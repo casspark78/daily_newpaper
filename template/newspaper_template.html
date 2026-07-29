@@ -115,12 +115,30 @@
     align-items: flex-start;
   }
   .two-col .col-text { flex: 1 1 260px; }
-  .two-col .col-img { flex: 1 1 320px; }
-  .two-col .col-img img {
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #e4ddc9;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
   }
   .weather-box {
     display: flex;
@@ -279,7 +297,19 @@
           <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
         </p>
       </div>
-      <!-- 확인 가능한 최신 순위표를 텍스트(리스트/표)로 요약. 이미지 생성/삽입은 하지 않는다. -->
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            {{KBO_STANDINGS_ROWS}}
+            <!-- 1~10위 전 팀. 각 행: <tr class="is-lg">(LG 행만)</tr>, td 8개(순위/팀/경기/승/무/패/승률/게임차) -->
+          </tbody>
+        </table>
+        <div class="standings-note">{{STANDINGS_AS_OF_NOTE}}</div>
+        <!-- 예: "※ 7월 9일 전반기 종료 기준 (최신 경기 결과는 공식 사이트 참고)" -->
+      </div>
     </div>
   </section>
 
