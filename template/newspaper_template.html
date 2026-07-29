@@ -216,8 +216,15 @@
   <section>
     <div class="section-num">SECTION 03 · MARKET</div>
     <h2>주식 리포트</h2>
-    <p>오늘자 리포트가 아직 준비되지 않았을 수 있어요. 아래 링크에서 확인하세요.</p>
-    <p><a href="https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html" target="_blank">https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html</a></p>
+    {{MARKET_CONTENT}}
+    <!-- 아래 링크의 리포트를 가져올 수 있으면:
+         <p>{{MARKET_OVERVIEW}}</p>
+         <ul>{{MARKET_STOCK_ITEMS}}</ul>  (종목명(코드) 가격/등락률 — 핵심 코멘트, 1~3개)
+         <p>{{MARKET_SCHEDULE_NOTE}}</p>  (이번 주 주요 일정 한 줄, 있을 때만)
+         <div class="fortune-note">{{MARKET_DISCLAIMER}} · <a href="전체 리포트 URL" target="_blank">전체 리포트 보기</a></div>
+         가져올 수 없으면:
+         <p class="placeholder-note">오늘자 리포트가 아직 준비되지 않았을 수 있어요. 아래 링크에서 확인하세요.</p>
+         <p><a href="https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html" target="_blank">https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html</a></p> -->
   </section>
 
   <!-- 4. 나만의 주요 뉴스 -->
