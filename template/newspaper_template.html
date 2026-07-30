@@ -208,22 +208,16 @@
     <span>발행인 HANS · 매일 아침 자동 발행</span>
   </div>
 
-  <!-- 1. 나의 주요 일정 (캘린더 + 미리 알림 통합) -->
+  <!-- 1. 나의 주요 일정 (캘린더 + 미리 알림 통합, 한 블록) -->
   <section>
     <div class="section-num">SECTION 01 · UPCOMING</div>
     <h2>나의 주요 일정</h2>
-    <div class="news-category">
-      <h3>이번 주 일정</h3>
-      {{UPCOMING_WEEK_CONTENT}}
-      <!-- 캘린더 연동이 가능하면 오늘부터 7일 이내 일정을 목록(ul/li)으로, 날짜/요일을 굵게 표시.
-           연동은 됐지만 일정이 없으면: <p class="placeholder-note">캘린더 연동은 확인했지만, 앞으로 일주일 동안 등록된 일정이 없어요.</p>
-           연동 자체가 안 되면: <p class="placeholder-note">오늘은 캘린더 연동을 확인하지 못했어요. 다음에 다시 시도할게요.</p> -->
-    </div>
-    <div class="news-category">
-      <h3>미리 알림</h3>
-      {{REMINDERS_CONTENT}}
-      <!-- 위와 동일한 원칙(연동 성공+항목 있음/성공+없음/실패 3가지 케이스) 적용 -->
-    </div>
+    {{UPCOMING_CONTENT}}
+    <!-- 캘린더(오늘부터 7일 이내)와 미리 알림을 합쳐 하나의 목록으로.
+         항목이 있으면: <ul><li>일정명(날짜)</li>...</ul> 형식으로 간단히 (예: <li>팀 미팅(7/31)</li>).
+         날짜는 M/D 형식, 캘린더 일정과 미리 알림 구분 없이 날짜순으로 나열.
+         하나도 없으면(연동은 되지만 항목이 없을 때): <p class="placeholder-note">앞으로 일주일 동안 등록된 일정이나 미리 알림이 없어요.</p>
+         연동 자체가 안 되면: <p class="placeholder-note">오늘은 일정 연동을 확인하지 못했어요. 다음에 다시 시도할게요.</p> -->
   </section>
 
   <!-- 2. 주식 리포트 -->
