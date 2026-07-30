@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HANS 데일리</title>
-<meta name="theme-color" content="#a3123a">
+<meta name="theme-color" content="#1c1a17">
 <meta name="description" content="HANS의 매일 아침 개인 신문">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
@@ -21,10 +21,46 @@
     background: #f2ede0;
     font-family: "Noto Sans CJK KR", -apple-system, sans-serif;
   }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+  }
+  #appHeader {
+    flex: 0 0 auto;
+  }
+  #brandbar {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(180deg, #211e1a, #14120f);
+    padding: calc(env(safe-area-inset-top, 0px) + 16px) 16px 15px;
+  }
+  #brandbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c9a24b 50%, transparent);
+  }
+  #brandbar .word {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #f5efe2;
+  }
+  #brandbar .word .accent { color: #c9a24b; }
+  #brandbar .sub {
+    margin-top: 5px;
+    font-size: 9.5px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #9a9284;
+  }
   #topbar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -33,17 +69,9 @@
     background: #fffdf8;
     border-bottom: 1px solid #d8d0bb;
   }
-  #topbar .brand {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: 700;
-    color: #a3123a;
-    font-size: 15px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-  }
   #topbar select {
     flex: 1 1 auto;
-    max-width: 220px;
+    max-width: 260px;
     font-size: 13px;
     padding: 5px 6px;
     border: 1px solid #d8d0bb;
@@ -62,9 +90,10 @@
   }
   #topbar button:active { background: #f2eee0; }
   #frame-wrap {
-    height: calc(100% - 46px);
+    flex: 1 1 auto;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    position: relative;
   }
   #paper {
     display: block;
@@ -83,11 +112,16 @@
 </style>
 </head>
 <body>
-  <div id="topbar">
-    <span class="brand">📰 HANS 데일리</span>
-    <select id="dateSelect" aria-label="날짜 선택"></select>
-    <button id="reloadBtn" aria-label="새로고침">새로고침</button>
-  </div>
+  <header id="appHeader">
+    <div id="brandbar">
+      <div class="word">HANS <span class="accent">NEWSPAPER</span></div>
+      <div class="sub">Personal Morning Edition</div>
+    </div>
+    <div id="topbar">
+      <select id="dateSelect" aria-label="날짜 선택"></select>
+      <button id="reloadBtn" aria-label="새로고침">새로고침</button>
+    </div>
+  </header>
   <div id="frame-wrap">
     <div id="status">신문을 불러오는 중…</div>
     <iframe id="paper" title="HANS 데일리" hidden></iframe>
