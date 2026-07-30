@@ -175,6 +175,19 @@
     padding: 10px 14px;
     border-radius: 6px;
   }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
   footer {
     text-align: center;
     font-size: 11px;
@@ -231,10 +244,28 @@
   <section>
     <div class="section-num">SECTION 04 · HEADLINES</div>
     <h2>나만의 주요 뉴스</h2>
-    <ul>
-      {{HEADLINES_LIST_ITEMS}}
-      <!-- 각 li: <li><strong>제목</strong> — 요약 한두 문장. (<a href="URL" target="_blank">출처</a>)</li> -->
-    </ul>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>{{NEWS_AI_ITEMS}}</ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>{{NEWS_ECONOMY_ITEMS}}</ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>{{NEWS_POLITICS_ITEMS}}</ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>{{NEWS_DISPLAY_ITEMS}}</ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>{{NEWS_SPORTS_ITEMS}}</ul>
+    </div>
+    <!-- 각 카테고리 ul 안에 2~3개 li: <li><strong>제목</strong> — 요약 한두 문장. (<a href="URL" target="_blank">출처</a>)</li>
+         해당 카테고리에서 뉴스를 찾지 못하면 그 news-category 블록 전체(h3 포함)를 생략한다. -->
   </section>
 
   <!-- 5. 오늘의 명언 -->
