@@ -208,21 +208,9 @@
     <span>발행인 HANS · 매일 아침 자동 발행</span>
   </div>
 
-  <!-- 1. 나의 주요 일정 (캘린더 + 미리 알림 통합, 한 블록) -->
+  <!-- 1. 주식 리포트 -->
   <section>
-    <div class="section-num">SECTION 01 · UPCOMING</div>
-    <h2>나의 주요 일정</h2>
-    {{UPCOMING_CONTENT}}
-    <!-- 캘린더(오늘부터 7일 이내)와 미리 알림을 합쳐 하나의 목록으로.
-         항목이 있으면: <ul><li>일정명(날짜)</li>...</ul> 형식으로 간단히 (예: <li>팀 미팅(7/31)</li>).
-         날짜는 M/D 형식, 캘린더 일정과 미리 알림 구분 없이 날짜순으로 나열.
-         하나도 없으면(연동은 되지만 항목이 없을 때): <p class="placeholder-note">앞으로 일주일 동안 등록된 일정이나 미리 알림이 없어요.</p>
-         연동 자체가 안 되면: <p class="placeholder-note">오늘은 일정 연동을 확인하지 못했어요. 다음에 다시 시도할게요.</p> -->
-  </section>
-
-  <!-- 2. 주식 리포트 -->
-  <section>
-    <div class="section-num">SECTION 02 · MARKET</div>
+    <div class="section-num">SECTION 01 · MARKET</div>
     <h2>주식 리포트</h2>
     {{MARKET_CONTENT}}
     <!-- 아래 링크의 리포트를 가져올 수 있으면:
@@ -235,9 +223,9 @@
          <p><a href="https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html" target="_blank">https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html</a></p> -->
   </section>
 
-  <!-- 3. 나만의 주요 뉴스 -->
+  <!-- 2. 나만의 주요 뉴스 -->
   <section>
-    <div class="section-num">SECTION 03 · HEADLINES</div>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
     <h2>나만의 주요 뉴스</h2>
     <div class="news-category">
       <h3>AI · 신기술</h3>
@@ -263,18 +251,18 @@
          해당 카테고리에서 뉴스를 찾지 못하면 그 news-category 블록 전체(h3 포함)를 생략한다. -->
   </section>
 
-  <!-- 4. 오늘의 명언 -->
+  <!-- 3. 오늘의 명언 -->
   <section>
-    <div class="section-num">SECTION 04 · QUIET WORDS</div>
+    <div class="section-num">SECTION 03 · QUIET WORDS</div>
     <h2>오늘의 명언</h2>
     <div class="quote-box">
       {{QUOTE_TEXT}}
     </div>
   </section>
 
-  <!-- 5. 오늘의 운세 -->
+  <!-- 4. 오늘의 운세 -->
   <section>
-    <div class="section-num">SECTION 05 · FORTUNE</div>
+    <div class="section-num">SECTION 04 · FORTUNE</div>
     <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
     <div class="fortune-grid">
       <div class="fortune-card">
@@ -293,18 +281,18 @@
     <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
   </section>
 
-  <!-- 6. 스몰토크 추천 -->
+  <!-- 5. 스몰토크 추천 -->
   <section>
-    <div class="section-num">SECTION 06 · SMALL TALK</div>
+    <div class="section-num">SECTION 05 · SMALL TALK</div>
     <h2>오늘 스몰토크 추천</h2>
     <ul>
       {{SMALL_TALK_ITEMS}}
     </ul>
   </section>
 
-  <!-- 7. 날씨 -->
+  <!-- 6. 날씨 -->
   <section>
-    <div class="section-num">SECTION 07 · WEATHER</div>
+    <div class="section-num">SECTION 06 · WEATHER</div>
     <h2>날씨 (경기도 파주시)</h2>
     <div class="weather-box">
       <div class="weather-card">
@@ -318,9 +306,9 @@
     </div>
   </section>
 
-  <!-- 8. LG트윈스 + KBO 순위표 -->
+  <!-- 7. LG트윈스 + KBO 순위표 -->
   <section>
-    <div class="section-num">SECTION 08 · LG TWINS</div>
+    <div class="section-num">SECTION 07 · LG TWINS</div>
     <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
     <div class="two-col">
       <div class="col-text">
@@ -346,17 +334,17 @@
     </div>
   </section>
 
-  <!-- 9. 주말 여행지 추천 -->
+  <!-- 8. 주말 여행지 추천 -->
   <section>
-    <div class="section-num">SECTION 09 · WEEKEND TRIP</div>
+    <div class="section-num">SECTION 08 · WEEKEND TRIP</div>
     <h2>주말에 가면 좋을 국내 여행지</h2>
     {{WEEKEND_TRIP_ITEMS}}
     <!-- <p><strong>지명</strong> — 설명 한두 문장.</p> 형식으로 2곳 내외 -->
   </section>
 
-  <!-- 10. 오늘의 짧은 영어 아티클 -->
+  <!-- 9. 오늘의 짧은 영어 아티클 -->
   <section>
-    <div class="section-num">SECTION 10 · ENGLISH FOR TODAY</div>
+    <div class="section-num">SECTION 09 · ENGLISH FOR TODAY</div>
     <h2>오늘의 짧은 영어 아티클</h2>
     <div class="english-article">
       <p class="eng-text">
