@@ -208,26 +208,27 @@
     <span>발행인 HANS · 매일 아침 자동 발행</span>
   </div>
 
-  <!-- 1. 나의 일정 -->
+  <!-- 1. 나의 주요 일정 (캘린더 + 미리 알림 통합) -->
   <section>
-    <div class="section-num">SECTION 01 · CALENDAR</div>
-    <h2>나의 일정</h2>
-    {{CALENDAR_CONTENT}}
-    <!-- 연동 정보를 가져올 수 있으면 오늘의 일정을 목록(ul/li)으로 표시.
-         가져올 수 없으면: <p class="placeholder-note">오늘은 캘린더 연동을 확인하지 못했어요. 다음에 다시 시도할게요.</p> -->
+    <div class="section-num">SECTION 01 · UPCOMING</div>
+    <h2>나의 주요 일정</h2>
+    <div class="news-category">
+      <h3>이번 주 일정</h3>
+      {{UPCOMING_WEEK_CONTENT}}
+      <!-- 캘린더 연동이 가능하면 오늘부터 7일 이내 일정을 목록(ul/li)으로, 날짜/요일을 굵게 표시.
+           연동은 됐지만 일정이 없으면: <p class="placeholder-note">캘린더 연동은 확인했지만, 앞으로 일주일 동안 등록된 일정이 없어요.</p>
+           연동 자체가 안 되면: <p class="placeholder-note">오늘은 캘린더 연동을 확인하지 못했어요. 다음에 다시 시도할게요.</p> -->
+    </div>
+    <div class="news-category">
+      <h3>미리 알림</h3>
+      {{REMINDERS_CONTENT}}
+      <!-- 위와 동일한 원칙(연동 성공+항목 있음/성공+없음/실패 3가지 케이스) 적용 -->
+    </div>
   </section>
 
-  <!-- 2. 미리 알림 -->
+  <!-- 2. 주식 리포트 -->
   <section>
-    <div class="section-num">SECTION 02 · REMINDERS</div>
-    <h2>미리 알림</h2>
-    {{REMINDERS_CONTENT}}
-    <!-- 위와 동일한 규칙 적용 -->
-  </section>
-
-  <!-- 3. 주식 리포트 -->
-  <section>
-    <div class="section-num">SECTION 03 · MARKET</div>
+    <div class="section-num">SECTION 02 · MARKET</div>
     <h2>주식 리포트</h2>
     {{MARKET_CONTENT}}
     <!-- 아래 링크의 리포트를 가져올 수 있으면:
@@ -240,9 +241,9 @@
          <p><a href="https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html" target="_blank">https://casspark78.github.io/stock_analysis/reports/{{ISO_DATE}}.html</a></p> -->
   </section>
 
-  <!-- 4. 나만의 주요 뉴스 -->
+  <!-- 3. 나만의 주요 뉴스 -->
   <section>
-    <div class="section-num">SECTION 04 · HEADLINES</div>
+    <div class="section-num">SECTION 03 · HEADLINES</div>
     <h2>나만의 주요 뉴스</h2>
     <div class="news-category">
       <h3>AI · 신기술</h3>
@@ -268,18 +269,18 @@
          해당 카테고리에서 뉴스를 찾지 못하면 그 news-category 블록 전체(h3 포함)를 생략한다. -->
   </section>
 
-  <!-- 5. 오늘의 명언 -->
+  <!-- 4. 오늘의 명언 -->
   <section>
-    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <div class="section-num">SECTION 04 · QUIET WORDS</div>
     <h2>오늘의 명언</h2>
     <div class="quote-box">
       {{QUOTE_TEXT}}
     </div>
   </section>
 
-  <!-- 6. 오늘의 운세 -->
+  <!-- 5. 오늘의 운세 -->
   <section>
-    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <div class="section-num">SECTION 05 · FORTUNE</div>
     <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
     <div class="fortune-grid">
       <div class="fortune-card">
@@ -298,18 +299,18 @@
     <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
   </section>
 
-  <!-- 7. 스몰토크 추천 -->
+  <!-- 6. 스몰토크 추천 -->
   <section>
-    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <div class="section-num">SECTION 06 · SMALL TALK</div>
     <h2>오늘 스몰토크 추천</h2>
     <ul>
       {{SMALL_TALK_ITEMS}}
     </ul>
   </section>
 
-  <!-- 8. 날씨 -->
+  <!-- 7. 날씨 -->
   <section>
-    <div class="section-num">SECTION 08 · WEATHER</div>
+    <div class="section-num">SECTION 07 · WEATHER</div>
     <h2>날씨 (경기도 파주시)</h2>
     <div class="weather-box">
       <div class="weather-card">
@@ -323,9 +324,9 @@
     </div>
   </section>
 
-  <!-- 9. LG트윈스 + KBO 순위표 -->
+  <!-- 8. LG트윈스 + KBO 순위표 -->
   <section>
-    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <div class="section-num">SECTION 08 · LG TWINS</div>
     <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
     <div class="two-col">
       <div class="col-text">
@@ -351,17 +352,17 @@
     </div>
   </section>
 
-  <!-- 10. 주말 여행지 추천 -->
+  <!-- 9. 주말 여행지 추천 -->
   <section>
-    <div class="section-num">SECTION 10 · WEEKEND TRIP</div>
+    <div class="section-num">SECTION 09 · WEEKEND TRIP</div>
     <h2>주말에 가면 좋을 국내 여행지</h2>
     {{WEEKEND_TRIP_ITEMS}}
     <!-- <p><strong>지명</strong> — 설명 한두 문장.</p> 형식으로 2곳 내외 -->
   </section>
 
-  <!-- 11. 오늘의 짧은 영어 아티클 -->
+  <!-- 10. 오늘의 짧은 영어 아티클 -->
   <section>
-    <div class="section-num">SECTION 11 · ENGLISH FOR TODAY</div>
+    <div class="section-num">SECTION 10 · ENGLISH FOR TODAY</div>
     <h2>오늘의 짧은 영어 아티클</h2>
     <div class="english-article">
       <p class="eng-text">
