@@ -6,6 +6,15 @@
 기준의 실제 콘텐츠로 채웁니다. CSS와 전체 구조(마스트헤드, 섹션 구분선, 색상 등)는
 절대 변경하지 않습니다.
 
+## PWA (신문 뷰어)
+저장소 루트의 `index.html` / `manifest.webmanifest` / `service-worker.js` / `icons/`가
+설치 가능한 PWA 뷰어이며, GitHub Pages(`https://casspark78.github.io/daily_newpaper/`)로
+서비스된다. 이 뷰어는 `reports/index.json`에 실린 날짜 목록을 읽어 오늘자
+`reports/{ISO_DATE}.html`을 iframe으로 보여준다. 따라서 매일 신문을 발행할 때는
+반드시 `reports/{ISO_DATE}.html`과 `reports/index.json`을 함께 갱신해야 PWA에서
+최신판이 보인다 (아래 "완성 후 처리" 참고). PWA 셸(index.html 등) 자체는 매일
+바뀌지 않으므로 평소에는 건드리지 않는다.
+
 ## 발행 대상자 정보 (개인화)
 - 이름: HANS
 - 거주지: 경기도 파주시
@@ -59,11 +68,19 @@
     다른 주제로 새로 작성.
 
 ## 완성 후 처리
-1. 완성된 HTML을 하나의 파일로 저장한다 (파일명 예: `my_newspaper_{ISO_DATE}.html`).
-2. Artifact로 발행하여 사용자에게 링크를 전달한다 (favicon은 신문 관련 이모지 사용,
-   기존에 발행한 적이 있다면 같은 URL을 갱신한다).
-3. 완성된 파일을 SendUserFile로도 함께 전달한다.
-4. 세션 마지막 메시지에 오늘자 헤드라인 한 줄 요약과 신문 링크를 간단히 남긴다.
+1. 완성된 HTML을 `reports/{ISO_DATE}.html` 경로로 저장한다 (저장소 루트 기준).
+2. `reports/index.json`을 읽어 오늘 날짜(ISO_DATE)를 배열에 추가(중복이면 그대로 두고)
+   정렬해서 다시 저장한다.
+3. `git add reports/{ISO_DATE}.html reports/index.json && git commit -m "Add {ISO_DATE} edition"
+   && git push origin main` 으로 커밋·푸시한다 (이 repo는 daily_newpaper이며, 이 커밋·푸시는
+   사용자가 명시적으로 허용한 자동화 범위다 — reports/index.json 갱신 이외의 다른 파일은
+   건드리지 않는다).
+4. 완성된 HTML을 Artifact로도 발행하여 사용자에게 링크를 전달한다 (favicon은 신문 관련
+   이모지 사용; 기존에 발행한 적이 있다면 같은 URL을 갱신한다).
+5. 완성된 파일을 SendUserFile로도 함께 전달한다.
+6. 세션 마지막 메시지에 오늘자 헤드라인 한 줄 요약과 함께, PWA 주소
+   (`https://casspark78.github.io/daily_newpaper/`, GitHub Pages가 설정되어 있다면)와
+   Artifact 링크를 간단히 남긴다.
 
-이 자동 실행 세션은 무인 실행이므로, 위 절차 외의 다른 작업(파일 수정, 커밋/푸시,
-설정 변경 등)은 수행하지 않는다.
+이 자동 실행 세션은 무인 실행이므로, 위 절차(그리고 3번의 reports/ 커밋·푸시) 외의
+다른 저장소 변경이나 설정 변경은 수행하지 않는다.

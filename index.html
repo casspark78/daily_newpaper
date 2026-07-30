@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HANS 데일리</title>
+<meta name="theme-color" content="#a3123a">
+<meta name="description" content="HANS의 매일 아침 개인 신문">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HANS데일리">
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f2ede0;
+    font-family: "Noto Sans CJK KR", -apple-system, sans-serif;
+  }
+  #topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 12px;
+    background: #fffdf8;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  #topbar .brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    color: #a3123a;
+    font-size: 15px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  #topbar select {
+    flex: 1 1 auto;
+    max-width: 220px;
+    font-size: 13px;
+    padding: 5px 6px;
+    border: 1px solid #d8d0bb;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+  }
+  #topbar button {
+    border: 1px solid #d8d0bb;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    padding: 5px 10px;
+    color: #333;
+    cursor: pointer;
+  }
+  #topbar button:active { background: #f2eee0; }
+  #frame-wrap {
+    height: calc(100% - 46px);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #paper {
+    display: block;
+    width: 100%;
+    border: 0;
+    min-height: 100%;
+    background: #f2ede0;
+  }
+  #status {
+    padding: 40px 20px;
+    text-align: center;
+    color: #7a7368;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+  <div id="topbar">
+    <span class="brand">📰 HANS 데일리</span>
+    <select id="dateSelect" aria-label="날짜 선택"></select>
+    <button id="reloadBtn" aria-label="새로고침">새로고침</button>
+  </div>
+  <div id="frame-wrap">
+    <div id="status">신문을 불러오는 중…</div>
+    <iframe id="paper" title="HANS 데일리" hidden></iframe>
+  </div>
+
+<script>
+(function () {
+  var statusEl = document.getElementById('status');
+  var frame = document.getElementById('paper');
+  var select = document.getElementById('dateSelect');
+  var reloadBtn = document.getElementById('reloadBtn');
+  var dates = [];
+
+  function todayKST() {
+    var parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit'
+    }).formatToParts(new Date());
+    var map = {};
+    parts.forEach(function (p) { map[p.type] = p.value; });
+    return map.year + '-' + map.month + '-' + map.day;
+  }
+
+  function formatLabel(iso) {
+    // Parse the y/m/d directly instead of building a Date from the string —
+    // any timezone-aware parsing here can shift the calendar day depending
+    // on the viewer's local timezone. Date.UTC(y, m-1, d) with getUTCDay()
+    // is the one round-trip that stays timezone-neutral.
+    var parts = iso.split('-').map(Number);
+    var days = ['일', '월', '화', '수', '목', '금', '토'];
+    var weekday = days[new Date(Date.UTC(parts[0], parts[1] - 1, parts[2])).getUTCDay()];
+    return parts[1] + '월 ' + parts[2] + '일 (' + weekday + ')';
+  }
+
+  function pickTarget(requested) {
+    if (dates.indexOf(requested) !== -1) return requested;
+    // dates is sorted newest-first; fall back to the newest edition <= requested,
+    // otherwise the oldest available edition.
+    for (var i = 0; i < dates.length; i++) {
+      if (dates[i] <= requested) return dates[i];
+    }
+    return dates.length ? dates[dates.length - 1] : null;
+  }
+
+  function loadDate(iso, opts) {
+    opts = opts || {};
+    frame.hidden = true;
+    statusEl.hidden = false;
+    statusEl.textContent = iso + ' 신문을 불러오는 중…';
+    var url = 'reports/' + iso + '.html';
+    var probe = new Image();
+    fetch(url, { cache: opts.forceNetwork ? 'reload' : 'default' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('not found');
+        frame.src = url;
+        select.value = iso;
+        if (history.replaceState) history.replaceState(null, '', '#' + iso);
+      })
+      .catch(function () {
+        statusEl.textContent = iso + '자 신문을 찾을 수 없어요.';
+      });
+  }
+
+  frame.addEventListener('load', function () {
+    statusEl.hidden = true;
+    frame.hidden = false;
+    try {
+      var doc = frame.contentWindow.document;
+      var resize = function () {
+        frame.style.height = doc.documentElement.scrollHeight + 'px';
+      };
+      resize();
+      if (frame._resizeObs) frame._resizeObs.disconnect();
+      frame._resizeObs = new ResizeObserver(resize);
+      frame._resizeObs.observe(doc.body);
+    } catch (e) { /* cross-origin fallback: fixed viewport height */ }
+  });
+
+  select.addEventListener('change', function () {
+    loadDate(select.value, { forceNetwork: true });
+  });
+
+  reloadBtn.addEventListener('click', function () {
+    loadDate(select.value || todayKST(), { forceNetwork: true });
+  });
+
+  fetch('reports/index.json', { cache: 'no-cache' })
+    .then(function (res) { return res.json(); })
+    .then(function (list) {
+      dates = list.slice().sort().reverse();
+      select.innerHTML = '';
+      dates.forEach(function (iso) {
+        var opt = document.createElement('option');
+        opt.value = iso;
+        opt.textContent = formatLabel(iso);
+        select.appendChild(opt);
+      });
+      var requested = (location.hash || '').replace('#', '') || todayKST();
+      var target = pickTarget(requested);
+      if (target) {
+        loadDate(target);
+      } else {
+        statusEl.textContent = '아직 발행된 신문이 없어요.';
+      }
+    })
+    .catch(function () {
+      statusEl.textContent = '신문 목록을 불러오지 못했어요.';
+    });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js').catch(function () {});
+    });
+  }
+})();
+</script>
+</body>
+</html>
