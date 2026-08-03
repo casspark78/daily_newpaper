@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 3일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 3일 월요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>7월 한 달은 롤러코스터였습니다. 중국 CXMT 상장과 DUV 장비 국산화 우려가 겹치며 KOSPI가 37% 폭락했는데, 7월 31일 삼성전자와 SK하이닉스가 나란히 분기 사상 최대 실적을 발표하고 미국 빅테크의 AI 투자 확대가 확인되면서 KOSPI는 <strong>+17.91%</strong>, 역대 최대 단일 일간 상승을 기록했습니다.</p>
+    <ul>
+      <li><strong>삼성전자 (005930)</strong> 265,000원 / +28.02% — Q2 영업이익 89.5조 사상 최대, ROE 30.8%, PER 6.7배로 저평가 구간이라는 판단.</li>
+      <li><strong>SK하이닉스 (000660)</strong> 1,718,000원 / +29.95% — Q2 영업이익 60.5조(+557% YoY), 영업이익률 76%, PER 3.9배로 극저평가 진단.</li>
+      <li><strong>TIGER 반도체TOP10 (396500)</strong> 34,370원 / +29.99% — 삼성·SK하이닉스 집중 편입으로 반도체 회복의 직접 수혜, 1년 수익률 +326%.</li>
+    </ul>
+    <p>이번 주 일정으로는 8월 4일(화) 한국은행 금융통화위원회 의사록 공개(16:00), 8월 5일(수) 7월말 외환보유액 발표(06:00), 8월 6일(목) 6월 국제수지 발표(08:00)가 예정돼 있습니다.</p>
+    <div class="fortune-note">※ 본 리포트는 참고용 자료이며 투자 권유가 아닙니다. · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-03.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>빅테크 AI 설비투자, 브레이크가 없다</strong> — 아마존이 올해 연간 설비투자 전망치를 2000억 달러에서 2200억 달러로 상향하는 등 아마존·마이크로소프트·알파벳이 공격적인 AI 투자 계획을 내놨습니다. 반도체와 장비 수요가 견조하게 이어질 근거로 읽힙니다. (<a href="https://www.newspim.com/news/view/20260731000943" target="_blank">뉴스핌</a>)</li>
+        <li><strong>이번 주 라스베이거스에 AI 업계가 모인다</strong> — 북미 최대 AI 비즈니스 콘퍼런스 'AI4 2026'이 8월 4~6일 개최되며 엔비디아·구글·MS·메타·삼성전자 등이 대거 참가합니다. 같은 기간 메모리·스토리지 행사 'FMS 2026'도 열립니다. (<a href="https://www.newspim.com/news/view/20260802000193" target="_blank">뉴스핌</a>)</li>
+        <li><strong>한·미 연구팀, 뉴로모픽 반도체 난제 풀었다</strong> — 단일 소자로 초저전력·고집적 뉴로모픽 반도체를 구현하는 데 성공했다고 발표했습니다. 차세대 AI 반도체의 전력 문제를 겨냥한 성과입니다. (<a href="https://www.etnews.com/20260730000021" target="_blank">전자신문</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>증권가 "반도체 조정은 막바지"</strong> — AI 수익성이 실적으로 입증되고 강제청산 리스크가 잦아들면서 반도체주 투자심리가 회복 국면에 들어섰다는 진단이 나왔습니다. (<a href="https://www.newspim.com/news/view/20260731001095" target="_blank">뉴스핌</a>)</li>
+        <li><strong>7월 말 증시엔 서킷브레이커까지</strong> — 코스피가 8~9% 급락하고 삼성전자·SK하이닉스가 11~12% 폭락하며 서킷브레이커가 발동됐던 장면이 불과 며칠 전입니다. 그만큼 변동성이 큰 구간입니다. (<a href="https://www.fnnews.com/news/202607281123582752" target="_blank">파이낸셜뉴스</a>)</li>
+        <li><strong>"실적은 그대로인데 주가가 무너졌다"</strong> — 미 빅테크의 AI 투자 지속성에 대한 의구심과 중국 업체 추격 가능성이 부각되며 국내 반도체주의 위험 프리미엄이 빠르게 높아졌다는 분석입니다. (<a href="https://www.newspim.com/news/view/20260728001061" target="_blank">뉴스핌</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>8월 임시국회 본회의 시동</strong> — 더불어민주당이 이른바 '필리버스터 방지법'을 앞세워 쟁점 법안 처리에 속도를 내고 있습니다. 패스트트랙 처리 기간을 대폭 단축하는 내용이 핵심입니다. (<a href="https://www.mt.co.kr/politics/2026/08/02/2026080211162916260" target="_blank">머니투데이</a>)</li>
+        <li><strong>국민의힘 "입법 독주 장치" 반발</strong> — 국민의힘은 국회법 개정안을 여당의 입법 독점 수단으로 규정하며 강하게 반대하고 있고, 보완수사권 폐지에 항의해 최고위원회의를 열었습니다. (<a href="https://www.newspim.com/news/view/20260802000186" target="_blank">뉴스핌</a>)</li>
+        <li><strong>오늘 국회 일정</strong> — 여성가족위원회 전체회의를 비롯한 상임위가 열리고, 여야 지도부가 각각 회의를 갖습니다. 민주당은 오후 2시 형사소송법 개정 관련 기자회견을 예고했습니다. (<a href="https://www.newspim.com/news/view/20260802000179" target="_blank">뉴스핌</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>삼성이 LG디스플레이를 살렸다</strong> — 삼성전자가 원가 효율이 좋은 LGD의 WOLED 패널을 TV·게이밍 모니터에 도입하고, LG 측은 일부 모니터에 삼성D의 QD-OLED를 채택했습니다. 경쟁사가 서로 핵심 고객이 되는 구도입니다. (<a href="https://www.g-enews.com/article/Global-Biz/2026/07/2026072408341418550c8c1c064d_1" target="_blank">글로벌이코노믹</a>)</li>
+        <li><strong>OLED 무게중심, 스마트폰에서 노트북·차량용으로</strong> — 중국 업체의 물량 공세로 스마트폰 OLED 경쟁이 격화되면서, 국내 업계는 진입장벽이 높은 차량용·IT용 OLED에서 주도권 확보에 속도를 내고 있습니다. (<a href="https://www.ekn.kr/web/view.php?key=20260514025104450" target="_blank">에너지경제</a>)</li>
+        <li><strong>삼성D·LGD, 차세대 OLED 기술 대거 공개</strong> — 양사가 K-디스플레이와 SID 2026에서 차세대 OLED 기술을 선보였습니다. 삼성D는 A6 라인에서 IT OLED를 연 1000만대(14.3인치 기준) 생산하겠다는 계획을 밝혔습니다. (<a href="https://www.ftoday.co.kr/news/articleView.html?idxno=362418" target="_blank">파이낸셜투데이</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>손흥민, 리그 4경기 연속골</strong> — 밴쿠버 화이트캡스전에서 전반 37분 수비수를 속인 터닝 슈팅으로 선제골을 터뜨렸습니다. MLS 올스타전 멀티골까지 포함하면 공식전 5경기 연속 득점, 6골입니다. (<a href="https://www.newspim.com/news/view/20260802000012" target="_blank">뉴스핌</a>)</li>
+        <li><strong>MLS 사무국 "LAFC 입단 후 최고의 기량"</strong> — 시즌 초반 13경기 무득점이던 선수가 북중미 월드컵 복귀 후 매 경기 골을 넣고 있다며 현지 찬사가 이어지고 있습니다. (<a href="https://www.newspim.com/news/view/20260803000012" target="_blank">뉴스핌</a>)</li>
+        <li><strong>손흥민·뮐러 나란히 득점, LAFC는 1-1 무승부</strong> — 후반 31분 토마스 뮐러에게 페널티킥 동점골을 내주며 비겼지만, LAFC는 서부 콘퍼런스 2위를 지켰습니다. (<a href="https://www.interfootball.co.kr/news/articleView.html?idxno=691705" target="_blank">인터풋볼</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 03 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      한 달 만에 37% 빠졌다가 하루에 18% 오르는 것이 시장입니다.<br>
+      그 사이에서 내가 지켜야 할 것은 속도가 아니라 방향입니다.
+    </div>
+  </section>
+
+  <!-- 4. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 04 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>한 주의 시작이지만 서두를수록 손해입니다. 오전에 판단을 미루고 정보를 한 번 더 확인하면 오후에 훨씬 깔끔한 결론이 나옵니다. 더위 탓에 체력이 먼저 지치니 일정은 한 칸 비워두세요.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>큰 흐름은 나쁘지 않으나 변동이 심한 날입니다. 오늘 새로 벌이는 것보다 이미 가진 것을 정리하는 쪽이 이득입니다. 숫자를 눈으로 한 번 더 확인하는 습관이 돈을 지켜줍니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>말수가 적어지기 쉬운 날입니다. 먼저 안부를 묻는 짧은 연락 하나가 관계의 온도를 지켜줍니다. 오래 못 본 사람에게서 반가운 소식이 들어올 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 5. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 05 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li><strong>"한 달 만에 37% 빠졌다가 하루에 18% 올랐다는데, 이거 실화예요?"</strong> — 7월 증시 이야기는 누구나 한마디 보탤 수 있는 소재입니다. 삼성전자·SK하이닉스 사상 최대 실적까지 엮으면 대화가 자연스럽게 이어집니다.</li>
+      <li><strong>"손흥민 요즘 미쳤다면서요, 4경기 연속골이래요."</strong> — 월드컵 끝나고 매 경기 골을 넣고 있다는 이야기는 축구를 잘 모르는 사람도 반응합니다. 골프 스윙 세리머니 얘기도 재밌는 곁가지입니다.</li>
+      <li><strong>"오늘 아침에 안개 보셨어요? 낮엔 또 37도라던데."</strong> — 경기북부는 아침 안개, 낮에는 폭염이라는 극단적인 하루입니다. 날씨는 가장 안전한 스몰토크 주제이고, 열대야 이야기로 자연스럽게 넘어갈 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 6. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 06 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/3, 월)</strong><br>
+        폭염 지속. 서울·경기 기준 아침 최저 26도 안팎, 낮 최고 37도 안팎으로 무덥겠습니다. 아침까지 경기북부 내륙에 가시거리 1km 미만의 안개가 끼는 곳이 있어 출근길 운전에 주의가 필요합니다. 수도권에 비 소식은 없고, 소나기는 강원남부내륙·충북북부에 국한됩니다. 미세먼지는 전 권역 '좋음'~'보통'(8월 3일 05시 발표 기준).
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/4, 화)</strong><br>
+        대체로 맑겠습니다. 아침 최저기온 23~27도, 낮 최고기온 31~37도로 오늘과 비슷한 더위가 이어지겠습니다. 밤사이 기온이 25도 아래로 떨어지지 않아 열대야가 나타나는 곳이 있겠습니다.
+      </div>
+    </div>
+    <div class="fortune-note">※ 기상청 예보 기반 요약이며, 파주 지역 상세 수치는 <a href="https://www.weather.go.kr/w/index.do" target="_blank">기상청 날씨누리</a>에서 확인하세요.</div>
+  </section>
+
+  <!-- 7. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 07 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>주말 잠실 두산전은 아쉬웠습니다. 어제(8월 2일) LG는 두산에 <strong>3-8로 패</strong>하며 3연전을 <strong>1무 2패</strong>로 마감했습니다. 두산 선발 벤자민이 6이닝 4피안타(1홈런) 무사사구 8삼진 3자책으로 호투했고, 두산 타선에서는 멀티히트가 5명이나 나왔습니다.</p>
+        <p>7월 31일 1차전은 두산에 2-4로 졌고, 8월 1일 2차전은 새 외국인 투수 <strong>카라스코가 데뷔전에서 위력투</strong>를 펼쳤지만 2-2 무승부로 끝났습니다. 8월 2일 선발은 톨허스트였습니다.</p>
+        <p>오늘(8월 3일 월요일)은 KBO 리그 정기 휴식일로 경기가 없습니다. 다음 경기 일정과 최신 순위는 아래 공식 사이트에서 확인하세요.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT</td><td>96</td><td>58</td><td>2</td><td>36</td><td>0.617</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성</td><td>98</td><td>59</td><td>2</td><td>37</td><td>0.615</td><td>0.0</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG</td><td>98</td><td>55</td><td>0</td><td>43</td><td>0.561</td><td>5.0</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 2일 경기 시작 전 기준 상위 3팀. 오늘 아침 확인 가능한 자료에서 4~10위 전체 순위와 8월 2일 경기 결과 반영분은 확인하지 못해 싣지 않았습니다. 전체 순위는 <a href="https://www.koreabaseball.com/Record/TeamRank/TeamRank.aspx" target="_blank">KBO 팀 순위</a>를 참고하세요. (게임차는 승패 기준 계산값)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>강원 평창 대관령</strong> — 낮 최고기온이 37도를 오르내리는 요즘, 해발 700m 이상 고지대는 체감이 확실히 다릅니다. 삼양목장과 하늘목장의 초지 능선을 걷다 보면 한여름에도 바람이 서늘하고, 파주에서 서울양양고속도로를 타면 부담 없는 당일치기 거리입니다.</p>
+    <p><strong>강원 인제 내린천</strong> — 계곡물에 발만 담가도 더위가 가시는 곳입니다. 래프팅 시즌이 한창이라 물살이 좋고, 근처 자작나무숲까지 묶으면 그늘 산책과 물놀이를 하루에 해결할 수 있습니다. 주말 오전에는 차가 몰리니 아침 일찍 출발하는 편이 낫습니다.</p>
+  </section>
+
+  <!-- 9. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 09 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Many cities are getting hotter every summer, and people are looking for simple ways to stay cool. Experts say the easiest method costs almost nothing: close your curtains during the day. Sunlight through a window can raise a room's temperature by several degrees. Another useful habit is to drink water before you feel thirsty, because thirst is a late signal. Doctors also recommend avoiding hard exercise between noon and five in the afternoon. If you must go outside, wear light colors and take a break in the shade every twenty minutes. These small choices will not stop the heat, but they can keep an ordinary hot day from becoming dangerous.
+      </p>
+      <p><strong>[우리말 풀이]</strong> 여름마다 더워지는 도시가 늘면서 사람들은 더위를 견딜 간단한 방법을 찾고 있습니다. 전문가들이 꼽는 가장 쉬운 방법은 돈이 거의 들지 않습니다. 낮에 커튼을 치는 것입니다. 창문을 통과한 햇빛은 방 온도를 몇 도나 올릴 수 있습니다. 또 하나 유용한 습관은 목이 마르기 전에 물을 마시는 것인데, 갈증은 뒤늦게 오는 신호이기 때문입니다. 의사들은 낮 12시부터 오후 5시 사이에 무리한 운동을 피하라고 권합니다. 밖에 나가야 한다면 밝은 색 옷을 입고 20분마다 그늘에서 쉬세요. 이런 작은 선택들이 더위를 없애주지는 못하지만, 평범하게 더운 하루가 위험한 하루로 바뀌는 것은 막아줍니다.</p>
+      <ul class="vocab-list">
+        <li><strong>method (명사)</strong> — 방법, 방식</li>
+        <li><strong>thirst (명사)</strong> — 갈증 (형용사형 thirsty: 목이 마른)</li>
+        <li><strong>avoid (동사)</strong> — 피하다, ~하지 않도록 하다</li>
+      </ul>
+      <p class="comprehension-q">Q. According to the article, why should you drink water before you feel thirsty?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
