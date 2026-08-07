@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 7일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 7일 금요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>어제(8월 6일) 코스피는 <strong>4.58% 급락</strong>했습니다. 솔리다임 나스닥 상장 추진설과 외국인·기관의 대규모 순매도가 겹쳤고, 특히 전기전자 업종에서만 3.2조 원의 순매도가 나왔습니다. 간밤 미국 반도체주 약세에도 동조했습니다. 반면 코스닥은 소형주 중심으로 반등하며 0.26% 올라 양대 지수가 엇갈렸습니다.</p>
+    <ul>
+      <li><strong>삼성전자 (005930)</strong> 230,500원 / -6.30% — PER 9.7배로 저평가 판단은 유지, 추세 확인 후 분할 매수 의견.</li>
+      <li><strong>SK하이닉스 (000660)</strong> 1,495,000원 / -10.37% — ROE 96%·PER 8.75배로 중장기 가치 매력은 유효하다는 진단.</li>
+      <li><strong>TIGER 반도체TOP10 (396500)</strong> 31,095원 / -8.26% — 반도체 급락을 직격으로 맞았으나 중장기 반등 기대, 지지선 확인 후 매수 의견.</li>
+    </ul>
+    <p>일정은 오늘(8/7) 미국 고용보고서 발표가 가장 중요하고, 다음 주에는 8/10 미국 신규 실업수당청구건수, 8/11 SK하이닉스 솔리다임 프리IPO 관련 공시, 8/12 미국 CPI 발표가 이어집니다.</p>
+    <div class="fortune-note">※ 본 리포트는 참고용 자료이며 투자 권유가 아닙니다. · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-07.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>AMD, AI 전용 반도체 스타트업 탈라스 인수</strong> — 캐나다 토론토 소재 탈라스는 하나의 AI 모델에 최적화한 맞춤형 반도체를 만듭니다. 범용 GPU와 달리 비용을 낮추고 처리 속도를 크게 높이는 방식으로, 엔비디아 추격에 속도를 내려는 포석입니다. (<a href="https://www.newspim.com/news/view/20260807000024" target="_blank">뉴스핌</a>)</li>
+        <li><strong>오픈AI, 무료 이용자에게 'GPT-5.6 루나' 개방</strong> — 무료 사용자의 기본 모델을 GPT-5.5에서 GPT-5.6 루나로 교체하고, 다음 주부터 무료·고(Go) 이용자에게 텍스트 대화 무제한을 제공한다고 밝혔습니다. (<a href="https://www.aitimes.com/news/articleView.html?idxno=213646" target="_blank">AI타임스</a>)</li>
+        <li><strong>소프트뱅크 'AI 올인' 전략이 시험대에</strong> — 빅테크의 AI 투자 과열 우려가 퍼지면서 AI에 집중 투자해 온 소프트뱅크그룹의 순자산가치(NAV)가 한 달 새 20% 줄었습니다. 투자 여력 위축 가능성이 제기됩니다. (<a href="https://www.newspim.com/news/view/20260807000228" target="_blank">뉴스핌</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>코스피 4.58% 급락, 6,296.38 마감</strong> — 전일 대비 301.88포인트 내렸습니다. 다만 골드만삭스는 '코스피 12,000' 전망을 그대로 유지해, 단기 변동성과 중장기 시각이 엇갈리는 모습입니다. (<a href="https://www.fnnews.com/news/202608061630040587" target="_blank">파이낸셜뉴스</a>)</li>
+        <li><strong>SK하이닉스 8%대 급락</strong> — 솔리다임 프리IPO 추진설과 주주환원안 부재가 동시에 부각되며 장 초반부터 밀렸습니다. (<a href="https://www.newspim.com/news/view/20260806000410" target="_blank">뉴스핌</a>)</li>
+        <li><strong>"솔리다임 프리IPO, 확정된 사항 없다"</strong> — 낸드 자회사 솔리다임의 5조~10조 원 규모 상장 전 투자유치설에 대해 SK하이닉스는 여러 방안을 검토 중일 뿐이라고 선을 그었습니다. (<a href="https://www.newspim.com/news/view/20260805001468" target="_blank">뉴스핌</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>6월 경상수지 497.3억 달러 흑자</strong> — 전월에 이어 두 달 연속 월간 기준 역대 최대 기록을 갈아치웠습니다. (<a href="https://www.newspim.com/news/view/20260806001223" target="_blank">뉴스핌</a>)</li>
+        <li><strong>민주당 '일하는 국회법' 속도전</strong> — 8월 임시국회에서 패스트트랙 처리 기간 단축에 이어 필리버스터 종결 요건 완화까지 추진합니다. 국민의힘은 입법 독주 장치라며 반발하고 있습니다. (<a href="https://www.mt.co.kr/politics/2026/08/02/2026080211162916260" target="_blank">머니투데이</a>)</li>
+        <li><strong>정동영 통일부 장관 업무보고 발언 논란</strong> — 5일 청와대 영빈관에서 열린 외교·안보 부처 대통령 업무보고에서 내놓은 '한반도 평화공존 발전 구상'을 두고 논란이 이어지고 있습니다. (<a href="https://www.newspim.com/news/view/20260806001204" target="_blank">뉴스핌</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>삼성디스플레이, '플렉스 크로마 픽셀' 첫 공개</strong> — 고휘도 모드 기준 최대 밝기 3,000니트, BT.2020 색역 96% 이상을 지원하는 스마트폰용 OLED 기술입니다. 센서 OLED와 스트레처블 디스플레이도 함께 선보였습니다. (<a href="https://www.thelec.kr/news/articleView.html?idxno=56069" target="_blank">디일렉</a>)</li>
+        <li><strong>LG디스플레이, 3세대 탠덤 OLED 공개</strong> — 'RGB 탠덤 2.0'을 적용한 OLED TV 패널로 최대 휘도 4,500니트와 0.3% 수준의 초저반사율을 구현했습니다. 소자를 적층해 수명·휘도·전력을 동시에 잡는 기술입니다. (<a href="https://www.ftoday.co.kr/news/articleView.html?idxno=362418" target="_blank">파이낸셜투데이</a>)</li>
+        <li><strong>삼성전자가 LG디스플레이의 핵심 고객사로</strong> — 수년간 적자로 구조조정을 이어온 LGD에게, 최대 경쟁사인 삼성전자가 실적 방어와 라인 가동률을 떠받치는 가장 결정적인 고객으로 부상했습니다. (<a href="https://www.g-enews.com/article/Global-Biz/2026/07/2026072408341418550c8c1c064d_1" target="_blank">글로벌이코노믹</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>손흥민, 공식전 5경기 연속골 도전</strong> — 6일 멕시코 명문 치바스 과달라하라를 상대로 나섰습니다. 최근 5경기에서 6골을 몰아친 절정의 폼입니다. (<a href="https://www.newspim.com/news/view/20260805000049" target="_blank">뉴스핌</a>)</li>
+        <li><strong>"LAFC 입단 후 최고의 기량"</strong> — 시즌 초반 13경기 무득점이던 선수가 북중미 월드컵 이후 매 경기 골을 넣고 있다며 MLS 사무국이 직접 찬사를 보냈습니다. (<a href="https://www.newspim.com/news/view/20260803000012" target="_blank">뉴스핌</a>)</li>
+        <li><strong>손흥민, MLS 16·17라운드 베스트 11 선정</strong> — 2경기 연속골로 라운드 베스트 일레븐에 이름을 올렸습니다. (<a href="https://www.newspim.com/news/view/20260724000318" target="_blank">뉴스핌</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 03 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      야구도 멈추는 더위입니다.<br>
+      멈춰야 할 때 멈추는 것도 실력입니다.
+    </div>
+  </section>
+
+  <!-- 4. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 04 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>주 마무리를 짓기 좋은 날입니다. 다만 욕심내서 하나 더 끼워 넣으면 그것 때문에 전부 늘어집니다. 더위에 판단력이 무뎌지기 쉬우니 중요한 결정은 시원한 시간대로 미루세요.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>흔들리는 장세에 마음이 급해질 수 있지만, 오늘은 손을 얹지 않는 것이 버는 것입니다. 지출 쪽에서는 여름 마무리 명목의 충동구매를 조심하세요.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>가까운 사람과 사소한 일로 어긋나기 쉬운 날입니다. 더위 탓이라 여기고 한 박자 늦게 답하면 그냥 지나갑니다. 저녁 자리에서 뜻밖의 좋은 이야기가 나옵니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 5. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 05 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li><strong>"프로야구가 더워서 취소된 거 아세요? 리그 생기고 처음이래요."</strong> — 야구 팬이든 아니든 놀라는 소식입니다. 관중 25명이 온열질환으로 쓰러졌다는 이야기까지 하면 더위의 심각성이 확 와닿습니다.</li>
+      <li><strong>"어제 코스피 4.5% 빠졌더라고요. 지난주엔 하루에 18% 올랐는데."</strong> — 요즘 증시는 롤러코스터라 누구나 한마디 보탤 수 있습니다. 굳이 종목 이야기로 들어가지 않아도 대화가 됩니다.</li>
+      <li><strong>"파주도 폭염중대경보 떴대요. 39도라는데 밖에 어떻게 다니죠?"</strong> — 오늘 서울 39도, 하남 체감 38.5도입니다. 날씨는 가장 안전한 화제이고, 내일부터 조금 누그러진다는 이야기로 자연스럽게 마무리할 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 6. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 06 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/7, 금)</strong><br>
+        절기상 입추인데도 극한 폭염입니다. <strong>파주에 폭염중대경보</strong>가 발효 중입니다(서울 전역, 인천, 고양·김포·연천·포천·가평 등 경기 다수 지역 동일). 아침 최저 27도 안팎, 낮 최고 39도 안팎으로 전국이 대체로 맑겠습니다. 오후 들어 서울 강남 체감 37.6도, 경기 하남 38.5도까지 올랐습니다. 한낮 야외 활동은 피하시는 게 좋습니다.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/8, 토)</strong><br>
+        더위가 한풀 꺾입니다. 아침 최저기온 22~27도, 낮 최고기온 27~36도로 오늘보다 낮아지겠지만 여전히 평년보다 높습니다. 오후에는 서울·경기내륙에 소나기가 내리는 곳이 있겠으니 외출 시 우산을 챙기세요.
+      </div>
+    </div>
+    <div class="fortune-note">※ 기상청 예보 기반 요약입니다. 상세 수치는 <a href="https://www.weather.go.kr/w/index.do" target="_blank">기상청 날씨누리</a>에서 확인하세요.</div>
+  </section>
+
+  <!-- 7. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 07 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p><strong>야구가 멈췄습니다.</strong> KBO는 폭염을 이유로 8월 5일과 6일 1군·퓨처스리그 전 경기를 취소했습니다. 리그 출범 이후 폭염으로 전 구장 경기가 취소된 것은 처음입니다. 이어 <strong>7일부터 9일까지 주말 3연전도 취소</strong>됐고, 당분간 경기 시작 시각을 오후 7시로 늦추기로 했습니다.</p>
+        <p>계기는 LG 경기였습니다. 4일 인천 SSG랜더스필드의 SSG-LG전에서 관중 25명이 온열질환 의심 증세로 현장 치료를 받았고, 그중 2명은 의식 저하 등 중증으로 구급차에 실려 갔습니다. 기상청이 올해 신설한 '폭염중대경보'가 뜨면 당일 오후 1시 이전에 취소를 결정할 수 있도록 기준도 새로 만들었습니다. 올 시즌 폭염 취소 경기는 15경기, 우천 포함 전체 취소는 40경기로 늘었습니다.</p>
+        <p>LG의 마지막 경기는 4일 SSG전이었고 <strong>8-10으로 졌습니다</strong>(3연패). 선발 웰스가 강습타구를 맞고 2.1이닝 만에 내려갔고, 7회 조형우의 스리런 등으로 2-9까지 벌어졌다가 8회 이재원의 3점 홈런을 앞세워 9-8까지 따라붙었지만 뒤집지는 못했습니다.</p>
+        <p>후반기 성적이 걱정입니다. 15경기에서 <strong>3승 1무 11패</strong>, 팀 평균자책점 6.83으로 리그 최하위이고 선발 평균자책점은 7.48입니다. 3위 자리도 4위 두산에 2경기 차로 쫓기고 있습니다. 역설적이지만 이번 휴식이 마운드를 추스를 시간이 될 수도 있겠습니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT</td><td>96</td><td>58</td><td>2</td><td>36</td><td>0.617</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성</td><td>98</td><td>59</td><td>2</td><td>37</td><td>0.615</td><td>0.0</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG</td><td>100</td><td>55</td><td>1</td><td>44</td><td>0.556</td><td>5.0</td></tr>
+            <tr><td>4</td><td>두산</td><td>101</td><td>52</td><td>4</td><td>45</td><td>0.536</td><td>7.0</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 기준 시점이 행마다 다릅니다 — LG·두산은 8월 2일 경기 종료 기준, KT·삼성은 8월 1일 기준입니다. 5~10위는 오늘 확인 가능한 자료로 검증되지 않아 싣지 않았습니다. 8월 5일부터 폭염으로 경기가 없어 순위 변동은 사실상 멈춘 상태입니다. 전체 순위는 <a href="https://www.koreabaseball.com/Record/TeamRank/TeamRank.aspx" target="_blank">KBO 팀 순위</a>를 참고하세요. (게임차는 승패 기준 계산값)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>강원 홍천</strong> — 마침 이번 주말입니다. '2026 홍천강 물마실' 축제가 8월 7일부터 9일까지 열려 카약과 패들보드 체험, 맥주 축제가 함께 진행됩니다. 파주에서 두 시간 남짓이면 닿고, 물에 들어가 있는 시간이 대부분이라 39도짜리 더위를 정면으로 피하기에 제격입니다.</p>
+    <p><strong>충북 단양</strong> — 실내에서 더위를 접겠다면 동굴만 한 곳이 없습니다. 고수동굴과 천동동굴은 계절과 무관하게 15도 안팎을 유지해 들어서는 순간 서늘합니다. 오후에 소나기 예보가 있는 내일 같은 날, 날씨에 흔들리지 않는 일정이라는 점도 장점입니다.</p>
+  </section>
+
+  <!-- 9. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 09 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Why do we remember the songs of our twenties so clearly? Researchers call this the "reminiscence bump." Between roughly ages fifteen and twenty-five, the brain forms memories that stay unusually strong for the rest of our lives. During those years we meet many things for the first time, and first experiences leave deeper marks than familiar ones. Music is especially powerful because it arrives together with emotion. A song you heard during an important summer can bring back that entire season in a few seconds. This is also why older listeners often say new music "all sounds the same" — it is not worse, it simply lands on a quieter part of the mind.
+      </p>
+      <p><strong>[우리말 풀이]</strong> 우리는 왜 스무 살 무렵의 노래를 그토록 또렷하게 기억할까요? 연구자들은 이것을 '회상 절정(reminiscence bump)'이라고 부릅니다. 대략 열다섯에서 스물다섯 사이에 뇌는 남은 평생 유난히 강하게 남는 기억을 만듭니다. 그 시기에 우리는 많은 것을 처음 만나는데, 처음 겪는 일은 익숙한 일보다 깊은 자국을 남깁니다. 음악은 특히 강력합니다. 감정과 함께 들어오기 때문입니다. 어떤 중요한 여름에 들었던 노래 하나가 그 계절 전체를 몇 초 만에 되돌려 놓습니다. 나이 든 청자들이 요즘 음악은 "다 비슷하게 들린다"고 말하는 이유도 여기 있습니다. 음악이 나빠진 게 아니라, 마음의 조용한 자리에 내려앉을 뿐입니다.</p>
+      <ul class="vocab-list">
+        <li><strong>reminiscence (명사)</strong> — 회상, 추억 (동사형 reminisce: 추억에 잠기다)</li>
+        <li><strong>familiar (형용사)</strong> — 익숙한, 낯익은 (↔ unfamiliar)</li>
+        <li><strong>land (동사)</strong> — (어떤 자리에) 내려앉다, 가닿다 ※ '착륙하다' 외에 이런 비유적 쓰임이 자주 있습니다</li>
+      </ul>
+      <p class="comprehension-q">Q. According to the article, why do first experiences leave deeper marks than familiar ones?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
