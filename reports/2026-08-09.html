@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 9일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 9일 일요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p class="placeholder-note">오늘자 리포트가 아직 준비되지 않았을 수 있어요. 아래 링크에서 확인하세요.</p>
+    <p><a href="https://casspark78.github.io/stock_analysis/reports/2026-08-09.html" target="_blank">https://casspark78.github.io/stock_analysis/reports/2026-08-09.html</a></p>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>제조업 특화 '피지컬 AI' 로봇, 자동차부터 반도체·바이오까지 확산</strong> — 카본식스 문태연 대표는 인터뷰에서 생성형 AI 모델 경쟁과 달리 제조 현장에서는 실제 생산라인에 투입되는 로봇 파운데이션 모델이 자동차 분야를 시작으로 반도체·디스플레이·바이오·식품 등으로 빠르게 확산되고 있다고 밝혔다. (<a href="https://biz.chosun.com/it-science/ict/2026/08/09/DGLIB353YFABPMTCXXTH4WKS34/" target="_blank">조선비즈</a>)</li>
+        <li><strong>말산업에도 AI 실증 스타트업 10곳 선정</strong> — 정부·민간 협력으로 경마장·목장 현장에서 AI 기반 분석 모델과 서비스를 검증(PoC)하는 스타트업 10곳이 선정돼 사업화를 지원받는다. (<a href="http://www.economytalk.kr/news/articleView.html?idxno=423386" target="_blank">이코노미톡</a>)</li>
+        <li><strong>반도체 'AI 슈퍼사이클', 붐 앤 버스트 우려도</strong> — 딜로이트 글로벌 경제 리뷰는 AI·반도체 투자 기대가 주식시장 변동성을 키우고 있다며, 과거 신기술 성장기마다 반복된 붐-버스트 주기 가능성을 경계해야 한다고 짚었다. (<a href="https://www.financialpost.co.kr/news/articleView.html?idxno=269549" target="_blank">파이낸셜포스트</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>네이버, 2분기 매출 3조3888억원 '역대 최대'</strong> — 영업이익은 소폭 감소했지만 AI 인프라 투자를 늘리는 가운데 엔비디아 등과의 파트너십을 바탕으로 B2B 사업 턴어라운드 기대가 커지고 있다. (<a href="https://www.startuptoday.co.kr/news/articleView.html?idxno=809095" target="_blank">스타트업투데이</a>)</li>
+        <li><strong>다음 주 미국 7월 CPI 발표에 시장 촉각</strong> — 12일 미국 7월 소비자물가지수 발표를 비롯해 10일 TSMC 7월 매출, 11일 미국 7월 기존주택판매 등이 예정돼 있어 다음 주 경제지표에 관심이 쏠린다. (<a href="https://biz.sbs.co.kr/article_hub/20000327259" target="_blank">SBS Biz</a>)</li>
+        <li><strong>원·달러 환율, 다음 주 1300원대 진입 가능성</strong> — 1400원선에 다가섰던 원·달러 환율이 중동 정세와 국제유가, 미국 경제지표 등에 따라 다음 주 1300원대로 반락할 수 있다는 전망이 나왔다. (<a href="https://www.goodkyung.com/news/articleView.html?idxno=290066" target="_blank">굿모닝경제</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>김민석, 제주·인천 순회경선서도 1위…당대표 경쟁 우위 확대</strong> — 더불어민주당 당대표 경선에서 김민석 후보가 제주·인천 지역 순회경선을 잇달아 승리하며 정청래 후보와의 누적 득표율 격차를 벌리고 있다. (<a href="https://www.dailian.co.kr/news/view/1676175/" target="_blank">데일리안</a>)</li>
+        <li><strong>미국, 韓 '가짜뉴스법'도 문제 삼아…디지털 규제 압박 확산</strong> — 미국 측은 모호한 규정으로 정부가 정치적으로 선호하지 않는 견해를 규제하는 데 법이 활용될 수 있다며 온라인 표현의 자유 위축을 우려했다. (<a href="https://www.news1.kr/it-science/internet-platform/6252440" target="_blank">뉴스1</a>)</li>
+        <li><strong>'주 52시간 예외' 놓고 정부 부처 간 이견</strong> — 김정관 산업통상부 장관과 김영훈 고용노동부 장관이 첨단산업 경쟁력 확보와 노동 기본권 보장 사이에서 뚜렷한 시각차를 보이고 있다. (<a href="https://www.huffingtonpost.kr/article/259361" target="_blank">허프포스트코리아</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>LG디스플레이 OLED 공급망에 중국 장비업체 첫 진입</strong> — 국내 OLED 장비업계의 수주 점유율 방어전과 글로벌 공급망 재편을 자극할 변수로 꼽히며, 생산망 다변화의 교두보가 될지 주목된다. (<a href="https://www.g-enews.com/view.php?ud=2026080809105819720c8c1c064d_1" target="_blank">글로벌이코노믹</a>)</li>
+        <li><strong>'폴드8 흥행' 삼성폰, LG디스플레이는 차세대 OLED에 3조원 투자</strong> — 삼성 폴더블 신제품이 플렉스윈도우 AI 기능을 앞세워 흥행하는 가운데, LG디스플레이도 국민성장펀드 1조5000억원을 포함해 총 3조원을 차세대 OLED 신기술에 투입한다. (<a href="http://www.4th.kr/news/articleView.html?idxno=2116022" target="_blank">4차산업</a>)</li>
+        <li><strong>DB하이텍, 디스플레이구동칩(DDIC) 가격 인상 대상 확대 검토</strong> — 8인치 파운드리 공급 부족이 심해지는 가운데 산업·자동차용 전력반도체 수요와 함께 DDI 가격 인상까지 검토되며 하반기 실적 기대가 커지고 있다. (<a href="https://www.bloter.net/news/articleView.html?idxno=670342" target="_blank">블로터</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>김민재, 바이에른 뮌헨 프리시즌서 선제골…아스톤 빌라전 2-1 승리 견인</strong> — 홍콩 카이탁스포츠파크에서 열린 프리시즌 경기에서 김민재가 후반 18분 선제골을 터뜨리며 팀 승리를 이끌었다. (<a href="https://www.mydaily.co.kr/page/view/2026080822025078686" target="_blank">마이데일리</a>)</li>
+        <li><strong>오타니는 대성공, 게레로 주니어는 트레이드 마감일 '대참사' 지적</strong> — 야후스포츠는 토론토가 트레이드 마감일 당시 결단을 내리지 못하고 선수에 대한 과거 명성만 믿다가 골든타임을 놓쳤다고 비판했다. (<a href="http://www.maniareport.com/view.php?ud=20260809064100639991b55a0d56_19" target="_blank">마니아리포트</a>)</li>
+        <li><strong>봉황대기 고교야구, 덕수고 42-0 대파…볼넷 없이 정면승부</strong> — 덕수고가 대구북구스포츠클럽을 상대로 홈런 3방 포함 팀 안타 34개를 몰아치며 대승을 거뒀다. (<a href="https://www.yna.co.kr/view/AKR20260808048800007" target="_blank">연합뉴스</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 03 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      더위가 걸음을 늦출 때, 마음은 오히려 멀리 볼 여유를 얻는다.
+    </div>
+  </section>
+
+  <!-- 4. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 04 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>일요일다운 여유가 흐르는 하루입니다. 무리하게 일정을 채우기보다 쉬어가는 쪽을 택하면 다음 주를 위한 에너지가 더 잘 쌓입니다. 작은 정리정돈이 마음까지 개운하게 해줄 수 있어요.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>큰 지출보다는 이번 주 씀씀이를 되짚어보기 좋은 날입니다. 충동적인 결정은 잠시 미뤄두고, 여름철 전기·냉방 관련 고정비를 점검해보면 실속을 챙길 수 있겠습니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>가까운 사람과 가벼운 안부를 나누기 좋은 타이밍입니다. 더위에 지친 상대를 먼저 챙기는 말 한마디가 관계를 훈훈하게 만들어줄 거예요.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 5. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 05 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>"이번 폭염에 프로야구까지 5일 연속 경기가 전면 취소됐다던데, 그라운드 잔디 열기가 50도 가까이 올라갔다고 하네요." — KBO 역대 첫 폭염 중단 소식으로 대화 시작하기 좋아요.</li>
+      <li>"오늘 파주 최고기온이 34도까지 오른다는데, 내일 저녁엔 또 소나기·뇌우가 온다더라고요." — 널뛰는 여름 날씨 얘기로 자연스럽게 안부 묻기.</li>
+      <li>"요즘 뉴스 보면 제조 현장에 투입되는 로봇 AI 얘기가 부쩍 늘었더라고요, 실제로 공장에서도 쓰이기 시작했대요." — AI가 일상 산업에 스며드는 최신 흐름을 가볍게 나누기.</li>
+    </ul>
+  </section>
+
+  <!-- 6. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 06 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/9, 일)</strong><br>
+        최저 23℃ / 최고 34℃, 무더위가 이어지는 가운데 대체로 맑은 하늘. 강수 확률은 낮은 편(약 7%)이며 대기질은 양호한 편으로 예보됨.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/10, 월)</strong><br>
+        최저 22℃ / 최고 34℃ 안팎, 전국이 대체로 흐리겠고 저녁 무렵 강한 뇌우 가능성이 있어 외출 시 우산을 챙기는 게 좋겠음.
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 07 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>기록적인 폭염으로 KBO리그는 8월 5일부터 9일까지 전 경기가 사상 처음으로 전면 취소됐습니다. 지난 4일 인천 SSG전에서 온열질환 의심 증상을 호소한 관중이 나오는 등 안전 우려가 커지자 KBO가 내린 결정으로, 리그는 오는 11일(화)부터 재개될 예정입니다.</p>
+        <p>LG 트윈스는 후반기 들어 고전하며 3위(100경기 55승 1무 44패, 승률 0.556)까지 내려온 상태입니다. 1위 KT 위즈와는 6게임차이지만 5위 KIA 타이거즈와도 2.5게임차로 좁혀져 있어, 뜻밖의 휴식기 이후 순위 싸움이 한층 치열해질 전망입니다. 리그 재개 첫 상대는 최하위 키움 히어로즈로 예상됩니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT 위즈</td><td>97</td><td>59</td><td>2</td><td>36</td><td>.621</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성 라이온즈</td><td>99</td><td>59</td><td>2</td><td>38</td><td>.608</td><td>1.0</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG 트윈스</td><td>100</td><td>55</td><td>1</td><td>44</td><td>.556</td><td>6.0</td></tr>
+            <tr><td>4</td><td>롯데 자이언츠</td><td>101</td><td>52</td><td>4</td><td>45</td><td>.536</td><td>8.0</td></tr>
+            <tr><td>5</td><td>KIA 타이거즈</td><td>100</td><td>52</td><td>2</td><td>46</td><td>.531</td><td>8.5</td></tr>
+            <tr><td>6</td><td>한화 이글스</td><td>98</td><td>46</td><td>3</td><td>49</td><td>.484</td><td>13.0</td></tr>
+            <tr><td>7</td><td>NC 다이노스</td><td>95</td><td>43</td><td>2</td><td>50</td><td>.462</td><td>15.0</td></tr>
+            <tr><td>8</td><td>두산 베어스</td><td>99</td><td>43</td><td>2</td><td>54</td><td>.443</td><td>17.0</td></tr>
+            <tr><td>9</td><td>SSG 랜더스</td><td>102</td><td>38</td><td>4</td><td>60</td><td>.388</td><td>22.5</td></tr>
+            <tr><td>10</td><td>키움 히어로즈</td><td>103</td><td>38</td><td>2</td><td>63</td><td>.376</td><td>24.0</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 2일 경기 종료 기준 (8월 5~9일 경기는 폭염으로 전면 취소돼 순위 변동 없음). 11일 리그 재개 이후 최신 결과는 공식 사이트를 참고하세요.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>강원도 인제 방태산 자연휴양림</strong> — 폭염 특보가 이어지는 요즘, 계곡물이 흐르는 울창한 숲 그늘 아래서 더위를 식히기 좋은 곳입니다. 산책로가 완만해 가족 단위로도 부담 없이 걸을 수 있어요.</p>
+    <p><strong>강릉·속초 해안가</strong> — 한여름 더위를 피해 시원한 동해 바닷바람을 쐬기 좋은 시기입니다. 이른 아침이나 늦은 오후에 방문하면 한낮의 뙤약볕을 피하면서도 여유롭게 해변을 즐길 수 있습니다.</p>
+  </section>
+
+  <!-- 9. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 09 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        This summer, South Korea is facing one of its hottest weeks in years. In some cities, the temperature has climbed close to 40 degrees Celsius. The heat is not just uncomfortable — it can also be dangerous. Because of the extreme heat, the country's professional baseball league canceled every single game for five days in a row. This had never happened before in the league's history. Doctors are asking people to drink plenty of water, avoid the sun in the early afternoon, and check on elderly neighbors. Even a normal weekend walk can feel exhausting right now. Experts say everyone should take the heat seriously and rest when the body feels tired.
+      </p>
+      <p style="margin-top:12px; color:#555;">
+        (번역) 올여름 한국은 몇 년 만에 가장 무더운 한 주를 보내고 있습니다. 일부 지역은 기온이 섭씨 40도에 가깝게 올랐습니다. 이 더위는 단순히 불쾌한 수준을 넘어 위험할 수도 있습니다. 극심한 폭염 때문에 한국의 프로야구 리그는 5일 연속으로 모든 경기를 취소했는데, 이는 리그 역사상 처음 있는 일이었습니다. 의사들은 물을 충분히 마시고, 이른 오후 시간대의 햇볕을 피하고, 나이 드신 이웃을 살펴봐 달라고 당부하고 있습니다. 지금은 평범한 주말 산책조차 힘겹게 느껴질 정도입니다. 전문가들은 이 더위를 가볍게 여기지 말고, 몸이 지칠 때는 반드시 쉬어야 한다고 말합니다.
+      </p>
+      <ul class="vocab-list">
+        <li><strong>extreme (adjective)</strong> — 극심한, 극도의</li>
+        <li><strong>cancel (verb)</strong> — 취소하다</li>
+        <li><strong>exhausting (adjective)</strong> — 진을 빼는, 몹시 지치게 하는</li>
+      </ul>
+      <p class="comprehension-q">Q. Why did the professional baseball league cancel its games for five days in a row?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
