@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 8일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 8일 토요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>어제(8월 7일) 국내 증시는 이틀 연속 내렸습니다. 코스피는 <strong>0.60% 하락한 6,258.77</strong>, 코스닥은 0.36% 내린 798.81로 마감했습니다. 같은 날 나스닥은 26,584로 0.90%, S&amp;P 500은 7,740으로 0.40% 오르며 <strong>국내 하락·미국 상승의 디커플링</strong>이 나타났습니다. 달러/원 환율은 1,416.1원으로 원화가 강세를 보였고, 미국 10년물 국채금리는 4.647%로 인플레이션 우려가 이어지고 있습니다.</p>
+    <ul>
+      <li><strong>삼성전자 (005930)</strong> 231,000원 / +0.22% — 매수 의견. 역대 최대 2분기 실적에 PER 11배로 저평가, AI 메모리 수혜 판단.</li>
+      <li><strong>SK하이닉스 (000660)</strong> 1,422,000원 / -4.88% — 매수 의견. ROE 44.1%·PER 3.9배 극저평가, HBM 슈퍼사이클 최대 수혜라는 진단.</li>
+      <li><strong>TIGER 반도체TOP10 (396500)</strong> 30,270원 / -2.65% — 중립에서 매수로. 반도체 섹터 조정 국면이나 실적 개선 시 반등 기대.</li>
+    </ul>
+    <p>다음 주는 <strong>8월 12일(수) 미국 소비자물가지수(CPI)</strong>가 최대 이벤트입니다. 리포트는 예상치를 웃돌면 긴축 장기화 우려로 하락, 밑돌면 금리 인하 기대로 상승 반응을 예상했습니다. 이어 8/13 영국 2분기 GDP·미국 PPI, 8/14 미국 소매판매와 미시간대 소비자심리지수가 발표됩니다.</p>
+    <div class="fortune-note">※ 본 리포트는 참고용 자료이며 투자 권유가 아닙니다. · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-08.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>오픈AI, 차세대 AI '아스트라' 개발 늦춘다</strong> — 사이버보안 우려를 이유로 출시 일정을 미뤘습니다. 성능 경쟁이 한창인 와중에 안전성을 이유로 속도를 늦춘 사례라 업계가 주목하고 있습니다. (<a href="https://zdnet.co.kr/view/?no=20260808063232" target="_blank">ZDNet Korea</a>)</li>
+        <li><strong>정부, 독자 AI 파운데이션 모델 2차 평가 돌입</strong> — 데이터 확보와 비용, 실제 활용성 검증이 관건으로 꼽힙니다. 국가 차원의 AI 기술 주권 확보 사업의 다음 단계입니다. (<a href="https://zdnet.co.kr/view/?no=20260807105027" target="_blank">ZDNet Korea</a>)</li>
+        <li><strong>인공지능 안전 서울포럼 2026 개최</strong> — 7~8일 서울 코엑스에서 열렸고, 8일 오후에는 '프론티어 AI 레드티밍 워크숍'이 함께 진행됐습니다. AI 모델의 취약점을 공격자 관점에서 찾아내는 방법론을 다뤘습니다. (<a href="https://zdnet.co.kr/view/?no=20260706100517" target="_blank">ZDNet Korea</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>코스피 6,200선 약보합 마감</strong> — 전 거래일보다 37.61포인트(0.60%) 내린 6,258.77로 장을 마쳤습니다. 전날 4.58% 급락에 이은 이틀 연속 하락입니다. (<a href="https://www.hankyung.com/article/2026080709686" target="_blank">한국경제</a>)</li>
+        <li><strong>SK하이닉스, 이틀 연속 급락</strong> — 전날 10% 넘게 빠진 데 이어 또 밀리며 개인 투자자들의 한숨이 깊어졌습니다. 솔리다임 프리IPO설과 주주환원 부재가 계속 발목을 잡고 있습니다. (<a href="https://www.hankyung.com/article/2026080710146" target="_blank">한국경제</a>)</li>
+        <li><strong>반도체 투톱의 엇갈린 하루</strong> — 코스피·코스닥이 동반 하락한 가운데 삼성전자는 오르고 SK하이닉스는 내리며 방향이 갈렸습니다. 같은 업종 안에서도 종목별 재료가 달리 작동하는 국면입니다. (<a href="https://www.hankyung.com/article/202608071015i" target="_blank">한국경제</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>민주당 당대표 경선, 인천 합동연설회</strong> — 송영길·정청래·김민석 후보가 8일 오후 인천 남동체육관에서 열린 당대표·최고위원 합동연설회에 참석했습니다. (<a href="https://www.newspim.com/news/view/20260808000097" target="_blank">뉴스핌</a>)</li>
+        <li><strong>패스트트랙 330일 → 90일 단축안, 8월 첫 본회의로</strong> — 민주당 주도로 마련된 국회법 개정안이 8월 임시국회 첫 본회의에서 의결될 예정입니다. 필리버스터 제도 자체를 손보는 추가 개정도 추진 중입니다. (<a href="https://www.fnnews.com/news/202608021540062522" target="_blank">파이낸셜뉴스</a>)</li>
+        <li><strong>8월 국회, 실제 가동은 중순부터</strong> — 회기는 시작됐지만 여름 휴가철과 민주당 전당대회 일정이 겹쳐 본격적인 심사는 중순 이후로 밀릴 전망입니다. (<a href="https://www.mt.co.kr/politics/2026/08/02/2026080211162916260" target="_blank">머니투데이</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>애플, 삼성디스플레이와 폴더블 OLED 3년 단독 공급 계약</strong> — 향후 3년간 폴더블폰용 OLED를 삼성디스플레이에서만 구매합니다. 애플로서도 대안 공급사가 없어 받아들인 조건이라는 분석입니다. (<a href="https://www.thelec.kr/news/articleView.html?idxno=54776" target="_blank">디일렉</a>)</li>
+        <li><strong>LG디스플레이 OLED 공급망에 중국 장비업체 첫 진입</strong> — 중국 CETC 계열 업체가 베트남 하이퐁 OLED 모듈 생산기지에 소규모 설비를 공급했습니다. 생산망 다변화의 교두보라는 평가와 함께 우려도 나옵니다. (<a href="https://www.g-enews.com/article/Global-Biz/2026/08/2026080809105819720c8c1c064d_1" target="_blank">글로벌이코노믹</a>)</li>
+        <li><strong>애플, 맥북에 '터치 OLED' 첫 적용</strong> — 삼성디스플레이가 단독 공급합니다. 노트북용 OLED 시장이 본격적으로 열리는 신호로 읽힙니다. (<a href="https://www.thelec.kr/news/articleView.html?idxno=60086" target="_blank">디일렉</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>손흥민, 4경기 연속골 행진 마감</strong> — 리그스컵 치바스 과달라하라전에서 거친 파울에 시달리며 공격포인트 없이 후반 41분 교체됐습니다. 공식전 5경기 연속 득점 기록은 다음으로 미뤘습니다. (<a href="https://www.newspim.com/news/view/20260806001019" target="_blank">뉴스핌</a>)</li>
+        <li><strong>LAFC, 승부차기 끝에 5-4 승리</strong> — 전반 38분 부앙가의 선제골 뒤 42분 알바라도에게 동점을 내줘 1-1로 비긴 뒤 승부차기에서 멕시코 명문 치바스를 눌렀습니다. (<a href="https://www.starnewskorea.com/sports/2026/08/06/2026080610131755093" target="_blank">스타뉴스</a>)</li>
+        <li><strong>패한 치바스 10번, 손흥민 유니폼 들고 웃었다</strong> — 상대 팀 에이스가 경기 후 유니폼 교환을 먼저 청했습니다. "내가 부탁했고, 다행히 그가 줬다"며 만족스러워했다고 합니다. (<a href="https://www.interfootball.co.kr/news/articleView.html?idxno=692073" target="_blank">인터풋볼</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 03 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      쉬는 것도 경기의 일부입니다.<br>
+      3회와 7회 사이에 숨을 고르는 팀이 9회까지 갑니다.
+    </div>
+  </section>
+
+  <!-- 4. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 04 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>주말이지만 마음 한쪽이 일에 가 있는 날입니다. 오늘만큼은 확실히 내려놓으세요. 미뤄둔 집안일 하나를 끝내면 오히려 머리가 가벼워집니다. 늦은 오후 소나기처럼, 기다리던 소식이 갑자기 옵니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>보합입니다. 크게 잃지도 얻지도 않는 날이니 계좌를 자주 들여다볼 이유가 없습니다. 다음 주 중반에 변수가 있으니 오늘은 현금 비중과 일정만 정리해두면 충분합니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>가족과 시간을 보내기 좋은 날입니다. 멀리 나가기보다 가까운 곳에서 함께 먹는 한 끼가 오래 남습니다. 오랜 친구에게 먼저 연락하면 반가운 답이 돌아옵니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 5. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 05 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li><strong>"야구 화요일에 다시 한대요. 이제 3회, 7회에 쉬는 시간이 생긴다네요."</strong> — 폭염으로 멈췄던 KBO가 11일 재개합니다. '쿨링 브레이크'라는 낯선 제도가 생겼다는 이야기는 야구 팬이 아니어도 흥미로워합니다.</li>
+      <li><strong>"삼성전자는 한 분기에 89조를 벌었다는데 주가는 왜 이럴까요?"</strong> — 실적과 주가가 따로 노는 요즘 장세는 누구나 한마디 보탤 수 있는 주제입니다. 정답을 낼 필요 없이 서로 답답함을 나누는 대화면 충분합니다.</li>
+      <li><strong>"우리는 39도인데 강원 동해안은 폭우래요. 태풍 때문이라던데."</strong> — 같은 나라에서 폭염과 폭우가 동시에 벌어지는 상황이라 이야깃거리가 됩니다. 휴가 계획 이야기로 자연스럽게 이어집니다.</li>
+    </ul>
+  </section>
+
+  <!-- 6. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 06 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/8, 토)</strong><br>
+        아침 최저 27도, 낮 최고 35도로 어제(39도)보다는 조금 내려가지만 여전히 무덥습니다. <strong>수도권에 폭염중대경보가 유지</strong>되고 있어 최고체감온도가 35도 안팎까지 오르겠습니다. 오후부터 밤 사이 서울·인천·경기에 <strong>소나기</strong>가 지나는 곳이 있겠고 예상 강수량은 5~40mm입니다. 한편 태풍 '돌핀'의 영향으로 강원 동해안에는 최대 150mm의 폭우가 예보돼 있습니다.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/9, 일)</strong><br>
+        최고기온이 조금씩 내려가겠지만 무더위와 열대야는 이어지겠습니다. 오후에는 내륙을 중심으로 소나기 가능성이 있습니다. 더위의 고비는 넘겼다는 분석이 나오지만 폭염특보는 당분간 유지될 전망입니다.
+      </div>
+    </div>
+    <div class="fortune-note">※ 기상청 예보 기반 요약입니다. 상세 수치는 <a href="https://www.weather.go.kr/w/index.do" target="_blank">기상청 날씨누리</a>에서 확인하세요.</div>
+  </section>
+
+  <!-- 7. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 07 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p><strong>야구가 화요일에 돌아옵니다.</strong> 폭염으로 8월 5일부터 주말까지 전 경기를 취소했던 KBO가 <strong>8월 11일 리그를 재개</strong>합니다. 올 시즌 폭염으로 취소된 경기는 30경기로 늘었습니다.</p>
+        <p>돌아오는 야구는 조금 달라집니다. 당분간 <strong>경기 시작 시각을 평일·주말 모두 오후 7시로 통일</strong>합니다(실내인 고척스카이돔은 중계 일정에 따라 평일 7시, 토요일 6시, 일요일 2시). 여기에 선수 피로를 덜기 위한 <strong>'쿨링 브레이크'</strong>가 정식 도입됩니다. 3회와 7회가 끝난 뒤 이닝 교대 시간을 4분으로 늘리고, 5회 뒤에는 필요하면 최대 6분까지 정비 시간을 줍니다.</p>
+        <p>LG의 마지막 경기는 4일 인천 SSG전이었고 <strong>8-10으로 졌습니다</strong>(3연패). 8회 이재원의 3점 홈런으로 9-8까지 따라붙었지만 뒤집지는 못했습니다. 후반기 15경기에서 <strong>3승 1무 11패</strong>, 팀 평균자책점 6.83으로 리그 최하위입니다.</p>
+        <p>3위 자리도 4위 두산에 2경기 차로 쫓기는 상황입니다. 다만 이번 일주일의 공백이 무너진 마운드를 추스를 시간이 될 수 있습니다. 재개 첫 경기가 후반기의 분기점이 되겠습니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT</td><td>96</td><td>58</td><td>2</td><td>36</td><td>0.617</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성</td><td>98</td><td>59</td><td>2</td><td>37</td><td>0.615</td><td>0.0</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG</td><td>100</td><td>55</td><td>1</td><td>44</td><td>0.556</td><td>5.0</td></tr>
+            <tr><td>4</td><td>두산</td><td>101</td><td>52</td><td>4</td><td>45</td><td>0.536</td><td>7.0</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 5일부터 폭염으로 경기가 없어 순위는 멈춰 있습니다. 기준 시점이 행마다 다릅니다 — LG·두산은 8월 2일 경기 종료 기준, KT·삼성은 8월 1일 기준입니다. 5~10위는 오늘 확인 가능한 자료로 검증되지 않아 싣지 않았습니다. 전체 순위는 <a href="https://www.koreabaseball.com/Record/TeamRank/TeamRank.aspx" target="_blank">KBO 팀 순위</a>를 참고하세요. (게임차는 승패 기준 계산값)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>경기 가평</strong> — 파주에서 한 시간 반 남짓, 오늘처럼 오후에 소나기가 예보된 날에 어울리는 선택입니다. 아침 일찍 출발해 계곡에서 반나절 보내고 비가 오기 전에 돌아오는 일정이면 이동 부담도 적습니다. 물이 차서 한낮에도 오래 앉아 있기 좋습니다.</p>
+    <p><strong>강원 정선</strong> — 더위를 확실히 피하고 싶다면 고지대로 올라가는 편이 낫습니다. 화암동굴은 연중 10도 안팎을 유지해 들어서는 순간 서늘하고, 병방치 스카이워크에서 내려다보는 동강 물줄기도 시원합니다. 태풍 영향을 받는 동해안 대신 내륙을 택하는 것이 이번 주말엔 안전합니다.</p>
+  </section>
+
+  <!-- 9. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 09 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Long before refrigerators existed, people still enjoyed cold drinks in summer. In winter, workers cut thick blocks of ice from frozen lakes and dragged them to buildings called ice houses. These were dug partly underground and packed with straw or sawdust, which slowed the melting down to almost nothing. A well-built ice house could keep its ice until the following autumn. Wealthy families served chilled desserts in August and quietly enjoyed the surprise on their guests' faces. The idea seems clever now, but it was simply ordinary technology at the time. Every generation forgets how much effort used to go into things we press a button for today.
+      </p>
+      <p><strong>[우리말 풀이]</strong> 냉장고가 있기 훨씬 전에도 사람들은 여름에 찬 음료를 즐겼습니다. 겨울이면 인부들이 얼어붙은 호수에서 두꺼운 얼음덩이를 잘라내 '아이스 하우스'라 부르는 건물로 끌고 갔습니다. 이 건물은 일부를 땅속에 파묻고 짚이나 톱밥을 채워 넣어, 녹는 속도를 거의 없다시피 늦췄습니다. 잘 지은 아이스 하우스는 이듬해 가을까지 얼음을 지킬 수 있었습니다. 부유한 집안은 8월에 차가운 후식을 내놓고 손님들의 놀란 표정을 조용히 즐겼습니다. 지금 보면 기발해 보이지만 당시에는 그저 평범한 기술이었습니다. 어느 세대나, 오늘 우리가 버튼 하나로 해결하는 일에 예전에는 얼마나 많은 수고가 들었는지를 잊고 삽니다.</p>
+      <ul class="vocab-list">
+        <li><strong>slow (동사)</strong> — 늦추다, 느리게 하다 ※ 형용사 '느린' 말고 동사 쓰임에 주목</li>
+        <li><strong>ordinary (형용사)</strong> — 평범한, 보통의 (↔ extraordinary 비범한)</li>
+        <li><strong>effort (명사)</strong> — 노력, 수고 (go into ~: ~에 (노력이) 들어가다)</li>
+      </ul>
+      <p class="comprehension-q">Q. Why did people pack ice houses with straw or sawdust?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
