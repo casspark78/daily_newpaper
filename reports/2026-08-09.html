@@ -116,17 +116,18 @@
   }
   .two-col .col-text { flex: 1 1 260px; }
   .two-col .col-table { flex: 1 1 320px; }
-  .standings-table {
+  .standings-table, .rank-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
   }
-  .standings-table th, .standings-table td {
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td {
     padding: 5px 6px;
     text-align: center;
     border-bottom: 1px solid #e4ddc9;
   }
-  .standings-table th {
+  .standings-table th, .rank-table th {
     background: #f7f2e6;
     color: #a3123a;
     font-weight: 700;
@@ -135,6 +136,22 @@
   }
   .standings-table td:nth-child(2) { text-align: left; }
   .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
   .standings-note {
     font-size: 11px;
     color: #9a9284;
@@ -262,18 +279,28 @@
     </div>
   </section>
 
-  <!-- 3. 오늘의 명언 -->
+  <!-- 3. 오늘의 역사 -->
   <section>
-    <div class="section-num">SECTION 03 · QUIET WORDS</div>
+    <div class="section-num">SECTION 03 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1992년</strong> — 황영조가 바르셀로나 올림픽 마라톤에서 우승하며 한국 육상에 올림픽 금메달을 안겼다. 56년 전 손기정의 베를린 올림픽 마라톤 우승(1936년 8월 9일)과 같은 날 이룬 쾌거로 더 큰 의미를 남겼다.</li>
+      <li><strong>1945년</strong> — 미국이 일본 나가사키에 원자폭탄을 투하했다. 히로시마에 이은 두 번째 원폭 투하로, 이는 제2차 세계대전 종전을 앞당긴 결정적 사건 중 하나로 꼽힌다.</li>
+    </ul>
+  </section>
+
+  <!-- 4. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 04 · QUIET WORDS</div>
     <h2>오늘의 명언</h2>
     <div class="quote-box">
       더위가 걸음을 늦출 때, 마음은 오히려 멀리 볼 여유를 얻는다.
     </div>
   </section>
 
-  <!-- 4. 오늘의 운세 -->
+  <!-- 5. 오늘의 운세 -->
   <section>
-    <div class="section-num">SECTION 04 · FORTUNE</div>
+    <div class="section-num">SECTION 05 · FORTUNE</div>
     <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
     <div class="fortune-grid">
       <div class="fortune-card">
@@ -292,9 +319,9 @@
     <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
   </section>
 
-  <!-- 5. 스몰토크 추천 -->
+  <!-- 6. 스몰토크 추천 -->
   <section>
-    <div class="section-num">SECTION 05 · SMALL TALK</div>
+    <div class="section-num">SECTION 06 · SMALL TALK</div>
     <h2>오늘 스몰토크 추천</h2>
     <ul>
       <li>"이번 폭염에 프로야구까지 5일 연속 경기가 전면 취소됐다던데, 그라운드 잔디 열기가 50도 가까이 올라갔다고 하네요." — KBO 역대 첫 폭염 중단 소식으로 대화 시작하기 좋아요.</li>
@@ -303,9 +330,9 @@
     </ul>
   </section>
 
-  <!-- 6. 날씨 -->
+  <!-- 7. 날씨 -->
   <section>
-    <div class="section-num">SECTION 06 · WEATHER</div>
+    <div class="section-num">SECTION 07 · WEATHER</div>
     <h2>날씨 (경기도 파주시)</h2>
     <div class="weather-box">
       <div class="weather-card">
@@ -319,9 +346,9 @@
     </div>
   </section>
 
-  <!-- 7. LG트윈스 + KBO 순위표 -->
+  <!-- 8. LG트윈스 + KBO 순위표 -->
   <section>
-    <div class="section-num">SECTION 07 · LG TWINS</div>
+    <div class="section-num">SECTION 08 · LG TWINS</div>
     <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
     <div class="two-col">
       <div class="col-text">
@@ -355,17 +382,40 @@
     </div>
   </section>
 
-  <!-- 8. 주말 여행지 추천 -->
+  <!-- 9. 주말 여행지 추천 -->
   <section>
-    <div class="section-num">SECTION 08 · WEEKEND TRIP</div>
+    <div class="section-num">SECTION 09 · WEEKEND TRIP</div>
     <h2>주말에 가면 좋을 국내 여행지</h2>
     <p><strong>강원도 인제 방태산 자연휴양림</strong> — 폭염 특보가 이어지는 요즘, 계곡물이 흐르는 울창한 숲 그늘 아래서 더위를 식히기 좋은 곳입니다. 산책로가 완만해 가족 단위로도 부담 없이 걸을 수 있어요.</p>
     <p><strong>강릉·속초 해안가</strong> — 한여름 더위를 피해 시원한 동해 바닷바람을 쐬기 좋은 시기입니다. 이른 아침이나 늦은 오후에 방문하면 한낮의 뙤약볕을 피하면서도 여유롭게 해변을 즐길 수 있습니다.</p>
   </section>
 
-  <!-- 9. 오늘의 짧은 영어 아티클 -->
+  <!-- 10. 오늘의 책 & 베스트셀러 -->
   <section>
-    <div class="section-num">SECTION 09 · ENGLISH FOR TODAY</div>
+    <div class="section-num">SECTION 10 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>루키우스 안나이우스 세네카 저 / 하와이 대저택 편역</td></tr>
+        <tr><td>2</td><td>오디세이아</td><td>호메로스 저 / 박문재 역</td></tr>
+        <tr><td>3</td><td>투명한 나선</td><td>히가시노 게이고 저 / 김선영 역</td></tr>
+        <tr><td>4</td><td>싯다르타</td><td>헤르만 헤세 저 / 박병덕 역</td></tr>
+        <tr><td>5</td><td>독서의 기술</td><td>고명환 저</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 2026년 8월 2일~8월 8일(8월 첫째 주) 종합 베스트셀러 기준. 세부 순위는 집계 시점에 따라 다소 달라질 수 있어 정확한 최신 순위는 예스24 공식 사이트를 참고하세요.</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>세네카, 오늘을 빼앗기고 있는 당신에게</strong> · 루키우스 안나이우스 세네카 저 / 하와이 대저택 편역 — 고대 로마 스토아 철학자 세네카의 에세이 중 '삶의 짧음에 대하여' 등을 현대 독자에 맞게 엮은 책이다. 바쁜 일상에 휩쓸려 정작 자신을 위한 시간을 놓치고 사는 이들에게, 지금 이 순간에 집중하고 마음의 평정을 지키라는 스토아적 조언을 전한다. 최근 예스24 종합 베스트셀러 1위에 오르며 고전 인문서로는 이례적인 대중적 인기를 얻고 있다. 계속되는 폭염 속 잠시 걸음을 늦추고 싶은 요즘, 함께 읽어보기 좋은 책이다.</p>
+    </div>
+  </section>
+
+  <!-- 11. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 11 · ENGLISH FOR TODAY</div>
     <h2>오늘의 짧은 영어 아티클</h2>
     <div class="english-article">
       <p class="eng-text">
