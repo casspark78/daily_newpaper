@@ -116,17 +116,18 @@
   }
   .two-col .col-text { flex: 1 1 260px; }
   .two-col .col-table { flex: 1 1 320px; }
-  .standings-table {
+  .standings-table, .rank-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
   }
-  .standings-table th, .standings-table td {
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td {
     padding: 5px 6px;
     text-align: center;
     border-bottom: 1px solid #e4ddc9;
   }
-  .standings-table th {
+  .standings-table th, .rank-table th {
     background: #f7f2e6;
     color: #a3123a;
     font-weight: 700;
@@ -135,6 +136,22 @@
   }
   .standings-table td:nth-child(2) { text-align: left; }
   .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
   .standings-note {
     font-size: 11px;
     color: #9a9284;
@@ -251,18 +268,29 @@
          해당 카테고리에서 뉴스를 찾지 못하면 그 news-category 블록 전체(h3 포함)를 생략한다. -->
   </section>
 
-  <!-- 3. 오늘의 명언 -->
+  <!-- 3. 오늘의 역사 -->
   <section>
-    <div class="section-num">SECTION 03 · QUIET WORDS</div>
+    <div class="section-num">SECTION 03 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      {{HISTORY_ITEMS}}
+      <!-- <li><strong>1969년</strong> — 사건 설명 한두 문장.</li> 형식으로 1~2개.
+           연도와 사실관계가 확인된 것만 넣는다. -->
+    </ul>
+  </section>
+
+  <!-- 4. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 04 · QUIET WORDS</div>
     <h2>오늘의 명언</h2>
     <div class="quote-box">
       {{QUOTE_TEXT}}
     </div>
   </section>
 
-  <!-- 4. 오늘의 운세 -->
+  <!-- 5. 오늘의 운세 -->
   <section>
-    <div class="section-num">SECTION 04 · FORTUNE</div>
+    <div class="section-num">SECTION 05 · FORTUNE</div>
     <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
     <div class="fortune-grid">
       <div class="fortune-card">
@@ -281,18 +309,18 @@
     <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
   </section>
 
-  <!-- 5. 스몰토크 추천 -->
+  <!-- 6. 스몰토크 추천 -->
   <section>
-    <div class="section-num">SECTION 05 · SMALL TALK</div>
+    <div class="section-num">SECTION 06 · SMALL TALK</div>
     <h2>오늘 스몰토크 추천</h2>
     <ul>
       {{SMALL_TALK_ITEMS}}
     </ul>
   </section>
 
-  <!-- 6. 날씨 -->
+  <!-- 7. 날씨 -->
   <section>
-    <div class="section-num">SECTION 06 · WEATHER</div>
+    <div class="section-num">SECTION 07 · WEATHER</div>
     <h2>날씨 (경기도 파주시)</h2>
     <div class="weather-box">
       <div class="weather-card">
@@ -306,9 +334,9 @@
     </div>
   </section>
 
-  <!-- 7. LG트윈스 + KBO 순위표 -->
+  <!-- 8. LG트윈스 + KBO 순위표 -->
   <section>
-    <div class="section-num">SECTION 07 · LG TWINS</div>
+    <div class="section-num">SECTION 08 · LG TWINS</div>
     <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
     <div class="two-col">
       <div class="col-text">
@@ -334,17 +362,40 @@
     </div>
   </section>
 
-  <!-- 8. 주말 여행지 추천 -->
+  <!-- 9. 주말 여행지 추천 -->
   <section>
-    <div class="section-num">SECTION 08 · WEEKEND TRIP</div>
+    <div class="section-num">SECTION 09 · WEEKEND TRIP</div>
     <h2>주말에 가면 좋을 국내 여행지</h2>
     {{WEEKEND_TRIP_ITEMS}}
     <!-- <p><strong>지명</strong> — 설명 한두 문장.</p> 형식으로 2곳 내외 -->
   </section>
 
-  <!-- 9. 오늘의 짧은 영어 아티클 -->
+  <!-- 10. 오늘의 책 & 베스트셀러 -->
   <section>
-    <div class="section-num">SECTION 09 · ENGLISH FOR TODAY</div>
+    <div class="section-num">SECTION 10 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        {{BESTSELLER_ROWS}}
+        <!-- 1~5위. 각 행: <tr><td>1</td><td>제목</td><td>저자</td></tr> -->
+      </tbody>
+    </table>
+    <div class="standings-note">{{BESTSELLER_AS_OF_NOTE}}</div>
+    <!-- 예: "※ 예스24 8월 첫째 주 종합 베스트셀러 기준" -->
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      {{BOOK_PICK}}
+      <!-- <p><strong>제목</strong> · 저자 — 소개 두세 문장.</p>
+           매일 다른 책을 고른다. 읽지 않은 책의 내용을 지어내지 않는다. -->
+    </div>
+  </section>
+
+  <!-- 11. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 11 · ENGLISH FOR TODAY</div>
     <h2>오늘의 짧은 영어 아티클</h2>
     <div class="english-article">
       <p class="eng-text">
