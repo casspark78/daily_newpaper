@@ -116,18 +116,19 @@
   }
   .two-col .col-text { flex: 1 1 260px; }
   .two-col .col-table { flex: 1 1 320px; }
-  .standings-table, .rank-table {
+  .standings-table, .rank-table, .golf-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
   }
   .standings-table th, .standings-table td,
-  .rank-table th, .rank-table td {
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td {
     padding: 5px 6px;
     text-align: center;
     border-bottom: 1px solid #e4ddc9;
   }
-  .standings-table th, .rank-table th {
+  .standings-table th, .rank-table th, .golf-table th {
     background: #f7f2e6;
     color: #a3123a;
     font-weight: 700;
@@ -137,6 +138,9 @@
   .standings-table td:nth-child(2) { text-align: left; }
   .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
   .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
   .book-pick {
     background: #f7f2e6;
     padding: 14px 18px;
@@ -362,17 +366,36 @@
     </div>
   </section>
 
-  <!-- 9. 주말 여행지 추천 -->
+  <!-- 9. 골프 금주 투어 일정 -->
   <section>
-    <div class="section-num">SECTION 09 · WEEKEND TRIP</div>
+    <div class="section-num">SECTION 09 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        {{GOLF_ROWS}}
+        <!-- PGA / LPGA / LIV / KLPGA / JLPGA 다섯 행을 항상 유지한다.
+             <tr><td>PGA</td><td>대회명</td><td>개최지</td><td>우승 ○○○ 또는 진행 중 현황</td></tr>
+             그 주에 대회가 없는 투어는 <tr class="is-off">로 '이번 주 대회 없음'을 적는다. -->
+      </tbody>
+    </table>
+    <div class="standings-note">{{GOLF_AS_OF_NOTE}}</div>
+    <!-- 예: "※ 8월 9일 기준. 진행 중인 대회의 순위는 공식 사이트를 참고하세요." -->
+  </section>
+
+  <!-- 10. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 10 · WEEKEND TRIP</div>
     <h2>주말에 가면 좋을 국내 여행지</h2>
     {{WEEKEND_TRIP_ITEMS}}
     <!-- <p><strong>지명</strong> — 설명 한두 문장.</p> 형식으로 2곳 내외 -->
   </section>
 
-  <!-- 10. 오늘의 책 & 베스트셀러 -->
+  <!-- 11. 오늘의 책 & 베스트셀러 -->
   <section>
-    <div class="section-num">SECTION 10 · BOOKS</div>
+    <div class="section-num">SECTION 11 · BOOKS</div>
     <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
     <table class="rank-table">
       <thead>
@@ -393,9 +416,9 @@
     </div>
   </section>
 
-  <!-- 11. 오늘의 짧은 영어 아티클 -->
+  <!-- 12. 오늘의 짧은 영어 아티클 -->
   <section>
-    <div class="section-num">SECTION 11 · ENGLISH FOR TODAY</div>
+    <div class="section-num">SECTION 12 · ENGLISH FOR TODAY</div>
     <h2>오늘의 짧은 영어 아티클</h2>
     <div class="english-article">
       <p class="eng-text">
