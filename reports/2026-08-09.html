@@ -116,18 +116,19 @@
   }
   .two-col .col-text { flex: 1 1 260px; }
   .two-col .col-table { flex: 1 1 320px; }
-  .standings-table, .rank-table {
+  .standings-table, .rank-table, .golf-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
   }
   .standings-table th, .standings-table td,
-  .rank-table th, .rank-table td {
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td {
     padding: 5px 6px;
     text-align: center;
     border-bottom: 1px solid #e4ddc9;
   }
-  .standings-table th, .rank-table th {
+  .standings-table th, .rank-table th, .golf-table th {
     background: #f7f2e6;
     color: #a3123a;
     font-weight: 700;
@@ -137,6 +138,9 @@
   .standings-table td:nth-child(2) { text-align: left; }
   .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
   .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
   .book-pick {
     background: #f7f2e6;
     padding: 14px 18px;
@@ -382,17 +386,36 @@
     </div>
   </section>
 
-  <!-- 9. 주말 여행지 추천 -->
+  <!-- 9. 골프 금주 투어 일정 -->
   <section>
-    <div class="section-num">SECTION 09 · WEEKEND TRIP</div>
+    <div class="section-num">SECTION 09 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>Wyndham Championship</td><td>Sedgefield Country Club, 그린즈버로(미국 노스캐롤라이나)</td><td>최종 라운드 진행 중 — 3라운드까지 Beau Hossler 선두(-12)</td></tr>
+        <tr class="is-off"><td>LPGA</td><td>—</td><td>—</td><td>이번 주 대회 없음 (다음 대회: 8/13~16 The Standard Portland Classic)</td></tr>
+        <tr><td>LIV</td><td>LIV Golf New York</td><td>Trump National Golf Club, 베드민스터(미국 뉴저지)</td><td>우승 Joaquin Niemann(-14) · 안병훈 공동6위(-5)</td></tr>
+        <tr><td>KLPGA</td><td>제13회 제주삼다수 마스터스</td><td>테디밸리 골프앤리조트, 제주 서귀포</td><td>최종 라운드 진행 중 — 3라운드까지 강채연 선두(-12)</td></tr>
+        <tr><td>JLPGA</td><td>북해도 meiji컵(Hokkaido Meiji Cup)</td><td>삿포로국제CC 시마마츠코스(일본 홋카이도)</td><td>최종 라운드 진행 중 — 2라운드까지 야스다 유카·요시자와 유즈키 공동선두(-5)</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 9일 오전(한국시간) 기준. PGA·KLPGA·JLPGA는 이날 최종 라운드가 진행 중이라 최신 순위는 각 투어 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 10. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 10 · WEEKEND TRIP</div>
     <h2>주말에 가면 좋을 국내 여행지</h2>
     <p><strong>강원도 인제 방태산 자연휴양림</strong> — 폭염 특보가 이어지는 요즘, 계곡물이 흐르는 울창한 숲 그늘 아래서 더위를 식히기 좋은 곳입니다. 산책로가 완만해 가족 단위로도 부담 없이 걸을 수 있어요.</p>
     <p><strong>강릉·속초 해안가</strong> — 한여름 더위를 피해 시원한 동해 바닷바람을 쐬기 좋은 시기입니다. 이른 아침이나 늦은 오후에 방문하면 한낮의 뙤약볕을 피하면서도 여유롭게 해변을 즐길 수 있습니다.</p>
   </section>
 
-  <!-- 10. 오늘의 책 & 베스트셀러 -->
+  <!-- 11. 오늘의 책 & 베스트셀러 -->
   <section>
-    <div class="section-num">SECTION 10 · BOOKS</div>
+    <div class="section-num">SECTION 11 · BOOKS</div>
     <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
     <table class="rank-table">
       <thead>
@@ -413,9 +436,9 @@
     </div>
   </section>
 
-  <!-- 11. 오늘의 짧은 영어 아티클 -->
+  <!-- 12. 오늘의 짧은 영어 아티클 -->
   <section>
-    <div class="section-num">SECTION 11 · ENGLISH FOR TODAY</div>
+    <div class="section-num">SECTION 12 · ENGLISH FOR TODAY</div>
     <h2>오늘의 짧은 영어 아티클</h2>
     <div class="english-article">
       <p class="eng-text">
