@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 11일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 11일 화요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>국내 증시가 강한 반등을 보였다. 코스피는 +0.65%, 코스닥은 +6.97% 급등하며 AI·반도체 기대감이 지수를 끌어올렸다. 다만 원/달러 환율이 1,410.3원, 미국 10년물 국채금리가 4.65%를 기록하며 글로벌 유동성에 대한 불확실성은 여전하다는 평가다.</p>
+    <ul>
+      <li><strong>삼성전자(005930)</strong> 230,000원 ▼-0.43% — 2분기 역대 최대 실적(영업이익 89.5조원, 이익률 52%)을 기록했으나 PER 18.27배로 밸류에이션은 적정 수준이라는 평가. 매수 의견 유지.</li>
+      <li><strong>SK하이닉스(000660)</strong> 1,420,000원 ▼-0.14% — 2분기 이익률 76%, ROE 96%의 압도적 수익성에도 PER은 11배로 저평가 구간이라는 분석. 강력 매수 의견.</li>
+      <li><strong>알테오젠(196170)</strong> ▲+15.57% — ADC(항체약물접합체) 기술 플랫폼을 기반으로 이날 코스닥 급등을 주도.</li>
+    </ul>
+    <p>이번 주 주요 일정: 8월 12일(수) 미국 7월 CPI 발표, 8월 13일(목) 미국 PPI 및 신규 실업수당 청구 지표가 예정돼 있다.</p>
+    <div class="fortune-note">※ 본 리포트는 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-11.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>삼성전자, 日 NTT 도코모와 AI 무선망 품질 최적화 기술 개발</strong> — 기지국 등 무선접속망에 AI를 적용해 전파 환경 변화에 맞춰 망을 제어하는 'AI-RAN' 기술을 공동 개발했다. (<a href="https://n.news.naver.com/mnews/article/020/0003739859?sid=101" target="_blank">동아일보</a>)</li>
+        <li><strong>"AI발 수요 구조 변화로 반도체, '사이클 산업'서 벗어나"</strong> — 국내 소재기업 관계자는 AI 등 신기술 등장으로 유리기판 같은 3D 신소재로의 체질 전환이 불가피하다고 진단했다. (<a href="https://n.news.naver.com/mnews/article/005/0001866085?sid=101" target="_blank">국민일보</a>)</li>
+        <li><strong>평면 패키징 한계 맞은 HBM, Z축 수직 적층이 판도 바꾼다</strong> — AI 데이터센터 수요 폭증에 대응해 인터포저 면적 한계를 넘어서는 3D 적층 패키징 기술이 주목받고 있다. (<a href="https://www.g-enews.com/view.php?ud=202608101548327574fbbec65dfb_1" target="_blank">글로벌이코노믹</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>미·이란 호르무즈 협상 교착…뉴욕증시 일제히 하락</strong> — 간밤 뉴욕 3대 지수가 숨 고르기에 들어간 가운데, 클리블랜드 연은 총재는 현재 금리 수준이 경제를 충분히 제약하지 못한다고 언급했다. (<a href="https://n.news.naver.com/mnews/article/215/0001261872?sid=101" target="_blank">한국경제TV</a>)</li>
+        <li><strong>엔·달러 159엔 돌파…미·중 통화 갈등 확산 우려</strong> — 엔저가 다시 심화되며 미국이 중국을 향한 환율 압박 수위를 높일 수 있다는 분석이 나왔다. (<a href="https://n.news.naver.com/mnews/article/215/0001261869?sid=101" target="_blank">한국경제TV</a>)</li>
+        <li><strong>아찔한 '롤러코스피'…서학개미, 두 달 만에 국장 이탈</strong> — 증시 변동성이 커지자 국내 투자자들이 다시 미국 주식 순매수로 돌아섰다는 한국은행 통계가 나왔다. (<a href="https://n.news.naver.com/mnews/article/022/0004150009?sid=101" target="_blank">세계일보</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>트럼프, '존스법' 세 번째 적용 유예…韓 조선업 장벽 걷힐까</strong> — 법 개정이나 폐지 없이 적용만 유예되는 방식이어서, 노동조합·지역 정치와 얽힌 정치적 부담을 피하려는 의도라는 해석이 나온다. (<a href="https://n.news.naver.com/mnews/article/022/0004150021?sid=104" target="_blank">세계일보</a>)</li>
+        <li><strong>민주당 8·17 전당대회 '슈퍼위크' 돌입…호남 표심에 쏠린 시선</strong> — 정청래·김민석 후보가 누적 득표율 1.48%포인트 차 접전 중인 가운데, 권리당원 비중이 큰 호남·서울·경기 투표가 이번 주 진행된다. (<a href="https://www.newscj.com/news/articleView.html?idxno=3424033" target="_blank">천지일보</a>)</li>
+        <li><strong>투표율 조작 질타…선관위 "오입력, 부정선거는 아니다"</strong> — 야당 의원들의 문제 제기에 선관위가 진화에 나섰고, 특검 후보 추천을 위한 국민추천위는 오는 14일 열릴 예정이다. (<a href="https://n.news.naver.com/mnews/article/055/0001379660?sid=100" target="_blank">SBS</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>353조 '메가투자' 시동…이재명 대통령 "속도전 넘어 전격전"</strong> — 충청권 메가프로젝트에 SK하이닉스·삼성전자·삼성디스플레이·삼성SDI 등 6개사가 참여하며, 반도체·디스플레이 생산시설 조기 가동을 지시했다. (<a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=691748" target="_blank">디지털투데이</a>)</li>
+        <li><strong>TSMC, 차세대 패키징 'CoPoS' 생산라인 완공</strong> — AI 산업발 첨단 패키징 수요 급증에 대응해 기존 디스플레이 패널 공장을 반도체 패키징 공장으로 전환하는 사례가 늘고 있다. (<a href="https://n.news.naver.com/mnews/article/011/0004650401?sid=104" target="_blank">서울경제</a>)</li>
+        <li><strong>LG디스플레이 OLED 공급망에 中 장비업체 첫 진입</strong> — 중국 CETC 계열 장비업체가 LG디스플레이 베트남 하이퐁 OLED 모듈 공장에 소규모 설비를 공급하며 한국 장비업체 중심 생산망에 교두보를 마련했다. (<a href="https://www.g-enews.com/article/Global-Biz/2026/08/2026080809105819720c8c1c064d_1" target="_blank">글로벌이코노믹</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>U-17 여자배구, 도미니카공화국 꺾고 세계선수권 16강 진출</strong> — 이승여 감독이 이끄는 한국 대표팀이 칠레 로스안데스에서 조별리그 4연승을 달리며 16강에 먼저 이름을 올렸다. (<a href="https://m.sports.naver.com/volleyball/article/001/0016243587" target="_blank">연합뉴스</a>)</li>
+        <li><strong>"포옛, 한국 축구대표팀 새 감독 유력" — 日 매체 보도</strong> — 대한축구협회가 공개채용 서류 접수를 마친 가운데, 일본 스포니치가 거스 포옛 전 전북현대 감독을 유력 후보로 전했다. (<a href="https://m.sports.naver.com/kfootball/article/421/0009106834" target="_blank">뉴스1</a>)</li>
+        <li><strong>토트넘 양민혁, 벨기에 베스테를로行 임대 임박</strong> — 디애슬레틱은 양민혁이 한 시즌 임대에 합의해 이적 절차를 마무리하고자 벨기에로 향했다고 전했다. (<a href="https://m.sports.naver.com/wfootball/article/001/0016243594" target="_blank">연합뉴스</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 03 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1929년</strong> — 미국 메이저리그 베이브 루스가 통산 500호 홈런을 기록하며 이 부문 최초의 선수가 됐다.</li>
+      <li><strong>2000년</strong> — 의약분업 강행에 반발한 전임의 1,300여 명이 사직서를 제출하고 전국적인 진료 거부에 들어가며 4차 총파업이 시작됐다.</li>
+    </ul>
+  </section>
+
+  <!-- 4. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 04 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      더위는 아직 물러가지 않았어도, 오늘 하루를 무엇으로 채울지는 언제나 나에게 달려 있다.
+    </div>
+  </section>
+
+  <!-- 5. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 05 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>화요일은 어제 다잡은 계획을 실제로 움직여보는 날입니다. 미뤄뒀던 일 하나를 오늘 처리하면 이번 주 전체 흐름이 한결 가벼워집니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>증시 변동성이 큰 시기인 만큼, 새로운 베팅보다는 이미 세워둔 원칙을 지키는 쪽이 유리합니다. 충동적인 매매는 피하는 게 좋겠습니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>가벼운 농담 한마디가 주변 분위기를 풀어주는 하루입니다. 다만 더위에 예민해진 상대의 말은 있는 그대로 받아들이기보다 한 번 더 헤아려보세요.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 6. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 06 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>"오늘 밤부터 KBO 다시 시작한대요" — 폭염 휴식기를 마치고 재개되는 프로야구, LG는 고척에서 키움과 첫 경기를 치른다는 이야기.</li>
+      <li>"어제 파주가 경기도에서 제일 더웠다던데요, 36도까지 올라갔대요" — 입추가 지났는데도 좀처럼 꺾이지 않는 더위 이야기.</li>
+      <li>"괌 근처에서 생긴 태풍은 다행히 우리 쪽으로 안 온다더라고요" — 16호 태풍 페이러우가 일본 먼바다 쪽으로 멀어지고 있다는 소식.</li>
+    </ul>
+  </section>
+
+  <!-- 7. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 07 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/11, 화)</strong><br>
+        낮 최고 34℃ 안팎의 폭염이 이어지는 가운데, 파주를 포함한 경기북부에는 폭염특보가 발효돼 있다. 어제(8/10) 파주 광탄면은 낮 최고 36.1℃까지 오르며 경기도에서 가장 높은 기온을 기록했다. 밤사이 기온이 25℃ 이상으로 유지되는 열대야도 계속되고 있다.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/12, 수)</strong><br>
+        입추 이후 더위가 조금씩 꺾이는 흐름이라는 예보가 있으나, 경기북부는 여전히 낮 최고 30도 중반대가 예상된다. 다만 지역별 세부 수치는 자료마다 차이가 있어, 정확한 예보는 <a href="https://www.weather.go.kr/" target="_blank">기상청 날씨누리</a>에서 확인을 권장한다.
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 08 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>LG 트윈스는 폭염 휴식기를 마치고 오늘(8/11) 밤 7시 고척돔에서 키움 히어로즈와 원정 경기를 치른다(선발투수 카를로스 카라스코 예고). 현재 LG는 KBO리그 3위(55승 1무 45패, 승률 .550)로 1위 KT 위즈에 6.5경기 뒤져 있다. 시즌 중반 리그 최초로 50승 고지를 밟았지만 후반기 흐름이 꺾이며 순위가 밀렸던 만큼, 짧은 휴식이 반등의 계기가 될지 주목된다. 오늘 경기 결과는 아직 확인되지 않아, 정확한 정보는 공식 사이트에서 확인을 권장한다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT 위즈</td><td>97</td><td>59</td><td>2</td><td>36</td><td>.621</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성 라이온즈</td><td>100</td><td>59</td><td>2</td><td>39</td><td>.602</td><td>1.5</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG 트윈스</td><td>101</td><td>55</td><td>1</td><td>45</td><td>.550</td><td>6.5</td></tr>
+            <tr><td>4</td><td>두산 베어스</td><td>101</td><td>52</td><td>4</td><td>45</td><td>.536</td><td>8.0</td></tr>
+            <tr><td>5</td><td>KIA 타이거즈</td><td>100</td><td>52</td><td>2</td><td>46</td><td>.531</td><td>8.5</td></tr>
+            <tr><td>6</td><td>한화 이글스</td><td>99</td><td>47</td><td>3</td><td>49</td><td>.490</td><td>12.5</td></tr>
+            <tr><td>7</td><td>NC 다이노스</td><td>95</td><td>43</td><td>2</td><td>50</td><td>.462</td><td>15.0</td></tr>
+            <tr><td>8</td><td>롯데 자이언츠</td><td>100</td><td>44</td><td>2</td><td>54</td><td>.449</td><td>16.5</td></tr>
+            <tr><td>9</td><td>SSG 랜더스</td><td>103</td><td>39</td><td>4</td><td>60</td><td>.394</td><td>22.0</td></tr>
+            <tr><td>10</td><td>키움 히어로즈</td><td>104</td><td>38</td><td>2</td><td>64</td><td>.373</td><td>24.5</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 폭염 휴식기 돌입 직전(8월 9일경) 경기 결과 기준(제3자 집계 사이트 참고치). KBO 리그는 오늘(8/11) 밤 경기부터 재개되며, 최신 결과는 KBO 공식 사이트에서 확인하는 것을 권장합니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 09 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>FedEx St. Jude Championship</td><td>TPC Southwind, 미국 멤피스</td><td>8/13(목) 개막 예정 (FedEx컵 플레이오프 1차전)</td></tr>
+        <tr><td>LPGA</td><td>The Standard Portland Classic</td><td>Columbia Edgewater CC, 미국 포틀랜드</td><td>8/13(목) 개막 예정</td></tr>
+        <tr class="is-off"><td>LIV</td><td colspan="3">이번 주 대회 없음 (8/9 뉴욕 대회 종료, 다음 대회는 8/21~23 인디애나폴리스)</td></tr>
+        <tr><td>KLPGA</td><td>메디힐·한국일보 챔피언십</td><td>몽베르CC, 경기 포천</td><td>8/13(목) 개막 예정. 박성현·김아림이 초청 선수로, 장하나도 출전</td></tr>
+        <tr><td>JLPGA</td><td>NEC 가루이자와72 골프토너먼트</td><td>가루이자와72 골프 북코스, 일본 나가노</td><td>8/14(금) 개막 예정</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 11일 기준. 이번 주(8/10~8/16) 대회 최종일이 속한 일정이며, 대회 개막 후 순위는 각 투어 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 10. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 10 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>경기 포천 산정호수</strong> — 명성산 자락에 자리한 호수로, 울창한 숲 그늘과 잔잔한 호숫가 산책로 덕분에 한여름에도 비교적 걷기 좋은 근교 나들이 코스다. 마침 이번 주 인근 몽베르CC에서 KLPGA 대회도 열려, 함께 둘러보기 좋다.</p>
+    <p><strong>강원 정선 병방치 스카이워크 &amp; 조양강 래프팅</strong> — 아찔한 전망대에서 굽이치는 동강 물줄기를 내려다본 뒤, 시원한 래프팅으로 더위를 씻어낼 수 있는 코스다.</p>
+  </section>
+
+  <!-- 11. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 11 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>루키우스 안나이우스 세네카</td></tr>
+        <tr><td>2</td><td>오디세이아</td><td>호메로스</td></tr>
+        <tr><td>3</td><td>투명한 나선</td><td>히가시노 게이고</td></tr>
+        <tr><td>4</td><td>오뒷세이아</td><td>호메로스</td></tr>
+        <tr><td>5</td><td>싯다르타</td><td>헤르만 헤세</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 종합 베스트셀러, 8월 4일~10일(1주) 집계 기준.</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>세네카, 오늘을 빼앗기고 있는 당신에게</strong> · 루키우스 안나이우스 세네카(하와이 대저택 편역) — 지난 6월 말 출간 이후 입소문을 타며 판매량이 꾸준히 늘다가, 최근 한 주 판매량이 전주 대비 186.3% 급증하며 예스24 종합 베스트셀러 1위에 올랐다. 로마 스토아 철학자 세네카가 시간을 낭비하지 말라고 조언하는 고전으로, 구매자 중 50대(39.6%)·40대(37.4%) 비중이 특히 높아 중장년층 독자들의 호응을 얻고 있다. 증시 변동성이 커진 요즘, 흔들리지 않는 태도를 이야기하는 이 책이 새삼 눈길을 끈다.</p>
+    </div>
+  </section>
+
+  <!-- 12. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 12 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        In South Korea, professional baseball sometimes takes a short pause during the hottest days of summer. This is often called a heat wave break. During the break, players can rest and recover from the extreme heat and humidity. Doctors say that playing hard outdoors in very high temperatures can be dangerous for athletes' health. After a few days off, teams return to the field with more energy and focus. Fans are always excited to watch their favorite team's first game back. For many supporters, that first game feels like a small new beginning in the middle of a long, hot summer.
+      </p>
+      <p style="font-size:13px; color:#555;">
+        (번역) 한국에서는 프로야구가 한여름 가장 더운 시기에 잠시 경기를 멈추기도 한다. 이를 흔히 '폭염 휴식기'라고 부른다. 휴식기 동안 선수들은 몸을 쉬게 하고 극심한 더위와 습도에서 회복할 시간을 가질 수 있다. 의사들은 매우 높은 기온에서 야외 운동을 강행하는 것이 선수들의 건강에 위험할 수 있다고 말한다. 며칠간의 휴식 후 팀들은 더 많은 에너지와 집중력을 가지고 다시 경기장으로 돌아온다. 팬들은 자신이 응원하는 팀의 복귀 첫 경기를 항상 설레는 마음으로 기다린다. 많은 팬들에게 그 첫 경기는 길고 더운 여름 한가운데서 맞는 작은 새 출발처럼 느껴진다.
+      </p>
+      <ul class="vocab-list">
+        <li><strong>pause (n./v.)</strong> — 잠시 멈춤, 중단하다</li>
+        <li><strong>extreme (adj.)</strong> — 극심한, 극단적인</li>
+        <li><strong>athlete (n.)</strong> — 운동선수</li>
+      </ul>
+      <p class="comprehension-q">Q. According to the passage, why do professional baseball games sometimes pause during the hottest part of summer?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
