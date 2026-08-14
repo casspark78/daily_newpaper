@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 15일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 15일 토요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>KOSPI는 미국 7월 생산자물가(PPI)가 예상을 밑돌며 인플레 둔화 기대가 확산되고 금리가 하락한 데 힘입어 +2.42% 오른 6,977.94에 마감했습니다. 반도체 섹터 강세가 두드러졌고 외국인은 3.03조원을 순매수했습니다.</p>
+    <ul>
+      <li><strong>SK하이닉스(000660)</strong> 1,645,000원 / +3.26% — ROE 44.1%·PER 3.9배의 압도적 재무지표로 "강력매수" 판정, 목표가 3,317,917원(+102% 상승여력).</li>
+      <li><strong>삼성전자(005930)</strong> 268,000원 / 보합 — PER 9.7배 저평가, ROE 15.1% 우수. 목표가 493,542원(+84% 상승여력).</li>
+      <li><strong>TIGER 반도체TOP10(396500)</strong> 36,240원 / +2.81% — 반도체 슈퍼사이클 진입 시 SK하이닉스·삼성전자 비중 50%로 수혜, "매수" 의견.</li>
+    </ul>
+    <p>이번 주 주요 일정: 8/19(수) 영국·유로존 CPI 발표, 8/20(목) 중국 인민은행 기준금리(LPR) 결정.</p>
+    <div class="fortune-note">본 리포트는 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-15.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>배경훈 장관 "AI 메가 프로젝트, 상용화 고속도로 만드는 것"</strong> — 현실 세계에 적용되는 피지컬 AI 분야에서 대한민국이 세계 1강을 목표로 정부 차원의 메가 프로젝트를 준비 중이라고 밝혔다. (<a href="https://n.news.naver.com/mnews/article/079/0004179070" target="_blank">노컷뉴스</a>)</li>
+        <li><strong>구글, 3주 만에 또 경량 AI 모델 출시</strong> — 코딩과 AI 에이전트 성능을 끌어올리고 토큰당 가격을 낮춰 시장 공략에 속도를 내는 모습이지만, 정작 차세대 플래그십 모델 출시는 늦어지고 있다. (<a href="https://n.news.naver.com/mnews/article/003/0014129215" target="_blank">뉴시스</a>)</li>
+        <li><strong>삼성전기, AI반도체용 유리기판 놓고 일본과 경쟁 본격화</strong> — 동우화인켐과 합작법인을 설립하며 사업화에 속도를 내는 가운데 일본 신코덴키도 고온에서 균열 없는 제품으로 맞서고 있다. (<a href="https://n.news.naver.com/mnews/article/011/0004652026" target="_blank">서울경제</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>뉴욕증시, 소비 둔화 우려에 하락…S&amp;P500 최고치서 후퇴</strong> — 14일(현지시간) 7월 미국 소매판매가 전월 대비 0.6% 감소로 예상보다 크게 둔화한 것으로 나타나며 3대 지수가 일제히 약세로 마감했다. (<a href="https://n.news.naver.com/mnews/article/374/0000527666" target="_blank">SBS Biz</a>)</li>
+        <li><strong>외국인 돌아오고 공포지수는 '뚝'…패닉 딛고 안정 찾는 국내 증시</strong> — 지난달부터 이달 초까지 이어진 변동성 장세가 진정되면서 국내 증시 투자심리가 빠르게 회복되고 있다. (<a href="https://n.news.naver.com/mnews/article/003/0014129213" target="_blank">뉴시스</a>)</li>
+        <li><strong>한국은행, 13년 만에 금 다시 매입</strong> — 한은이 올해 2분기 미국 증시에 상장된 금 현물 ETF 'SPDR 골드 트러스트'를 보유하는 등 금 관련 자산을 늘린 것으로 나타났다. (<a href="http://www.the-biz.co.kr/news/articleView.html?idxno=726220" target="_blank">더비즈</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>광복 81주년, 이재명 대통령 오늘 경축사…대북·대일 메시지 주목</strong> — 정부 주관 경축식이 오전에 열리며, 이 대통령은 대북 메시지와 함께 국민 통합도 촉구할 것으로 전망된다. (<a href="https://www.newsworks.co.kr/news/articleView.html?idxno=850443" target="_blank">뉴스웍스</a>)</li>
+        <li><strong>광복절 서울 도심, 진보·보수 단체 대규모 집회·행진</strong> — 자유통일당 5만명, 민주노총 1만명 등이 세종대로 일대에서 각각 집회를 열며 도심 교통 통제가 이뤄진다. (<a href="https://n.news.naver.com/mnews/article/029/0003042491" target="_blank">디지털타임스</a>)</li>
+        <li><strong>루비오 美국무장관 "한국, 없어서는 안 될 파트너"</strong> — 광복절 축하 메시지를 내고 지난해 트럼프 대통령의 국빈 방한을 계기로 양국 관계가 더욱 발전했다고 평가했다. (<a href="https://www.m-i.kr/news/articleView.html?idxno=1402718" target="_blank">매일일보</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>LG디스플레이, 직원 수 반년 만에 1000여명 감소</strong> — 대형 OLED 출하량 중 모니터용 비중이 지난해 10%대에서 올해 20%까지 늘어나는 등 사업구조 재편이 이어지고 있다. (<a href="https://n.news.naver.com/mnews/article/016/0002684258" target="_blank">헤럴드경제</a>)</li>
+        <li><strong>삼성디스플레이, 3분기 중대형 OLED 매출 1위 전망</strong> — 시장조사업계는 삼성디스플레이가 올해 3분기 매출 기준 글로벌 중대형 OLED 시장에서 처음으로 LG디스플레이를 제칠 것으로 내다봤다. (<a href="https://www.1conomynews.co.kr/news/articleView.html?idxno=49999" target="_blank">1코노미뉴스</a>)</li>
+        <li><strong>애플, 메모리 가격 급등에 삼성D·LGD에 OLED 단가 인하 요구</strong> — 발주 물량을 30~40% 늘려주겠다는 조건을 내걸었지만, 물량 증가만으로는 단가 압박을 상쇄하기 어렵다는 분석이 나온다. (<a href="https://www.newsway.co.kr/news/view?ud=2026081315171013497" target="_blank">뉴스웨이</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>이강인·김민재·황인범…유럽서 뛰는 한국 선수 어느새 31명</strong> — 유럽 5대 리그에서 활약하는 한국 선수단이 역대 최대 규모로 늘었으며, 분데스리가에는 5명이 뛰어 가장 많은 인원이 진출해 있다. (<a href="https://m.sports.naver.com/wfootball/article/421/0009115424" target="_blank">뉴스1</a>)</li>
+        <li><strong>여자농구, 일본에 0.2초 전 통한의 역전패…원정 평가전 2연패</strong> — 다음 달 아시안게임을 준비하는 여자농구 대표팀이 일본과의 2연전에서 모두 패하며 과제를 남겼다. (<a href="https://www.mediafine.co.kr/news/articleView.html?idxno=86731" target="_blank">미디어펜</a>)</li>
+        <li><strong>"광복절이고, 일본이어서"…농구대표팀 최고참 장재석, 각오 남겨</strong> — 9월 나고야 아시안게임을 앞둔 일본과의 평가전을 앞두고 각별한 의미를 담아 임했다고 밝혔다. (<a href="https://m.sports.naver.com/basketball/article/311/0002045568" target="_blank">엑스포츠뉴스</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 03 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1945년</strong> — 일본의 무조건 항복으로 한반도가 35년간의 식민 통치에서 벗어나 광복을 맞았다. 오늘로 광복 81주년이다.</li>
+      <li><strong>1948년</strong> — 대한민국 정부 수립이 공식 선포되었다.</li>
+    </ul>
+  </section>
+
+  <!-- 4. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 04 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      "자유는 어느 날 문득 주어지는 것이 아니라, 매일 다시 선택하는 용기다."
+    </div>
+  </section>
+
+  <!-- 5. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 05 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>빗소리에 마음이 차분해지는 하루입니다. 무리하게 일을 벌이기보다 지난 일을 되짚어보고 정리하기에 좋은 날이니, 쉬어가는 것도 하나의 전진임을 기억하세요.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>증시 훈풍이 이어지고 있지만 오늘은 관망하는 자세가 유리합니다. 큰 결정은 다음 주로 미루고, 이미 벌여둔 일의 마무리에 집중하면 실속이 따릅니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>공휴일을 맞아 가족이나 오랜 친구와 함께하는 시간이 마음을 든든하게 채워줍니다. 날씨 핑계로 집에서 함께 보내는 시간도 좋은 대화로 이어질 수 있어요.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 6. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 06 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>오늘이 광복 81주년 광복절이라던데, 서울 도심에 집회도 여러 곳에서 열린다고 하니 나들이 계획이 있다면 동선을 미리 확인해보는 게 좋겠어요.</li>
+      <li>어제 LG가 잠실에서 SSG에 3대5로 아깝게 졌다고 하더라고요 — 3위는 지켰지만 2위 삼성과 게임차가 6.5경기로 더 벌어져서 아쉬워요.</li>
+      <li>오늘·내일 이틀 다 수도권에 많은 비가 예보돼 있다던데, 주말 나들이보다는 집에서 책이나 영화 보며 보내기 좋은 날씨일지도 모르겠어요.</li>
+    </ul>
+  </section>
+
+  <!-- 7. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 07 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/15, 토)</strong><br>
+        최고 27~33℃ / 최저 21~24℃ · 대체로 흐리고 오후부터 소나기(수도권 5~50mm 예상)
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/16, 일)</strong><br>
+        최고 24~30℃ / 최저 21~25℃ · 대체로 흐리고 비(수도권 20~60mm 예상), 천둥·번개·돌풍 유의
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 08 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>LG 트윈스는 8월 14일 잠실 홈경기에서 SSG 랜더스에 3대5로 역전패했습니다. 시즌 성적은 57승 1무 47패(승률 0.548)로 리그 3위를 지켰지만, 2위 삼성 라이온즈와의 게임차는 6.5경기로 다소 벌어졌습니다. LG-SSG 3연전은 8월 16일까지 잠실에서 이어집니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT 위즈</td><td>101</td><td>61</td><td>2</td><td>38</td><td>0.616</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성 라이온즈</td><td>104</td><td>61</td><td>2</td><td>41</td><td>0.598</td><td>1.5</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG 트윈스</td><td>105</td><td>57</td><td>1</td><td>47</td><td>0.548</td><td>6.5</td></tr>
+            <tr><td>4</td><td>두산 베어스</td><td>105</td><td>55</td><td>4</td><td>46</td><td>0.545</td><td>7.0</td></tr>
+            <tr><td>5</td><td>KIA 타이거즈</td><td>104</td><td>54</td><td>2</td><td>48</td><td>0.529</td><td>8.5</td></tr>
+            <tr><td>6</td><td>한화 이글스</td><td>103</td><td>48</td><td>3</td><td>52</td><td>0.480</td><td>13.5</td></tr>
+            <tr><td>7</td><td>NC 다이노스</td><td>99</td><td>46</td><td>2</td><td>51</td><td>0.474</td><td>14.0</td></tr>
+            <tr><td>8</td><td>롯데 자이언츠</td><td>104</td><td>45</td><td>2</td><td>57</td><td>0.441</td><td>17.5</td></tr>
+            <tr><td>9</td><td>SSG 랜더스</td><td>107</td><td>42</td><td>4</td><td>61</td><td>0.408</td><td>21.0</td></tr>
+            <tr><td>10</td><td>키움 히어로즈</td><td>108</td><td>39</td><td>2</td><td>67</td><td>0.368</td><td>25.5</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 14일 기준. 이후 경기 결과가 반영되지 않았을 수 있으니 최신 순위는 KBO 공식 사이트를 참고하세요.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 09 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>FedEx St. Jude Championship</td><td>美 테네시 (TPC 사우스윈드)</td><td>진행 중 — 2라운드 기준 스코티 셰플러 단독선두(9언더 61타, 코스기록 타이). 3라운드는 오늘(현지 8/15) 진행.</td></tr>
+        <tr><td>LPGA</td><td>The Standard Portland Classic</td><td>美 오리건 (컬럼비아 엣지워터 CC)</td><td>진행 중 — 8/13~16 일정. 최신 순위는 출처마다 엇갈려 확인이 어려움, 공식 사이트 참고 요망.</td></tr>
+        <tr class="is-off"><td>LIV</td><td colspan="3">이번 주 대회 없음 (다음 대회는 8/20~23 LIV 골프 인디애나폴리스)</td></tr>
+        <tr><td>KLPGA</td><td>메디힐·한국일보 챔피언십</td><td>경기 포천 (몽베르 컨트리클럽)</td><td>진행 중 — 2라운드 기준 김민솔 단독선두(9언더 135타), 공동2위 노승희·이다연(8언더 136타).</td></tr>
+        <tr><td>JLPGA</td><td>NEC 카루이자와72 골프 토너먼트</td><td>日 나가노 (카루이자와72 골프 북코스)</td><td>진행 중 — 1라운드 야스다 유우카 선두(코스기록 타이 61타), 요시자와 유즈키 2주 연속 우승 도전 5위 출발.</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 14일 기준. 진행 중인 대회의 실시간 순위는 각 투어 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 10. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 10 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>임진각 평화누리공원 (파주)</strong> — 집에서 가까운 거리에 있으면서도 분단과 평화의 의미를 되새기기 좋은 곳입니다. 광복절 연휴에 잠시 들러 망배단과 평화의 종을 둘러보기 좋고, 비가 오더라도 인근 임진각 전시관에서 근현대사 자료를 관람할 수 있습니다.</p>
+    <p><strong>서대문형무소역사관 (서울)</strong> — 일제강점기 독립운동가들이 옥고를 치른 현장을 보존한 역사 공간으로, 광복절에 방문하면 그 의미가 남다릅니다. 실내 전시 위주라 우천에도 편하게 둘러볼 수 있습니다.</p>
+  </section>
+
+  <!-- 11. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 11 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>루키우스 안나이우스 세네카</td></tr>
+        <tr><td>2</td><td>오디세이아</td><td>호메로스</td></tr>
+        <tr><td>3</td><td>원소 원정대: 118개 캐릭터로 마스터하는 주기율표 공략집</td><td>아게도리도리</td></tr>
+        <tr><td>4</td><td>싯다르타</td><td>헤르만 헤세</td></tr>
+        <tr><td>5</td><td>니체의 초월자</td><td>프리드리히 니체</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 2026년 8월 8일~14일 종합 베스트셀러 기준.</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>싯다르타</strong> · 헤르만 헤세 — 1922년 발표된 헤세의 소설로, 브라만의 아들로 태어난 주인공이 고행자·구도자·세속의 삶을 두루 거치며 스스로 깨달음을 찾아가는 여정을 그렸다. 동양철학적 주제를 서구 문학 형식에 담아낸 대표작으로 꼽히며, 저자 헤세는 1946년 노벨문학상을 수상했다. 이번 주 종합 베스트셀러 4위에 오른 고전으로, 잠시 멈춰 서게 되는 날 함께 읽기 좋다.</p>
+    </div>
+  </section>
+
+  <!-- 12. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 12 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        August 15 is a national holiday in South Korea called Liberation Day, or Gwangbokjeol. On this day in 1945, Korea was freed from 35 years of Japanese colonial rule. The name means "the day the light returned." Every year, the government holds an official ceremony, and the President gives a special speech. Many families also fly the Korean flag, called the Taegukgi, outside their homes. This year marks the 81st anniversary of liberation. For many Koreans, the day is a quiet moment to remember history and think about peace.
+      </p>
+      <p style="margin-top:10px; color:#555;">
+        8월 15일은 한국의 국경일인 광복절입니다. 1945년 오늘, 한국은 35년간의 일제 식민 통치에서 해방되었습니다. '광복'이라는 이름은 '빛을 되찾은 날'이라는 뜻입니다. 매년 정부는 공식 경축식을 열고, 대통령은 특별 경축사를 발표합니다. 많은 가정에서는 태극기를 집 밖에 게양하기도 합니다. 올해는 광복 81주년이 되는 해입니다. 많은 한국인에게 이날은 역사를 기억하고 평화를 생각하는 조용한 시간입니다.
+      </p>
+      <ul class="vocab-list">
+        <li><strong>liberation (noun)</strong> — 해방, 광복</li>
+        <li><strong>colonial rule (noun phrase)</strong> — 식민 통치</li>
+        <li><strong>anniversary (noun)</strong> — 기념일, 주년</li>
+      </ul>
+      <p class="comprehension-q">Q. What does the name "Gwangbokjeol" mean, and what happened in Korea in 1945?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
