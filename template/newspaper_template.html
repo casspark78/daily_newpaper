@@ -116,19 +116,20 @@
   }
   .two-col .col-text { flex: 1 1 260px; }
   .two-col .col-table { flex: 1 1 320px; }
-  .standings-table, .rank-table, .golf-table {
+  .standings-table, .rank-table, .golf-table, .event-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
   }
   .standings-table th, .standings-table td,
   .rank-table th, .rank-table td,
-  .golf-table th, .golf-table td {
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td {
     padding: 5px 6px;
     text-align: center;
     border-bottom: 1px solid #e4ddc9;
   }
-  .standings-table th, .rank-table th, .golf-table th {
+  .standings-table th, .rank-table th, .golf-table th, .event-table th {
     background: #f7f2e6;
     color: #a3123a;
     font-weight: 700;
@@ -141,6 +142,8 @@
   .golf-table td:nth-child(n+2) { text-align: left; }
   .golf-table td:first-child { font-weight: 700; color: #a3123a; }
   .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
   .book-pick {
     background: #f7f2e6;
     padding: 14px 18px;
@@ -272,9 +275,29 @@
          해당 카테고리에서 뉴스를 찾지 못하면 그 news-category 블록 전체(h3 포함)를 생략한다. -->
   </section>
 
-  <!-- 3. 오늘의 역사 -->
+  <!-- 3. 국내 AI 행사 -->
   <section>
-    <div class="section-num">SECTION 03 · THIS DAY</div>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        {{AI_EVENT_ROWS}}
+        <!-- 오늘부터 1개월 이내 행사만, 가까운 순으로 3~5개.
+             <tr><td>8/19~21</td><td><a href="URL" target="_blank">행사명</a></td>
+                 <td>코엑스</td><td>주최 · 등록마감 8/14</td></tr>
+             등록 마감이 일주일 안이면 비고에 굵게 표시한다. -->
+      </tbody>
+    </table>
+    <div class="standings-note">{{AI_EVENT_NOTE}}</div>
+    <!-- 예: "※ 8월 15일 기준, 앞으로 한 달 내 행사. 일정·장소는 주최 측 사정으로 바뀔 수 있습니다." -->
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
     <h2>오늘, 역사 속의 이 날</h2>
     <ul class="history-list">
       {{HISTORY_ITEMS}}
@@ -283,18 +306,18 @@
     </ul>
   </section>
 
-  <!-- 4. 오늘의 명언 -->
+  <!-- 5. 오늘의 명언 -->
   <section>
-    <div class="section-num">SECTION 04 · QUIET WORDS</div>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
     <h2>오늘의 명언</h2>
     <div class="quote-box">
       {{QUOTE_TEXT}}
     </div>
   </section>
 
-  <!-- 5. 오늘의 운세 -->
+  <!-- 6. 오늘의 운세 -->
   <section>
-    <div class="section-num">SECTION 05 · FORTUNE</div>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
     <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
     <div class="fortune-grid">
       <div class="fortune-card">
@@ -313,18 +336,18 @@
     <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
   </section>
 
-  <!-- 6. 스몰토크 추천 -->
+  <!-- 7. 스몰토크 추천 -->
   <section>
-    <div class="section-num">SECTION 06 · SMALL TALK</div>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
     <h2>오늘 스몰토크 추천</h2>
     <ul>
       {{SMALL_TALK_ITEMS}}
     </ul>
   </section>
 
-  <!-- 7. 날씨 -->
+  <!-- 8. 날씨 -->
   <section>
-    <div class="section-num">SECTION 07 · WEATHER</div>
+    <div class="section-num">SECTION 08 · WEATHER</div>
     <h2>날씨 (경기도 파주시)</h2>
     <div class="weather-box">
       <div class="weather-card">
@@ -338,9 +361,9 @@
     </div>
   </section>
 
-  <!-- 8. LG트윈스 + KBO 순위표 -->
+  <!-- 9. LG트윈스 + KBO 순위표 -->
   <section>
-    <div class="section-num">SECTION 08 · LG TWINS</div>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
     <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
     <div class="two-col">
       <div class="col-text">
@@ -366,9 +389,9 @@
     </div>
   </section>
 
-  <!-- 9. 골프 금주 투어 일정 -->
+  <!-- 10. 골프 금주 투어 일정 -->
   <section>
-    <div class="section-num">SECTION 09 · GOLF</div>
+    <div class="section-num">SECTION 10 · GOLF</div>
     <h2>금주 골프 투어</h2>
     <table class="golf-table">
       <thead>
@@ -385,17 +408,17 @@
     <!-- 예: "※ 8월 9일 기준. 진행 중인 대회의 순위는 공식 사이트를 참고하세요." -->
   </section>
 
-  <!-- 10. 주말 여행지 추천 -->
+  <!-- 11. 주말 여행지 추천 -->
   <section>
-    <div class="section-num">SECTION 10 · WEEKEND TRIP</div>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
     <h2>주말에 가면 좋을 국내 여행지</h2>
     {{WEEKEND_TRIP_ITEMS}}
     <!-- <p><strong>지명</strong> — 설명 한두 문장.</p> 형식으로 2곳 내외 -->
   </section>
 
-  <!-- 11. 오늘의 책 & 베스트셀러 -->
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
   <section>
-    <div class="section-num">SECTION 11 · BOOKS</div>
+    <div class="section-num">SECTION 12 · BOOKS</div>
     <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
     <table class="rank-table">
       <thead>
@@ -416,9 +439,9 @@
     </div>
   </section>
 
-  <!-- 12. 오늘의 짧은 영어 아티클 -->
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
   <section>
-    <div class="section-num">SECTION 12 · ENGLISH FOR TODAY</div>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
     <h2>오늘의 짧은 영어 아티클</h2>
     <div class="english-article">
       <p class="eng-text">
