@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 17일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table, .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th, .event-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 17일 월요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+        <p>지난 금요일(8월 14일) 코스피는 <strong>2.42% 급등한 6,977.94</strong>로 마감했습니다. 장중 7,010.86까지 올라 7000선을 잠시 넘어섰습니다. 코스닥도 0.38% 올랐습니다. 같은 날 나스닥과 S&amp;P500이 소폭 내린 것과는 반대 방향이었는데, <strong>외국인이 코스피에서만 3조 원 넘게 순매수하며 5일 연속 사들인 것</strong>이 지수를 밀어 올렸습니다. 반도체 대형주의 견조한 흐름이 시장을 이끌었습니다.</p>
+    <ul>
+      <li><strong>삼성전자 (005930)</strong> 274,500원 / +2.43% — ROE 18.1%, 영업이익률 45.3%로 우수. 목표가 493,542원 대비 80% 상승여력이라는 판단.</li>
+      <li><strong>SK하이닉스 (000660)</strong> 1,645,000원 / +3.26% — ROE 44%, PER 3.9배로 극도의 저평가. 2분기 영업이익 60.5조의 역대급 실적, 목표가 대비 92% 상승여력.</li>
+      <li><strong>TIGER 반도체TOP10 (396500)</strong> 36,240원 / +2.81% — 반도체 업황 회복의 직접 수혜, 외국인 3조 순매수 모멘텀.</li>
+    </ul>
+    <p>이번 주는 <strong>8월 19일(수) 미국 소비자물가지수(CPI)</strong>가 가장 중요합니다. 연준 금리정책에 결정적 영향을 주는 지표입니다. 이어 8/20 중국 중앙은행 금리 결정, 8/21 한국 생산자물가지수(PPI)가 발표됩니다.</p>
+    <div class="fortune-note">※ 본 리포트는 참고용 자료이며 투자 권유가 아닙니다. · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-17.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul><li><strong>AI 추론 확산에 데이터센터 스위치 시장 커진다</strong> — 에이전틱 AI가 퍼지면서 프론트엔드 데이터센터 네트워크 수요가 급증하고 있습니다. 향후 스위치 매출 증가분의 절반 이상을 AI 관련 수요가 차지할 것으로 전망됩니다. (<a href="https://zdnet.co.kr/view/?no=20260817125238" target="_blank">ZDNet Korea</a>)</li>
+        <li><strong>로보택시는 이동시간을 판다</strong> — 운전자가 사라지자 자동차의 고객이 바뀌었다는 분석입니다. 차량 판매가 아니라 이동 중의 시간을 파는 사업으로 산업의 축이 옮겨가고 있습니다. (<a href="https://www.newspim.com/news/view/20260814000677" target="_blank">뉴스핌</a>)</li>
+        <li><strong>AI가 AI 반도체를 설계한다</strong> — 미세공정 다음의 병목은 '설계데이터'라는 진단입니다. 설계 자동화가 진전될수록 축적된 데이터를 가진 쪽이 유리해집니다. (<a href="https://www.newspim.com/news/view/20260812000988" target="_blank">뉴스핌</a>)</li></ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul><li><strong>외국인 3조 매수세에 '7천피' 목전</strong> — 코스피가 장중 7,010.86까지 올랐다가 6,977.94로 마감했습니다. 코스닥은 개인 매수에 힘입어 상승 마감했습니다. (<a href="https://www.fnnews.com/news/202608141600425206" target="_blank">파이낸셜뉴스</a>)</li>
+        <li><strong>반도체 '고점 우려' 한풀 꺾였다</strong> — 코스피가 닷새째 오르며 외국인이 돌아왔습니다. AI 투자 둔화 우려와 달리 AI 인프라 기업들의 호실적과 반도체 수출 증가가 이어지고 있습니다. (<a href="https://www.newspim.com/news/view/20260814000522" target="_blank">뉴스핌</a>)</li>
+        <li><strong>코스피 9000 회복의 조건은</strong> — 외국인 연속 순매수가 어디까지 이어질지가 관건이라는 분석입니다. 자금이 삼성전자와 SK하이닉스로 다시 유입되고 있습니다. (<a href="https://www.hankyung.com/article/202608140716i" target="_blank">한국경제</a>)</li></ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul><li><strong>오늘 민주당 8·17 전당대회</strong> — 오후 대전컨벤션센터에서 제3차 정기전국당원대회를 열고 당대표 1명과 최고위원 5명을 선출합니다. '1인 1표제'가 처음 적용되며 권리당원·대의원 투표 70%에 국민여론조사 30%가 반영됩니다. (<a href="https://www.fnnews.com/news/202608171018424669" target="_blank">파이낸셜뉴스</a>)</li>
+        <li><strong>권리당원 누적 득표 김민석 49.91% · 정청래 41.51%</strong> — 송영길 후보는 8.58%입니다. 순회 경선 결과가 이대로 굳어질지가 오늘의 관전 포인트입니다. (<a href="https://www.fnnews.com/news/202608171018424669" target="_blank">파이낸셜뉴스</a>)</li>
+        <li><strong>후보들 막판 지지 호소</strong> — 김민석 후보는 "새 지도부는 박선원·서미화·김용이길", 정청래 후보는 "제게 한 표를"이라며 마지막까지 표심을 파고들었습니다. 새 지도부의 과제는 국정 뒷받침과 당내 갈등 수습이 될 전망입니다. (<a href="https://www.mt.co.kr/politics/2026/08/17/2026081710013698301" target="_blank">머니투데이</a>)</li></ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul><li><strong>IMID 2026, 내일 부산 개막</strong> — 국제정보디스플레이학술대회가 8월 18~21일 부산 벡스코에서 열립니다. 삼성디스플레이는 최신 갤럭시에 적용된 프라이버시 OLED를, LG디스플레이는 신호 전송 속도를 크게 개선한 고주사율 OLED를 선보입니다. (<a href="https://zdnet.co.kr/view/?no=20260817124207" target="_blank">ZDNet Korea</a>)</li>
+        <li><strong>LG디스플레이, 애플 아이맥용 '5층 OLED' 개발 착수</strong> — 차세대 올인원 데스크톱 탑재를 겨냥해 2028년까지 개발을 마무리할 계획입니다. 번인과 수명 한계를 넘어서는 것이 과제입니다. (<a href="https://www.g-enews.com/article/Global-Biz/2026/08/2026081209414853400c8c1c064d_1" target="_blank">글로벌이코노믹</a>)</li>
+        <li><strong>삼성·LGD의 새 성장축은 'IT'</strong> — 애플이 아이패드 에어, 맥북 프로, 아이맥으로 OLED 적용을 단계적으로 넓힐 계획입니다. 2026~2030년 모니터 OLED 출하량은 연평균 33.9% 성장이 전망됩니다. (<a href="https://zdnet.co.kr/view/?no=20260812121414" target="_blank">ZDNet Korea</a>)</li></ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul><li><strong>손흥민의 LAFC, 리그스컵 8강 좌절</strong> — 정규시간 무패(1승 2무)에도 승점 7에 그쳐 MLS 팀 중 5위로 밀렸습니다. 이제 MLS 정규리그에 집중하게 됩니다. (<a href="https://www.newspim.com/news/view/20260814000961" target="_blank">뉴스핌</a>)</li>
+        <li><strong>손흥민, 리그스컵 3경기 연속 무득점</strong> — 다만 승부차기에서는 2번 키커로 나서 성공시켰습니다. 리그 4경기 연속골 뒤 찾아온 침묵입니다. (<a href="https://www.newspim.com/news/view/20260813000962" target="_blank">뉴스핌</a>)</li>
+        <li><strong>LAFC 감독, 혹사 우려 언급</strong> — 월드컵 직후 복귀해 6경기 연속 선발로 뛴 여파를 두고 "아예 방전된 선수도 있다"며 관리 필요성을 인정했습니다. (<a href="https://www.starnewskorea.com/sports/2026/08/09/2026080915462319540" target="_blank">스타뉴스</a>)</li></ul>
+    </div>
+  </section>
+
+  <!-- 3. 국내 AI 행사 -->
+  <section>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>8/18~21</td><td><a href="https://zdnet.co.kr/view/?no=20260817124207" target="_blank">IMID 2026 국제정보디스플레이학술대회</a></td><td>부산 벡스코</td><td>한국정보디스플레이학회 · <strong>내일 개막</strong></td></tr>
+        <tr><td>8/19~21</td><td><a href="https://www.aisummit.co.kr/" target="_blank">AI Summit Seoul &amp; Expo 2026</a></td><td>코엑스</td><td>9회째 · 100여 기업, 30+ 세션 · <strong>사전등록 마감 임박</strong></td></tr>
+        <tr><td>9/2</td><td><a href="https://www.etnews.com/20260814000102" target="_blank">UX Korea 2026 Fall</a></td><td>ST센터(강남)</td><td>피그마·LG전자·삼성SDS·네이버·KAIST</td></tr>
+        <tr><td>9/9</td><td><a href="https://zdnet.co.kr/view/?no=20260814102432" target="_blank">한·인도 AI 포용금융 컨퍼런스</a></td><td>서울(하이브리드)</td><td>AI 신용평가·보험 등 금융 접근성</td></tr>
+        <tr><td>9/11</td><td><a href="https://www.newspim.com/news/view/20260813001201" target="_blank">제14회 뉴스핌 아시아 포럼</a></td><td>여의도 페어몬트</td><td>'AI 대전환·에너지 안보' · 사전등록 9/10 정오까지</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 17일 기준, 앞으로 한 달 내 행사입니다. 일정·장소는 주최 측 사정으로 바뀔 수 있으니 등록 전 공식 페이지를 확인하세요.</div>
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1945년</strong> — 인도네시아가 독립을 선언했습니다. 일본 항복 이틀 뒤였고, 네덜란드와의 4년에 걸친 독립전쟁이 그 뒤로 이어졌습니다.</li>
+      <li><strong>1970년</strong> — 소련의 금성 탐사선 베네라 7호가 발사됐습니다. 그해 12월 금성 표면에 착륙해, 지구 아닌 다른 행성에 착륙해 신호를 보낸 최초의 탐사선이 됐습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 5. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      열흘 넘게 39도를 견디다 맞는 비는<br>그냥 비가 아니라 사면입니다.<br>버틴 뒤에야 알아보는 것들이 있습니다.
+    </div>
+  </section>
+
+  <!-- 6. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>한 주의 시작이지만 날씨처럼 흐렸다 갰다 합니다. 오전에 판단이 서지 않는 일은 오후로 미루세요. 비 그친 뒤 시야가 트이듯 늦은 오후에 실마리가 보입니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>흐름은 좋은 쪽입니다. 다만 남들이 들어갈 때 따라 들어가는 것만 조심하세요. 이번 주 중반에 굵직한 발표가 있으니 오늘은 자리를 지키는 것으로 충분합니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>말보다 듣는 편이 이로운 날입니다. 의견이 갈리는 자리에서 한 발 물러서 있으면 나중에 신뢰가 남습니다. 우산을 빌려주는 작은 호의가 오래 기억됩니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 7. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li><strong>"오늘 민주당 대표 뽑는 날이래요. 김민석이냐 정청래냐."</strong> — 오후 대전에서 결과가 나옵니다. 정치색을 드러내지 않고도 "누가 될 것 같아요?" 정도로 가볍게 던지기 좋은 화제입니다.</li>
+      <li><strong>"코스피가 7000을 찍었다가 내려왔대요. 외국인이 3조를 샀다던데."</strong> — 지난 금요일 장중 7,010까지 올랐습니다. 몇 주 전 폭락하던 때와 비교하면 격세지감이라 이야기가 이어집니다.</li>
+      <li><strong>"드디어 비 오네요. 지난주 39도가 거짓말 같아요."</strong> — 오늘 낮 최고가 27~31도로 뚝 떨어졌습니다. 다만 내일부터 다시 오른다니, 그 얘기로 자연스럽게 마무리할 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 8. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/17, 월)</strong><br>
+        오전까지 전국 대부분 지역에 비가 내리겠고, 오후에는 곳곳에 소나기가 지나겠습니다. 서울·인천·경기 예상 강수량은 <strong>5~40mm</strong>입니다. 아침 최저 21~25도, 낮 최고 <strong>27~31도</strong>로 지난주 39도의 극한 폭염이 확실히 한풀 꺾였습니다. 우산을 챙기시고, 비 그친 뒤 습도가 오르니 실내 환기에 신경 쓰세요.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/18, 화)</strong><br>
+        다시 기온이 오르기 시작합니다. 이번 비가 더위의 완전한 끝은 아니라는 예보라, 오늘의 시원함을 마지막 휴식으로 여기시는 편이 낫겠습니다. 상세 예보는 아침에 한 번 더 확인하세요.
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>어제(8월 16일) 잠실 SSG전에서 <strong>0-6으로 완패</strong>했습니다. 안방에서 영봉패라 뼈아픕니다. SSG 선발 아빌라에게 7이닝 4피안타 2볼넷 8삼진 무실점으로 완전히 묶였습니다.</p>
+        <p>LG 선발 <strong>카라스코는 5.1이닝 8피안타 2피홈런 5실점</strong>으로 시즌 첫 패를 안았습니다. 8월 11일 키움전에서 3연패를 끊고 데뷔 첫 승을 거뒀던 투수라 아쉬움이 큽니다. SSG에서는 한유섬이 4타수 3안타(1홈런) 2타점으로 앞장섰고, 고별전을 치른 마드리스도 홈런을 보탰습니다.</p>
+        <p>주말 SSG 3연전을 내주면서 흐름이 꺾였습니다. 14일 경기도 김재환의 결승 2점포에 5-3으로 졌습니다. 3위는 지키고 있지만 4위 두산과의 간격이 1.5경기까지 좁혀졌습니다.</p>
+        <p>오늘(월요일)은 리그 정기 휴식일로 경기가 없습니다. 한 박자 쉬어가며 마운드를 정비할 시간입니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT</td><td>102</td><td>61</td><td>2</td><td>39</td><td>0.610</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성</td><td>105</td><td>62</td><td>2</td><td>41</td><td>0.602</td><td>0.5</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG</td><td>106</td><td>58</td><td>1</td><td>47</td><td>0.552</td><td>5.5</td></tr>
+            <tr><td>4</td><td>두산</td><td>106</td><td>55</td><td>4</td><td>47</td><td>0.539</td><td>7.0</td></tr>
+            <tr><td>6</td><td>한화</td><td>104</td><td>48</td><td>3</td><td>53</td><td>0.475</td><td>13.5</td></tr>
+            <tr><td>7</td><td>NC</td><td>100</td><td>46</td><td>2</td><td>52</td><td>0.469</td><td>14.0</td></tr>
+            <tr><td>8</td><td>롯데</td><td>105</td><td>46</td><td>2</td><td>57</td><td>0.447</td><td>16.5</td></tr>
+            <tr><td>9</td><td>SSG</td><td>108</td><td>42</td><td>4</td><td>62</td><td>0.404</td><td>21.0</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 16일 경기 시작 전 기준이라 어제 경기 결과는 반영되지 않았습니다(LG는 패배로 58승 1무 48패). <strong>5위(KIA)와 10위(키움)는 오늘 확인 가능한 자료로 검증되지 않아 뺐습니다.</strong> 게임차는 승패 기준 계산값입니다. 전체 순위는 <a href="https://www.koreabaseball.com/Record/TeamRank/TeamRank.aspx" target="_blank">KBO 팀 순위</a>를 참고하세요.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 10 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>FedEx St. Jude Championship</td><td>미국 테네시</td><td>우승 <strong>스코티 셰플러</strong> · 페덱스컵 플레이오프 1차전</td></tr>
+        <tr><td>LPGA</td><td>Standard Portland Classic</td><td>미국 오리건</td><td>우승 <strong>지노 티띠꾼</strong>(태국) · 통산 10승</td></tr>
+        <tr class="is-off"><td>LIV</td><td colspan="2">이번 주 대회 없음</td><td>직전 8/9 뉴욕 요아킨 니만 우승 · 다음은 8/23 인디애나폴리스</td></tr>
+        <tr><td>KLPGA</td><td>메디힐·한국일보 챔피언십</td><td>국내</td><td>우승 <strong>서교림</strong> · 통산 3승</td></tr>
+        <tr><td>JLPGA</td><td>NEC 가루이자와 72</td><td>일본 나가노현</td><td>우승 <strong>야스다 유카</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 16일 종료 기준. 이번 주는 PGA 페덱스컵 플레이오프 2차전(BMW 챔피언십, 8/23 미주리)과 LIV 인디애나폴리스가 이어집니다.</div>
+  </section>
+
+  <!-- 11. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>강원 삼척</strong> — 내일부터 더위가 되돌아온다니 다음 주말은 다시 피서지가 답입니다. 환선굴은 연중 10도 안팎이라 여름에 들어서면 서늘하고, 장호항은 물이 맑아 '한국의 나폴리'로 불립니다. 동굴과 바다를 하루에 묶을 수 있는 조합이 삼척의 장점입니다.</p>
+    <p><strong>경북 문경</strong> — 파주에서 멀지만 그만큼 사람이 덜 몰립니다. 문경새재 옛길은 흙길이라 맨발로 걷기 좋고 양옆으로 그늘이 이어져 한낮에도 견딜 만합니다. 폐선을 활용한 철로자전거는 아이나 어른이나 반응이 좋습니다.</p>
+  </section>
+
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 12 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>하와이 대저택 편역</td></tr>
+        <tr><td>2</td><td>투명한 나선</td><td>히가시노 게이고</td></tr>
+        <tr><td>3</td><td>오디세이아</td><td>호메로스</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 <strong>8월 첫째 주</strong> 종합 기준입니다. 8월 둘째·셋째 주 순위는 오늘 확인 가능한 자료로 검증되지 않아 싣지 않았고, 4~5위도 같은 이유로 뺐습니다. 최신 순위는 <a href="https://store.kyobobook.co.kr/bestseller/total/weekly" target="_blank">교보문고</a>나 <a href="https://www.yes24.com/product/category/weekbestseller?categoryNumber=001" target="_blank">예스24</a>에서 확인하세요.</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>세네카, 오늘을 빼앗기고 있는 당신에게</strong> · 하와이 대저택 편역 — 로마 철학자 세네카의 글을 오늘의 언어로 옮긴 책입니다. 6월 말 출간 후 입소문만으로 판매가 늘더니 직전 주 대비 186.3% 급증하며 처음 종합 1위에 올랐습니다. 구매자의 39.6%가 50대, 37.4%가 40대로 중장년 독자가 압도적입니다. 전당대회 결과를 기다리고 지수 등락을 좇느라 하루가 흘러가는 날, "무엇이 내 시간을 가져가고 있는가"라는 2천 년 전 질문이 묘하게 맞아떨어집니다.</p>
+    </div>
+  </section>
+
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        After a long dry spell, the first rain has a smell that most people recognize immediately. Scientists call it petrichor. The word was invented in 1964 by two Australian researchers who found that plants release oils during dry weather, and these oils settle into soil and stone. When rain finally arrives, the drops trap tiny air bubbles that burst upward and carry those oils into the air. Bacteria in the soil add their own compound, which our noses detect at astonishingly low concentrations. Some scientists think humans evolved this sensitivity because finding rain once meant finding survival. It is a strange thought: the smell you enjoy on a summer afternoon may be older than language itself.
+      </p>
+      <p><strong>[우리말 풀이]</strong> 오랜 가뭄 끝에 내리는 첫 비에는 누구나 대번에 알아채는 냄새가 있습니다. 과학자들은 이것을 '페트리코(petrichor)'라고 부릅니다. 1964년 두 호주 연구자가 만든 말인데, 이들은 식물이 건조한 날씨에 기름 성분을 내보내고 그것이 흙과 돌에 내려앉는다는 사실을 밝혀냈습니다. 마침내 비가 오면 빗방울이 작은 공기 방울을 가두고, 그 방울이 위로 터지면서 기름 성분을 공기 중으로 실어 나릅니다. 흙 속 박테리아도 자기 화합물을 보태는데, 우리 코는 이것을 놀라울 만큼 옅은 농도에서도 감지합니다. 일부 과학자들은 비를 찾는 일이 곧 생존을 찾는 일이던 시절에 인간이 이 감각을 얻었다고 봅니다. 묘한 생각입니다 — 여름 오후에 당신이 즐기는 그 냄새가 언어보다 오래됐을지도 모릅니다.</p>
+      <ul class="vocab-list">
+        <li><strong>dry spell (명사구)</strong> — 건조한 기간, 가뭄이 이어지는 시기 (spell: 한동안 계속되는 기간)</li>
+        <li><strong>settle (동사)</strong> — 내려앉다, 가라앉다 ※ '정착하다' 외에 이런 물리적 쓰임이 흔합니다</li>
+        <li><strong>sensitivity (명사)</strong> — 민감성, 감지 능력 (형용사 sensitive: 민감한)</li>
+      </ul>
+      <p class="comprehension-q">Q. How do raindrops carry the plant oils into the air?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
