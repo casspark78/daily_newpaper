@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 21일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table, .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th, .event-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 21일 금요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>전일(8/20) 코스피가 +5.89% 급등하며 전일 급락분을 대부분 만회했습니다. SK하이닉스의 역대급 40조원 자사주 소각 발표와 마이크론의 100억달러 규모 AI 메모리 연구소 설립 소식이 반도체 섹터를 끌어올렸습니다. 미국 증시는 반대로 약세(나스닥 -0.52%, S&amp;P500 -0.69%)를 보였지만, 국내 반도체 펀더멘털에 대한 긍정적 시각이 우위를 점했습니다.</p>
+    <ul>
+      <li><strong>삼성전자(005930)</strong> 270,500원 ▲9.29% — ROE 17.6%, PER 11.9배로 저평가 상태이며 172조원 영업이익 기대감에 힘입어 매수 의견이 제시됐습니다.</li>
+      <li><strong>SK하이닉스(000660)</strong> 1,640,000원 ▲9.33% — ROE 44.1%, Forward PER 3.9배의 극도 저평가 구간에서 40조원 자사주 소각 발표까지 겹쳐 강력매수 의견이 나왔습니다.</li>
+      <li><strong>TIGER 반도체TOP10(396500)</strong> 36,200원 ▲9.23% — 삼성전자·SK하이닉스 비중이 절반에 달하는 ETF로, 1년 수익률 +210%를 기록하며 매수 의견을 받았습니다.</li>
+    </ul>
+    <p>이번 주 주요 일정: 8/27~29 잭슨홀 경제 심포지엄(연준 통화정책 힌트), 9/15~16 FOMC 회의(금리 동결 여부 주목).</p>
+    <div class="fortune-note">본 리포트는 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-21.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>서울 코엑스서 '2026 OCP 코리아 테크 데이' 개최</strong> — 'AI의 미래를 설계하는 인프라 혁신'을 주제로 21일 열리는 국내 최대 오픈 데이터센터 포럼으로, 지난해보다 1.5배 커진 규모로 1500명이 참관한다. (<a href="https://www.aitimes.com/news/articleView.html?idxno=213319" target="_blank">AI타임스</a>)</li>
+        <li><strong>AWS, 국내 첫 '피지컬 AI 프론티어 프로그램' 가동</strong> — 케어링·리얼월드·알체라 등이 1기 참여기업으로 선정돼 12월까지 클라우드·AI 기술 지원을 받으며 로봇 AI 역량을 고도화한다. (<a href="https://www.itdaily.kr/news/articleView.html?idxno=241105" target="_blank">아이티데일리</a>)</li>
+        <li><strong>비트고코리아, 해외 기업 최초로 국내 가상자산사업자(VASP) 등록 수리</strong> — 인수합병 없이 신설 법인으로 금융정보분석원 심사를 통과해 기관 대상 디지털자산 커스터디 서비스를 시작한다. (<a href="https://www.koreaherald.com/article/10846857" target="_blank">코리아헤럴드</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>코스피, 매수 사이드카 속 6,850선 전격 회복 마감</strong> — 20일 코스피가 381.41포인트(5.89%) 오른 6,852.58에 마감하며 반도체 대형주가 급등을 이끌었다. (<a href="https://www.businesskorea.co.kr/news/articleView.html?idxno=275182" target="_blank">비즈니스코리아</a>)</li>
+        <li><strong>금융권, 경남 수해 피해 가계·중소기업에 긴급 금융지원</strong> — 금융위원회가 대출 만기연장·상환유예·카드대금 청구유예 등을 마련했고, 신한·KB국민·하나은행은 최대 5000만원까지 생활안정자금을 지원한다. (<a href="https://www.newsis.com/view/NISX20260820_0003756002" target="_blank">뉴시스</a>)</li>
+        <li><strong>비트고코리아, 해외 기업 최초로 가상자산사업자(VASP) 등록 수리</strong> — 하나금융그룹·SK텔레콤이 주주로 참여한 비트고코리아가 기관 대상 디지털자산 커스터디 사업을 시작한다. (<a href="https://www.koreaherald.com/article/10846857" target="_blank">코리아헤럴드</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>조희대 대법원장 '서면 제청' 후폭풍…대법관 인선 진통</strong> — 대통령과의 대면 협의 없이 대법관 후보 2명을 서면으로 제청한 것을 두고 더불어민주당은 임명 절차 보완을, 범야권은 삼권분립 훼손 중단을 주장하며 정면충돌하고 있다. (<a href="https://biz.heraldcorp.com/article/10846509" target="_blank">헤럴드경제</a>)</li>
+        <li><strong>국회, 8월 임시국회 본회의서 쟁점법안 잇달아 처리</strong> — 21일까지 나흘간 이어지는 8월 임시회 본회의에서 패스트트랙 단축법 등 쟁점성 법안 처리가 이어지고 있다. (<a href="https://www.newdaily.co.kr/site/data/html/2026/08/20/2026082000242.html" target="_blank">뉴데일리</a>)</li>
+        <li><strong>트럼프, "북한 핵무기 57개 보유…올해 안에 김정은 만날 것"</strong> — 트럼프 대통령이 19일 북한의 핵무기 보유량을 구체적 숫자로 처음 언급하며 연내 북미 정상회담 가능성을 시사했다. (<a href="https://biz.heraldcorp.com/article/10846656" target="_blank">헤럴드경제</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>삼성디스플레이, 폴더블 OLED 투자 확대…아산 A7 공장 공사 재개</strong> — 애플 맥북 프로용 OLED 양산 공식화와 함께 2040년까지 67조원 투자 계획을 밝혔으며 충남 아산 2단지 신공장 건설도 다시 시작됐다. (<a href="https://www.edaily.co.kr/News/Read?newsId=02069686645548304" target="_blank">이데일리</a>)</li>
+        <li><strong>2026년 글로벌 디스플레이 설비투자 57% 급증, OLED가 주도</strong> — 카운터포인트리서치에 따르면 OLED 투자가 74% 늘며 전체 성장을 견인하고, IT용 8.7세대 라인 구축이 투자의 61%를 차지할 전망이다. (<a href="https://korea.counterpointresearch.com/2026-display-capex/" target="_blank">카운터포인트리서치</a>)</li>
+        <li><strong>갤럭시 Z 폴드8 울트라, 반사방지·최대 밝기 3000니트로 디스플레이 대폭 개선</strong> — 421ppi 해상도의 새 폴더블 OLED와 힌지 구조 개선으로 화면 주름도 크게 줄었다. (<a href="https://news.sktelecom.com/228686" target="_blank">SK텔레콤 뉴스룸</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>이강인, 스타랭킹 21주 연속 1위 질주</strong> — 8월 6일 기준 1만3775표를 받아 21주 연속 남자 스포츠 스타 1위를 지켰으며, 손흥민(3위)·허웅 등을 제쳤다. (<a href="https://www.mt.co.kr/sports/2026/08/06/2026080616350576331" target="_blank">머니투데이</a>)</li>
+        <li><strong>손흥민, 13경기 무득점 침묵 깨고 MLS 도움 부문 선두 질주</strong> — 정규리그 득점을 신고한 데 이어 시즌 어시스트 9개로 리그 선두를 달리며 8월 최대 8경기를 소화하고 있다. (<a href="https://tsnkoreanews.com/news/article.html?no=28085" target="_blank">TSN코리아</a>)</li>
+        <li><strong>2026 LCK 하반기, 8월 23일 정규시즌 종료…월즈 진출 경쟁 마무리 단계</strong> — 7월 29일부터 이어진 하반기 정규시즌이 이번 주 끝나며, 26일부터는 플레이-인 스테이지를 통해 월드 챔피언십 진출팀을 가린다. (<a href="http://inews24.com/view/1989400" target="_blank">아이뉴스24</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 국내 AI 행사 -->
+  <section>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>8/21(오늘)</td><td><a href="https://www.opencompute.org/summit/2026-ocp-korea-tech-day" target="_blank">2026 OCP 코리아 테크 데이</a></td><td>서울 코엑스 그랜드볼룸·아셈볼룸</td><td>OCP 코리아 주최 · AI 데이터센터 인프라 포럼 · <strong>당일 개최(등록 마감 임박)</strong></td></tr>
+        <tr><td>9/3~4</td><td><a href="https://zdnet.co.kr/view/?no=20260730133038" target="_blank">2026 한국 디스플레이 컨퍼런스</a></td><td>서울 양재 엘타워</td><td>옴디아 주최 · 'AI 시대 디스플레이 산업 전략'</td></tr>
+        <tr><td>9/9</td><td><a href="https://event.fnnews.com/event/397" target="_blank">AI World 2026</a></td><td>서울 롯데월드타워 롯데시네마 5층</td><td>파이낸셜뉴스·과기정통부 주최</td></tr>
+        <tr><td>9/18</td><td><a href="https://nabs.etnews.com/" target="_blank">Next AI &amp; Big Data Summit 2026</a></td><td>서울 엘타워 6층 그레이스홀</td><td>사전등록 9.9만원 · 등록마감 9/17(목) 15:00</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 21일 기준, 앞으로 한 달 내 국내 AI·기술 행사입니다. 일정·참가비는 주최 측 사정으로 바뀔 수 있으니 공식 사이트에서 다시 확인하세요.</div>
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1911년</strong> — 레오나르도 다빈치의 명화 《모나리자》가 프랑스 파리 루브르 박물관에서 도난당했다.</li>
+      <li><strong>1959년</strong> — 하와이가 미국의 50번째 주로 정식 승격됐다.</li>
+    </ul>
+  </section>
+
+  <!-- 5. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      &ldquo;어제의 폭락도 오늘의 급등도 지나가는 날씨일 뿐, 중심을 잡은 사람만이 계절을 통과한다.&rdquo;
+    </div>
+  </section>
+
+  <!-- 6. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>어제의 급등장처럼 오늘은 뜻밖의 좋은 소식이 따라붙는 하루입니다. 다만 들뜬 기분에 성급한 결정을 내리기보다 한 박자 여유를 두고 움직이면 실속을 챙길 수 있습니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>반등의 기운을 타고 재물운도 함께 오르는 흐름입니다. 다만 우산 없이 나서면 낭패를 보듯, 지출 계획은 미리 세워두는 것이 안전합니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>장마처럼 눅눅했던 관계가 있다면 오늘 먼저 연락을 건네보세요. 뜻밖에 반가운 답이 돌아올 가능성이 큽니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 7. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>"어제 코스피가 하루 만에 5.89%나 뛰었대. SK하이닉스가 40조 자사주 소각한다니까 그 영향이 컸나 봐." — 급락 다음날 반등한 증시 얘기로 대화를 시작해보세요.</li>
+      <li>"오늘 코엑스에서 'OCP 코리아 테크 데이'라고, AI 데이터센터 인프라 다루는 큰 행사가 열린대. 엔비디아·시스코·AMD도 온다더라." — 요즘 화제인 AI 인프라 이야기로 이어가기 좋습니다.</li>
+      <li>"주말까지 파주에 계속 비가 온다던데, 늦더위에 습도까지 높다니 우산은 꼭 챙겨야겠어." — 다가오는 주말 계획과 엮어 날씨 얘기를 나눠보세요.</li>
+    </ul>
+  </section>
+
+  <!-- 8. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/21, 금)</strong><br>
+        최고 29°C · 최저 23°C · 흐리고 비(약 9.6mm 예상)<br>
+        강수확률 높음 · 불쾌지수 매우 높음, 외출 시 우산을 챙기세요
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/22, 토)</strong><br>
+        최고 30°C · 최저 23°C · 흐리고 비(약 28.4mm 예상)<br>
+        강수확률 높음 · 불쾌지수 매우 높음, 오늘보다 비가 더 강해질 전망
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>LG 트윈스는 8월 18~19일 잠실에서 천적 KT를 이틀 연속 제압하며(19일 1-0 완봉승, 선발 톨허스트 7이닝 2안타 무실점 호투) 7월 2일 이후 48일 만에 연승을 신고했습니다. 다만 8월 21일 아침 KBO 공식 순위표 기준으로는 60승 49패 1무(승률 .550)로 KIA에 이어 4위, 선두 KT와는 5.5경기 차를 기록 중입니다. 20일 KT와의 3연전 마지막 경기 결과는 정확히 확인하지 못했으니 아래 공식 사이트에서 최신 소식을 확인해 주세요. 3~5위 KIA·LG·두산 간 순위 경쟁은 여전히 치열합니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT</td><td>106</td><td>63</td><td>2</td><td>41</td><td>0.606</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성</td><td>108</td><td>63</td><td>2</td><td>43</td><td>0.594</td><td>1</td></tr>
+            <tr><td>3</td><td>KIA</td><td>109</td><td>59</td><td>2</td><td>48</td><td>0.551</td><td>5.5</td></tr>
+            <tr class="is-lg"><td>4</td><td>LG</td><td>110</td><td>60</td><td>1</td><td>49</td><td>0.550</td><td>5.5</td></tr>
+            <tr><td>5</td><td>두산</td><td>110</td><td>57</td><td>4</td><td>49</td><td>0.538</td><td>7</td></tr>
+            <tr><td>6</td><td>NC</td><td>103</td><td>47</td><td>2</td><td>54</td><td>0.465</td><td>14.5</td></tr>
+            <tr><td>7</td><td>롯데</td><td>108</td><td>49</td><td>2</td><td>57</td><td>0.462</td><td>15</td></tr>
+            <tr><td>8</td><td>한화</td><td>107</td><td>48</td><td>3</td><td>56</td><td>0.462</td><td>15</td></tr>
+            <tr><td>9</td><td>SSG</td><td>112</td><td>45</td><td>4</td><td>63</td><td>0.417</td><td>20</td></tr>
+            <tr><td>10</td><td>키움</td><td>113</td><td>40</td><td>2</td><td>71</td><td>0.360</td><td>26.5</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 21일 아침 KBO 공식 사이트 기준. 이후 경기 결과는 공식 사이트를 참고하세요.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 10 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>BMW Championship (FedEx컵 플레이오프 3차전)</td><td>美 미주리주 세인트루이스, 벨러리브 CC</td><td>진행 중(1라운드 기준 매킬로이·우들랜드·클라크·스폰 공동선두 -6), 총상금 2000만달러</td></tr>
+        <tr><td>LPGA</td><td>CPKC Women's Open</td><td>캐나다 앨버타주 에드먼턴, 로열 메이필드 GC</td><td>진행 중, 한국 선수 성적은 확인되지 않음</td></tr>
+        <tr><td>LIV</td><td>LIV Golf 인디애나폴리스(시즌 최종전)</td><td>美 인디애나주 웨스트필드, 더 클럽 앳 채텀힐스</td><td>진행 중(1라운드 기준 캔터 선두 -8)</td></tr>
+        <tr><td>KLPGA</td><td>BC카드·한경 제48회 KLPGA 챔피언십(시즌 2번째 메이저)</td><td>경기 포천, 포천힐스 컨트리클럽</td><td>진행 중(1라운드 기준 송은아 선두 -5), 총상금 15억원</td></tr>
+        <tr><td>JLPGA</td><td>CAT Ladies 2026</td><td>日 가나가와현 하코네, 오하코네 컨트리클럽</td><td>오늘(8/21) 개막</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 21일 오전 기준입니다. 라운드 진행 상황과 실시간 순위·한국 선수 성적은 각 투어 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 11. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>헤이리 예술마을</strong> — 갤러리와 카페가 밀집해 있어 비 오는 날에도 실내 위주로 여유롭게 돌아볼 수 있는 근교 명소입니다. 파주에서 차로 20분 안팎이라 부담 없는 당일 나들이로 좋습니다.</p>
+    <p><strong>국립중앙박물관</strong> — 상설전시가 무료이고 실내 공간이 넓어 장마철 주말 나들이에 안성맞춤입니다. 서울 용산에 위치해 있어 가족 단위 방문객에게도 부담이 적습니다.</p>
+  </section>
+
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 12 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>루키우스 안나이우스 세네카</td></tr>
+        <tr><td>2</td><td>브레인 악셀</td><td>이진우</td></tr>
+        <tr><td>3</td><td>찰리 멍거 바이블 완결판</td><td>김재현·이건</td></tr>
+        <tr><td>4</td><td>그랬다고 적었다</td><td>김애란</td></tr>
+        <tr><td>5</td><td>오뒷세이아</td><td>호메로스</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 실시간 종합 베스트셀러 기준(8월 21일 확인). 주간 집계 데이터를 직접 확인하지 못해 실시간 순위로 대체했습니다.</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>오뒷세이아</strong> · 호메로스(김헌 옮김) — 트로이 전쟁 이후 오뒷세우스가 10년에 걸쳐 고향 이타카로 돌아가는 여정을 그린 고대 그리스 서사시로, 《일리아스》의 후속편 격인 작품입니다. 외눈 거인 키클롭스, 마녀 키르케, 세이렌의 유혹 등 널리 알려진 모험담을 담고 있으며 서양 문학의 원형으로 꼽히는 고전으로, 이번 주 예스24 베스트셀러 5위에 올랐습니다.</p>
+    </div>
+  </section>
+
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Today, Seoul is hosting a big technology event called the OCP Korea Tech Day. It brings together experts who build the huge computer systems behind artificial intelligence. Around 1,500 visitors are expected to attend the forum at COEX. Global companies such as Nvidia, Cisco, and AMD are joining the event this year. The main topic is how to design better infrastructure for the future of AI. Engineers will talk about servers, cooling systems, and how to save energy in massive data centers. As AI grows more powerful, these data centers need smarter ways to stay cool and efficient. Events like this help Korea stay connected to the latest trends in AI technology.
+      </p>
+      <p style="font-size:13px;color:#7a7368;margin-top:10px;">(해석) 오늘 서울에서는 'OCP 코리아 테크 데이'라는 대형 기술 행사가 열립니다. 이 행사는 인공지능을 뒷받침하는 거대한 컴퓨터 시스템을 만드는 전문가들을 한자리에 모읍니다. 코엑스에서 열리는 이 포럼에는 약 1500명의 방문객이 참석할 것으로 예상됩니다. 올해는 엔비디아, 시스코, AMD 같은 글로벌 기업들도 참여합니다. 핵심 주제는 AI의 미래를 위한 더 나은 인프라를 설계하는 방법입니다. 엔지니어들은 서버, 냉각 시스템, 그리고 거대한 데이터센터에서 에너지를 절약하는 방법에 대해 이야기할 예정입니다. AI가 점점 더 강력해지면서, 이런 데이터센터는 더 똑똑하게 시원함과 효율성을 유지할 방법이 필요합니다. 이런 행사는 한국이 최신 AI 기술 흐름과 계속 연결될 수 있도록 돕습니다.</p>
+      <ul class="vocab-list">
+        <li><strong>infrastructure (n.)</strong> — 기반 시설, 인프라</li>
+        <li><strong>efficient (adj.)</strong> — 효율적인</li>
+        <li><strong>massive (adj.)</strong> — 거대한</li>
+      </ul>
+      <p class="comprehension-q">Q. Why do AI data centers need smarter cooling and energy-saving systems, according to the article?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
