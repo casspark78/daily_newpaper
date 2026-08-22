@@ -87,6 +87,14 @@
     border-top: 1px solid #d8d0bb;
     border-bottom: 1px solid #d8d0bb;
   }
+  .quote-attr {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    color: #8a8272;
+    margin-top: 10px;
+  }
+  .quote-attr .who { font-weight: 700; color: #6b6459; }
   .fortune-grid {
     display: flex;
     gap: 16px;
@@ -312,6 +320,9 @@
     <h2>오늘의 명언</h2>
     <div class="quote-box">
       {{QUOTE_TEXT}}
+      <div class="quote-attr">{{QUOTE_ATTRIBUTION}}</div>
+      <!-- <span class="who">말한 사람</span> · 저작명 (또는 연설·인터뷰 등 출처)
+           출처를 확인하지 못한 인용문은 싣지 않는다. -->
     </div>
   </section>
 
