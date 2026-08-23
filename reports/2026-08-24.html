@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 24일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .quote-attr {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    color: #8a8272;
+    margin-top: 10px;
+  }
+  .quote-attr .who { font-weight: 700; color: #6b6459; }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table, .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th, .event-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 24일 월요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>코스피는 0.88% 오른 반면 코스닥은 4.63% 급락하며 혼조세를 보였습니다. 미국 반도체 업체 브로드컴의 AI칩 가이던스 하향이 투자심리를 흔들었고, 국내 반도체주 시초가에도 하방 압력으로 작용할 가능성이 있습니다.</p>
+    <ul>
+      <li><strong>삼성전자(005930)</strong> 281,500원 ▲ +3.87% — ROE 31.4%, 목표가 대비 67% 상승여력이 거론되며 매수 의견이 우세합니다.</li>
+      <li><strong>SK하이닉스(000660)</strong> 1,730,000원 ▲ +2.31% — HBM4 사실상 독점 지위와 저평가된 PER(7.39배)가 강점으로 꼽힙니다.</li>
+      <li><strong>TIGER 반도체TOP10(396500)</strong> 36,470원 · 연초 이후 +68% — 반도체 수퍼사이클 수혜 ETF로 소개됐습니다.</li>
+    </ul>
+    <p>이번 주는 8/26(수) 엔비디아 실적 발표, 8/27~29 잭슨홀 경제정책 심포지엄, 8/28(금) 미국 7월 PCE 물가지수 등 시장을 흔들 굵직한 일정이 몰려 있습니다.</p>
+    <div class="fortune-note">본 리포트는 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-24.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>오픈AI, 캘리포니아 AI 규제법 강화로 입장 선회</strong> — 주(州)별 AI 규제 난립을 반대해온 오픈AI가 캘리포니아의 AI 규제 강화 쪽으로 태도를 바꿨다. 그레그 브록먼 사장은 연방 차원 규제 일원화를 주장하는 슈퍼팩에도 거금을 기부했다. (<a href="http://www.inews24.com/view/1997448" target="_blank">아이뉴스24</a>)</li>
+        <li><strong>국가자격시험 '스마트안경' 부정행위 두 달 새 5건</strong> — 스마트안경을 이용한 시험 부정행위가 잇따르자 정부가 신기술 기기까지 포괄하는 법적 제재 기준 마련에 나섰다. (<a href="https://n.news.naver.com/mnews/article/003/0014142914?sid=102" target="_blank">뉴시스</a>)</li>
+        <li><strong>"AI가 바꾼 일자리, 해법을 묻다" 제2회 미래전략포럼</strong> — AI발 노동시장 대전환에 정부의 제도적 대응이 뒤따라야 한다는 지적이 나왔다. 포럼은 내일 개최된다. (<a href="https://n.news.naver.com/mnews/article/629/0000526745?sid=101" target="_blank">더팩트</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>삼성전자·SK하이닉스, 150조원급 주주환원 오늘부터 시행</strong> — 두 반도체 대장주가 역대 최대 규모의 자사주 매입·소각에 나선다. 잭슨홀 심포지엄까지 반도체 업황과 금리 방향을 가를 일정이 이어진다. (<a href="https://www.newsverse.kr/news/articleView.html?idxno=11258" target="_blank">뉴스버스</a>)</li>
+        <li><strong>100조원+α 미래대응기금, AI·지방 투자에 방점</strong> — 정부가 조성하는 대규모 미래대응기금의 투자 방향이 인공지능과 지방 투자에 맞춰질 전망이다. (<a href="https://n.news.naver.com/mnews/article/277/0005806206?sid=101" target="_blank">아시아경제</a>)</li>
+        <li><strong>미래에셋증권, IMA 완판 이어 1천억원 추가 조성</strong> — 예·적금과 주식 사이 새로운 투자처를 찾는 자금이 몰리며 흥행이 이어지고 있다. (<a href="https://news.ifm.kr/news/articleView.html?idxno=477715" target="_blank">경인방송</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>김민석·장동혁, 취임 후 첫 회동…여야 협치 시험대</strong> — 더불어민주당 김민석 대표와 국민의힘 장동혁 대표가 오늘 국회에서 상견례를 겸한 첫 회동을 갖는다. 부동산 세제, 조희대 대법원장 탄핵 등 현안이 산적해 있다. (<a href="https://n.news.naver.com/mnews/article/032/0003465958?sid=100" target="_blank">경향신문</a>)</li>
+        <li><strong>종합특검, 180일 수사 마무리…최종 결과 오늘 발표</strong> — 윤석열·김건희 전 부부 등 58명을 기소한 종합특검이 최종 수사 결과를 브리핑한다. (<a href="https://n.news.naver.com/mnews/article/052/0002397147?sid=102" target="_blank">YTN</a>)</li>
+        <li><strong>스테이블코인법 통합안 임박…금융위원장 오늘 국회 출석</strong> — 국회가 디지털자산기본법 2단계 입법을 다루는 가운데 여야 이견 조율이 이번 주 관전 포인트다. (<a href="https://n.news.naver.com/mnews/article/018/0006356723?sid=101" target="_blank">이데일리</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>"10년 공들인 기술, USB 하나에 넘어갔다"</strong> — 반도체·디스플레이 등 국가 핵심기술이 산업스파이로 유출되는 사건이 늘고 있다는 경고가 나왔다. 과거 디스플레이 패널 기술이 중국으로 흘러간 사례가 재차 거론됐다. (<a href="https://n.news.naver.com/mnews/article/243/0000102039?sid=101" target="_blank">이코노미스트</a>)</li>
+        <li><strong>삼성디스플레이 지분 약 4.45조원 규모 양도 결정</strong> — 오늘 아침 경제 브리핑에서 삼성디스플레이 주식의 대규모 양도 소식이 전해졌다. (<a href="https://www.news2day.co.kr/article/20260824500003" target="_blank">뉴스투데이</a>)</li>
+        <li><strong>반도체는 '내신 문턱' 높아지고 디스플레이는 낮아진 대학 계약학과</strong> — 취업보장 계약학과 경쟁력이 산업 성장성에 따라 엇갈리는 모습이다. (<a href="https://n.news.naver.com/mnews/article/008/0005403511?sid=102" target="_blank">머니투데이</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>이재성, 마인츠 시즌 첫 공식전서 도움…팀 9-0 대승</strong> — 독일 분데스리가 마인츠의 국가대표 미드필더 이재성이 포칼컵 1라운드에서 공격포인트를 올렸다. (<a href="https://news.sbs.co.kr/news/endPage.do?news_id=N1008718018&plink=ORI&cooper=NAVER" target="_blank">SBS</a>)</li>
+        <li><strong>이강인, 아틀레티코서 슈팅 수 눈에 띄게 증가</strong> — 파리생제르맹 시절보다 더 공격적인 역할을 소화하며 연계를 넘어 득점까지 책임지고 있다는 평가다. (<a href="https://m.sports.naver.com/wfootball/article/003/0014142946" target="_blank">뉴시스</a>)</li>
+        <li><strong>서교림, '림솔대전' 연장 접전 끝 KLPGA 챔피언십 우승</strong> — 서교림이 라이벌 김민솔과의 연장전 명승부 끝에 시즌 4승째를 신고하며 다승 단독 선두에 올랐다. (<a href="https://www.mt.co.kr/culture/2026/08/23/2026082317580033685" target="_blank">머니투데이</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 국내 AI 행사 -->
+  <section>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9/2~4</td><td><a href="https://www.ajunews.com/view/20260820142242887" target="_blank">2026 GGGF(제18회 착한 성장, 좋은 일자리 글로벌포럼)</a></td>
+            <td>서울 플라자호텔 그랜드볼룸 · 국회의원회관</td><td>아주경제 주최 · '코리아, AI의 국가' 주제 · 온·오프라인 병행</td></tr>
+        <tr><td>9/9</td><td><a href="https://event.fnnews.com/event/397" target="_blank">AI World 2026</a></td>
+            <td>서울 롯데월드타워 롯데시네마(5F)</td><td>파이낸셜뉴스·과기정통부 주최 · 'AI Shift-새로운 경제'</td></tr>
+        <tr><td>9/9</td><td><a href="https://www.theise.org/notice_1/?mod=document&uid=768" target="_blank">AI 반도체포럼 9월 조찬강연회</a></td>
+            <td>서울 안다즈 서울 강남</td><td>반도체공학회 주최</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 24일 기준, 앞으로 한 달 내 행사입니다. 일정·장소는 주최 측 사정으로 바뀔 수 있습니다.</div>
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1992년</strong> — 대한민국과 중화인민공화국이 국교를 수립했습니다(한중수교). 이와 함께 대만(중화민국)과는 외교 관계가 단절됐습니다.</li>
+      <li><strong>2006년</strong> — 체코 프라하에서 열린 국제천문연맹(IAU) 총회가 행성의 정의를 새로 규정하면서, 명왕성이 태양계 행성 지위를 잃고 왜소행성으로 재분류됐습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 5. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      &ldquo;인내란 희망을 품는 기술이다.&rdquo;
+      <div class="quote-attr"><span class="who">보브나르그 후작(뤽 드 클라피에)</span> · 「성찰과 잠언」(1746)</div>
+    </div>
+  </section>
+
+  <!-- 6. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>새로운 한 주가 시작되는 오늘, 조급하게 서두르기보다 천천히 페이스를 잡는 편이 유리합니다. 아침에 세운 계획을 오후까지 꾸준히 밀고 나가면 기분 좋은 성취감이 따라옵니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>시장이 출렁이는 날, 조바심에 무리한 결정을 내리면 후회가 남습니다. 큰 그림을 보고 기다리는 쪽이 통장에는 더 이롭겠습니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>가까운 사람에게 무심코 던진 말 한마디가 오래 남을 수 있는 날입니다. 평소보다 한 박자 여유를 두고 부드럽게 표현해보세요.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 7. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>LG 트윈스가 어제 대전 원정에서 한화를 12-3으로 크게 이기며 연패를 끊었어요. "문정빈·송찬의가 나란히 스리런 홈런을 쳤다더라" 정도면 야구 좋아하는 사람과 대화가 쉽게 풀립니다.</li>
+      <li>오늘 여야 대표(김민석·장동혁)가 취임 후 처음으로 국회에서 마주 앉는다고 하니, "이번엔 협치가 좀 될까요?" 정도로 가볍게 운을 떼보기 좋은 소재입니다.</li>
+      <li>코스피는 오르고 코스닥은 4%대 급락한 엇갈린 장세 얘기로, "브로드컴발 반도체 훈풍이 여기까지 오려나" 하는 식의 스몰토크도 무난합니다.</li>
+    </ul>
+  </section>
+
+  <!-- 8. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/24, 월)</strong><br>
+        최고 29°C · 최저 22°C · 흐리고 한때 비 · 미세먼지 좋음<br>
+        전국 단위 예보 기준(경기 북부 실제 체감과 다소 차이가 있을 수 있음)입니다
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/25, 화)</strong><br>
+        최고 30°C 안팎 · 최저 22°C 안팎 · 구름 많음<br>
+        정확한 시간대별 예보는 기상청 날씨누리에서 확인하세요
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>LG 트윈스는 어제(8/23) 대전 원정에서 한화 이글스를 12-3으로 완파하며 연패를 끊었습니다. 1회 문정빈, 2회 송찬의가 나란히 스리런 홈런을 터뜨려 2회 만에 8-0으로 앞서갔고, 선발 카를로스 카라스코가 퀄리티스타트로 시즌 2승째를 챙겼습니다. 현재 순위는 3위. 오늘(8/24)은 월요일 휴식일이며, 다음 경기는 8/25(화) 저녁 6시 30분 잠실 홈경기입니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>삼성</td><td>91</td><td>55</td><td>2</td><td>34</td><td>.618</td><td>-</td></tr>
+            <tr><td>2</td><td>KT</td><td>88</td><td>51</td><td>2</td><td>35</td><td>.593</td><td>2.5</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG</td><td>91</td><td>52</td><td>0</td><td>39</td><td>.571</td><td>4.0</td></tr>
+            <tr><td>4</td><td>KIA</td><td>93</td><td>49</td><td>2</td><td>42</td><td>.538</td><td>7.0</td></tr>
+            <tr><td>5</td><td>두산</td><td>92</td><td>47</td><td>3</td><td>42</td><td>.528</td><td>8.0</td></tr>
+            <tr><td>6</td><td>한화</td><td>89</td><td>42</td><td>3</td><td>44</td><td>.488</td><td>11.5</td></tr>
+            <tr><td>7</td><td>NC</td><td>88</td><td>42</td><td>1</td><td>45</td><td>.483</td><td>12.0</td></tr>
+            <tr><td>8</td><td>롯데</td><td>91</td><td>40</td><td>2</td><td>49</td><td>.449</td><td>15.0</td></tr>
+            <tr><td>9</td><td>SSG</td><td>93</td><td>34</td><td>3</td><td>56</td><td>.378</td><td>21.5</td></tr>
+            <tr><td>10</td><td>키움</td><td>93</td><td>33</td><td>1</td><td>59</td><td>.359</td><td>23.5</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 23일 경기 종료 기준 (최신 경기 결과는 KBO 공식 사이트 참고)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 10 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>투어 챔피언십</td><td>미국 애틀랜타 이스트레이크GC</td><td>8/27(목) 개막 예정 · 시즌 최종전, 상금랭킹 상위 30명 출전</td></tr>
+        <tr><td>LPGA</td><td>FM 챔피언십</td><td>미국 매사추세츠 TPC보스턴</td><td>8/27(목) 개막 예정 · 지난주 CPKC 여자오픈은 브룩 헨더슨 우승(-15)</td></tr>
+        <tr><td>LIV</td><td>LIV 골프 팀 챔피언십 미시간</td><td>미국 미시간 카디널 앳 세인트존스</td><td>8/27(목) 개막 예정 · 시즌 최종전(팀), 개인전은 호아킨 니만이 인디애나폴리스에서 -16으로 우승하며 시즌 챔프 등극</td></tr>
+        <tr><td>KLPGA</td><td>제15회 KG 레이디스 오픈</td><td>경기 용인 써닝포인트</td><td>8/27(목) 개막 예정 · 지난주 KLPGA 챔피언십은 서교림이 연장 접전 끝 우승</td></tr>
+        <tr><td>JLPGA</td><td>니트리 레이디스</td><td>일본 홋카이도 쿠시로CC</td><td>8/27(목) 개막 예정</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 24일 기준. 다섯 개 투어 모두 이번 주 목요일(8/27) 개막하며, 진행 중 순위는 각 투어 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 11. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>가평 아침고요수목원 계곡</strong> — 늦여름 더위가 아직 남은 요즘, 사람이 붐비지 않는 계곡에서 그늘막을 두고 여유롭게 발을 담그기 좋습니다. 파주에서 크게 멀지 않은 거리라 당일치기로도 무난합니다.</p>
+    <p><strong>강릉 솔올미술관</strong> — 2024년 문을 연 미술관으로, 정원과 산책로가 잘 가꿔져 있어 무더위를 피해 실내외를 오가며 여유로운 하루를 보내기 좋습니다.</p>
+  </section>
+
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 12 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>루키우스 안나이우스 세네카(하와이 대저택 편역)</td></tr>
+        <tr><td>2</td><td>오디세이아</td><td>호메로스(박문재 역)</td></tr>
+        <tr><td>3</td><td>찌니주의보</td><td>정지아</td></tr>
+        <tr><td>4</td><td>그랬다고 적었다</td><td>김애란</td></tr>
+        <tr><td>5</td><td>모순</td><td>양귀자</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 8월 17일~23일 주간 종합 베스트셀러 기준</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>찌니주의보</strong> · 정지아 — 「아버지의 해방일지」이후 4년 만에 내놓은 장편으로, 이번 주 예스24 종합 베스트셀러 3위에 올랐습니다. 노인들만 사는 전남 구례의 산골 마을에 젊은 레즈비언 커플이 이사 오면서 벌어지는 한바탕 소동을 그렸습니다. 저자는 「아버지의 해방일지」로 5·18문학상을, 「봄빛」으로 한무숙문학상을 받은 바 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Monday mornings can feel heavy, especially when the stock market opens with mixed signals. Today, one index rose while another dropped sharply. It is tempting to panic and make quick decisions. However, patience often pays off better than haste. A wise thinker once wrote that patience is simply the art of hoping. Instead of reacting to every small change, it helps to focus on the bigger picture. Small, steady steps usually lead further than sudden leaps. This idea applies not only to money, but to any goal worth reaching.
+      </p>
+      <p style="font-size:13px;color:#7a7368;margin-top:10px;">(번역) 월요일 아침은, 특히 증시가 엇갈린 신호로 출발할 때 유독 무겁게 느껴질 수 있습니다. 오늘도 한 지수는 오르고 다른 지수는 크게 떨어졌습니다. 조급해져서 성급한 결정을 내리고 싶어지죠. 하지만 인내는 종종 서두름보다 더 나은 결과를 가져다줍니다. 한 현자는 인내란 그저 희망을 품는 기술이라고 썼습니다. 작은 변화마다 반응하기보다, 더 큰 그림에 집중하는 편이 도움이 됩니다. 작고 꾸준한 걸음이 대개 갑작스러운 도약보다 더 멀리 데려다줍니다. 이 생각은 돈뿐 아니라 이룰 가치가 있는 모든 목표에 적용됩니다.</p>
+      <ul class="vocab-list">
+        <li><strong>tempting (adj.)</strong> — 마음이 끌리는, 유혹적인</li>
+        <li><strong>haste (n.)</strong> — 서두름, 성급함</li>
+        <li><strong>steady (adj.)</strong> — 꾸준한, 안정된</li>
+      </ul>
+      <p class="comprehension-q">Q. According to the article, what does patience allow you to focus on instead of every small change?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
