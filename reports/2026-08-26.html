@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 26일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .quote-attr {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    color: #8a8272;
+    margin-top: 10px;
+  }
+  .quote-attr .who { font-weight: 700; color: #6b6459; }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table, .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th, .event-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 26일 수요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>코스피는 장중 -4%까지 급락했다가 개인·기관의 저가 매수세가 유입되며 6,742.74(+0.68%)로 극적 반등 마감했습니다. 코스닥도 2차전지·반도체 중소형주 반등에 힘입어 827.15(+1.70%)로 올랐습니다. 원/달러 환율은 1,382.4원(▼4.1원)으로 소폭 하락했고, 시장의 관심은 오늘(한국시간 8/27 새벽) 발표될 엔비디아 실적에 쏠려 있습니다.</p>
+    <ul>
+      <li><strong>삼성전자(005930)</strong> 257,000원 (보합) — 2분기 영업이익 89.5조원(역대 최대), 90~110조원 규모 주주환원과 자사주 매입 개시를 발표했습니다. 투자의견 매수.</li>
+      <li><strong>SK하이닉스(000660)</strong> 1,592,000원 ▼ -4.73% — PER 3.9배로 역대급 저평가 구간이며 ROE 44.1%, HBM4 양산 판매분은 이미 완판(sold out) 상태입니다. 투자의견 매수.</li>
+      <li><strong>TIGER 반도체TOP10(396500)</strong> — 삼성전자·SK하이닉스 비중이 높은 ETF로, 반도체 슈퍼사이클 수혜가 기대됩니다. 투자의견 매수.</li>
+    </ul>
+    <p>이번 주는 8/26(수) 엔비디아 2분기 실적 발표, 8/27(목) 한국은행 금융통화위원회 기준금리 결정, 8/27~29 미국 연준 잭슨홀 경제심포지엄(케빈 워시 의장 기조연설 주목) 등 시장을 흔들 굵직한 일정이 이어집니다.</p>
+    <div class="fortune-note">본 리포트는 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-26.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>뤼튼테크놀로지스, 국내 첫 'AI 서비스 플랫폼 유니콘' 등극</strong> — AI 모델·반도체 등 원천기술 개발을 넘어 실제 이용자가 쓰는 서비스를 기반으로 성장한 국내 AI 스타트업이 유니콘 기업 반열에 올랐습니다. (<a href="https://n.news.naver.com/mnews/article/092/0002435043?sid=105" target="_blank">지디넷코리아</a>)</li>
+        <li><strong>과기정통부, 'K-문샷 AI 휴머노이드 미션' 로드맵 산학연 간담회</strong> — 차세대 로봇·AI 경쟁력의 핵심이 될 휴머노이드 미션 로드맵에 대해 산학연 전문가들의 의견을 수렴했습니다. (<a href="https://www.itbiznews.com/news/articleView.html?idxno=222812" target="_blank">IT비즈뉴스</a>)</li>
+        <li><strong>남양유업, 한컴과 MOU…전사 AI 활용 확대 추진</strong> — 구매·생산·물류 부서 등에 '에이전틱 OS'를 시범 적용하며 전사 AI 전환(AX) 전략을 함께 수립하기로 했습니다. (<a href="https://n.news.naver.com/mnews/article/001/0016270679?sid=101" target="_blank">연합뉴스</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>해외 IB "한은, 이달 또 금리 인상"…성장률 3%대 상향 전망</strong> — 물가 압력이 여전히 남아 있어 추가 인상이 필요하다는 분석과 함께, 내수·고용 회복이 더딘 만큼 동결 가능성도 함께 제기됩니다. (<a href="https://n.news.naver.com/mnews/article/421/0009132474?sid=101" target="_blank">뉴스1</a>)</li>
+        <li><strong>소비자심리지수 4개월 만에 하락…"주가는 떨어지고 물가는 올랐다"</strong> — 국내 증시 조정과 누적된 물가 부담으로 체감경기가 저하됐으며, 제조업·건설업 고용 감소와 AI 고노출 업종 청년 고용 부진도 영향을 미쳤습니다. (<a href="https://n.news.naver.com/mnews/article/018/0006357957?sid=110" target="_blank">이데일리</a>)</li>
+        <li><strong>9월 기업경기실사지수(BSI), 수출·매출은 '맑음' 고용·자금사정은 '흐림'</strong> — 한국경제인협회의 매출액 600대 기업 조사에서 수출·투자 전망은 긍정적이었지만 고용·채산성 지표는 여전히 부정적으로 나타났습니다. (<a href="https://n.news.naver.com/mnews/article/082/0001395272?sid=101" target="_blank">부산일보</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>김민석 대표, 당 차원 '개헌추진단' 설치 발표</strong> — 여의도 국회 브리핑에서 "여야와 정치권, 국민이 합의하고 시행할 수 있는 개헌을 신속히 하겠다"며 권력구조 개편을 포함한 개헌 논의에 속도를 내겠다고 밝혔습니다. (<a href="https://n.news.naver.com/mnews/article/047/0002526708?sid=102" target="_blank">오마이뉴스</a>)</li>
+        <li><strong>이준석 개혁신당 대표, 오늘 대표직 사퇴</strong> — 6·3 지방선거 패배와 정이한 전 부산시장 후보의 피습 자작극 사태 등에 대한 정치적 책임을 지고 물러납니다. (<a href="https://n.news.naver.com/mnews/article/654/0000197055?sid=100" target="_blank">강원도민일보</a>)</li>
+        <li><strong>[전국 주요 신문 사설] "수사 대신 정치를 한 특검" 등 특검 활동 비판 이어져</strong> — 26일 조간 사설에서 여러 매체가 최근 종료된 특검 수사의 성과와 정치적 논란을 함께 짚었습니다. (<a href="https://n.news.naver.com/mnews/article/001/0016270673?sid=110" target="_blank">연합뉴스</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>삼성디스플레이, 제네시스 GV90에 OLED 공급</strong> — 디지털 영화 산업 색영역 표준인 DCI-P3를 100% 충족하는 13.2형 OLED가 앞좌석 헤드레스트 뒷면에 적용되며 프리미엄 차량용 시장을 공략합니다. (<a href="https://www.viva100.com/article/20260826500027" target="_blank">브릿지경제</a>)</li>
+        <li><strong>[CAPEX 기업진단] 삼성디스플레이, 아산 67조 베팅…폴더블 '정조준'</strong> — 이청 삼성디스플레이 사장은 충청권 첨단산업 발전비전 국민보고회에서 8.6세대 OLED로 물량 승부를 걸겠다고 밝혔으며, LG디스플레이는 재무 안정에 무게를 두는 대조적 행보를 보이고 있습니다. (<a href="http://www.finomy.com/news/articleView.html?idxno=259880" target="_blank">피노미</a>)</li>
+        <li><strong>BOE·3M 중국 공동 연구소 개소…차세대 디스플레이 기술 협력 강화</strong> — LCD·OLED·마이크로 LED 패널의 광효율을 높이는 기술 협력을 위해 베이징에 공동 연구소를 열었습니다. (<a href="https://www.theguru.co.kr/news/article.html?no=106243" target="_blank">더구루</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>손흥민·이강인, 나란히 소속팀 최전방 공격수로 호흡</strong> — LAFC의 손흥민과 아틀레티코 마드리드의 이강인이 포지션을 바꿔 나란히 최전방에서 뛰는 모습이 화제가 되고 있습니다. (<a href="https://m.sports.naver.com/kfootball/article/108/0003464735" target="_blank">스타뉴스</a>)</li>
+        <li><strong>설영우, 분데스리가 진출…"유럽 진출 한국 수비수 전성시대"</strong> — 차범근·박지성·손흥민·이강인으로 이어진 한국 축구 유럽 진출사가 최근 수비수 중심으로 흐름이 바뀌고 있다는 평가입니다. (<a href="https://m.sports.naver.com/wfootball/article/025/0003546741" target="_blank">중앙일보</a>)</li>
+        <li><strong>라힘 스털링, 운전 중 아산화질소 흡입 블랙박스 영상 파문</strong> — 스포츠카를 몰던 중 웃음가스를 흡입하는 모습이 담긴 블랙박스 영상이 제보되며 논란이 되고 있습니다. (<a href="https://m.sports.naver.com/wfootball/article/076/0004439343" target="_blank">스포츠조선</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 국내 AI 행사 -->
+  <section>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9/9</td><td><a href="https://event.fnnews.com/event/397" target="_blank">AI World 2026</a></td>
+            <td>서울 롯데월드타워 롯데시네마(5F)</td><td>파이낸셜뉴스·과기정통부 주최 · 'AI Shift-새로운 경제'</td></tr>
+        <tr><td>9/9</td><td><a href="https://www.theise.org/notice_1/?mod=document&uid=768" target="_blank">AI 반도체포럼 9월 조찬강연회</a></td>
+            <td>서울 안다즈 서울 강남</td><td>반도체공학회 주최</td></tr>
+        <tr><td>9/18</td><td><a href="https://nabs.etnews.com/" target="_blank">Next AI &amp; Big Data Summit 2026</a></td>
+            <td>서울 양재 엘타워 6층 그레이스홀</td><td>전자신문인터넷 주최 · 사전등록 9만9000원 · <strong>등록마감 9/17(목) 15시</strong></td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 26일 기준, 앞으로 한 달 내 행사입니다. 일정·장소는 주최 측 사정으로 바뀔 수 있습니다.</div>
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1920년</strong> — 미국 수정헌법 제19조가 발효되며 여성 참정권이 공식 인정됐습니다. 이날은 오늘날 '여성평등의 날(Women's Equality Day)'로 기려지고 있습니다.</li>
+      <li><strong>1883년</strong> — 인도네시아 크라카타우 화산이 근대 역사상 가장 격렬한 화산 폭발 중 하나로 기록될 규모로 분출했습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 5. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      &ldquo;우리 중 누구에게도 삶은 쉽지 않습니다. 하지만 그게 어떻단 말입니까? 우리에게는 인내심이, 그리고 무엇보다 스스로에 대한 믿음이 있어야 합니다.&rdquo;
+      <div class="quote-attr"><span class="who">마리 퀴리</span> · 이브 퀴리 라부이스, 「마담 퀴리」(1937) 2부 116쪽</div>
+    </div>
+  </section>
+
+  <!-- 6. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>새벽에 결정될 큰 뉴스(엔비디아 실적)를 기다리는 것처럼, 오늘은 결과를 재촉하기보다 차분히 순서를 기다리는 태도가 운을 살립니다. 급하게 판단하면 놓치는 것이 많은 하루입니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>어제 널뛰던 지수가 결국 플러스로 마감했듯, 오늘도 중간의 흔들림에 겁먹지 않는 사람에게 기회가 옵니다. 성급한 매도나 매수보다는 지켜보는 쪽이 유리합니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>무더위에 다들 예민해지기 쉬운 날씨입니다. 상대의 날 선 말투에 곧바로 맞서기보다 한 박자 쉬어가면 관계가 오히려 부드러워집니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 7. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>어제(25일) 잠실에서 LG가 NC를 상대로 연장 10회 접전 끝에 5-4로 이겼는데, 9번타자 홍창기의 끝내기 안타와 오스틴 딘의 사이클링 히트가 하루에 함께 나왔다고 하니 야구 좋아하는 사람과 화제 삼기 좋습니다.</li>
+      <li>1982년 개장한 잠실야구장이 올 시즌을 끝으로 문을 닫고, 정규시즌 마지막 경기가 10월 7일 두산-LG전으로 정해졌다는 소식은 "44년 야구 성지의 마지막"이라는 이야기로 풀어가기 좋은 소재입니다.</li>
+      <li>코스피가 장중 -4%까지 급락했다가 결국 플러스로 마감했는데, 다들 오늘 새벽 발표되는 엔비디아 실적에 촉각을 곤두세우고 있다는 이야기로 증시 화제를 자연스럽게 꺼낼 수 있습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 8. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/26, 수)</strong><br>
+        최저 24~28°C · 최고 28~33°C · 폭염주의보(파주 동북부·서북부·남부) · 경기북동부(파주 포함) 중심 최대 60mm 소나기, 돌풍·천둥번개 동반 가능<br>
+        미세먼지 수치는 확인하지 못했습니다 — 기상청 날씨누리에서 확인하세요.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/27, 목)</strong><br>
+        전국 기준 아침 최저 21~26°C · 낮 최고 29~34°C · 중부지방 대체로 흐리고 소나기 가능성<br>
+        경기 파주 지역의 세부 수치는 확인하지 못했습니다 — 기상청 날씨누리에서 확인하세요.
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>LG 트윈스는 어제(25일) 잠실에서 NC 다이노스와 연장 10회까지 가는 접전 끝에 5-4로 승리했습니다. 9번타자 홍창기가 끝내기 안타를 쳤고, 외국인 타자 오스틴 딘은 힘든 몸 상태에도 3루까지 전력 질주해 사이클링 히트를 완성했습니다. 이 승리로 LG는 3위 자리를 지켰으며, 4위 KIA와의 승차도 팽팽하게 유지되고 있습니다. 한편 올 시즌을 끝으로 44년 역사의 잠실야구장이 문을 닫으며, 정규시즌 최종전은 10월 7일 두산-LG전으로 확정됐습니다.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT</td><td>109</td><td>64</td><td>3</td><td>42</td><td>.604</td><td>-</td></tr>
+            <tr><td>2</td><td>삼성</td><td>112</td><td>65</td><td>3</td><td>44</td><td>.596</td><td>0.5</td></tr>
+            <tr class="is-lg"><td>3</td><td>LG</td><td>113</td><td>62</td><td>1</td><td>50</td><td>.554</td><td>5.0</td></tr>
+            <tr><td>4</td><td>KIA</td><td>113</td><td>61</td><td>2</td><td>50</td><td>.550</td><td>5.5</td></tr>
+            <tr><td>5</td><td>두산</td><td>113</td><td>59</td><td>4</td><td>50</td><td>.541</td><td>6.5</td></tr>
+            <tr><td>6</td><td>롯데</td><td>111</td><td>50</td><td>2</td><td>59</td><td>.459</td><td>15.5</td></tr>
+            <tr><td>7</td><td>한화</td><td>110</td><td>49</td><td>3</td><td>58</td><td>.458</td><td>15.5</td></tr>
+            <tr><td>8</td><td>NC</td><td>107</td><td>48</td><td>2</td><td>57</td><td>.457</td><td>15.5</td></tr>
+            <tr><td>9</td><td>SSG</td><td>115</td><td>46</td><td>5</td><td>64</td><td>.418</td><td>20.0</td></tr>
+            <tr><td>10</td><td>키움</td><td>117</td><td>42</td><td>3</td><td>72</td><td>.368</td><td>26.0</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 25일 경기 종료 기준 (최신 경기 결과는 KBO 공식 사이트 참고)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 10 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>투어 챔피언십</td><td>미국 애틀랜타 이스트레이크GC</td><td>8/27(목) 개막 예정 · 시즌 최종전, 스코티 셰플러 등 FedEx컵 상위 30명 출전</td></tr>
+        <tr><td>LPGA</td><td>FM 챔피언십</td><td>미국 매사추세츠 TPC보스턴</td><td>8/27(목) 개막 예정</td></tr>
+        <tr class="is-off"><td>LIV</td><td>—</td><td>—</td><td>이번 주 대회 없음 · 시즌 최종전이던 미시간 팀 챔피언십이 취소되며 지난주 인디애나폴리스 대회로 시즌이 조기 종료됨</td></tr>
+        <tr><td>KLPGA</td><td>제15회 KG 레이디스 오픈</td><td>경기 용인 써닝포인트CC</td><td>8/27(목) 개막 예정</td></tr>
+        <tr><td>JLPGA</td><td>니토리 레이디스 골프 토너먼트</td><td>일본 홋카이도 쿠시로CC</td><td>8/27(목) 개막 예정</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 26일 기준. LIV를 제외한 네 개 투어 모두 이번 주 목요일(8/27) 개막해 일요일(8/30) 마무리되며, 진행 중 순위는 각 투어 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 11. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>포천 백운계곡</strong> — 폭염특보가 이어지는 만큼, 맑은 계곡물에 발을 담그며 늦더위를 식히기 좋은 곳입니다. 파주에서 멀지 않아 당일치기로도 다녀오기 좋습니다.</p>
+    <p><strong>국립중앙박물관</strong> — 주말 사이 기압골 영향으로 비가 올 가능성이 있는 만큼, 무더위와 궂은 날씨를 함께 피해 실내에서 여유롭게 시간을 보내기 좋은 곳입니다.</p>
+  </section>
+
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 12 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>루키우스 안나이우스 세네카(하와이 대저택 편역)</td></tr>
+        <tr><td>2</td><td>오디세이아</td><td>호메로스(박문재 역)</td></tr>
+        <tr><td>3</td><td>그랬다고 적었다</td><td>김애란</td></tr>
+        <tr><td>4</td><td>찌니주의보</td><td>정지아</td></tr>
+        <tr><td>5</td><td>처음 읽는 그리스 로마 신화 15: 트로이의 마지막 불꽃</td><td>최설희 글 · 한현동 그림</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 주간 종합 베스트셀러(2026.08.19~08.25) 기준</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>오디세이아</strong> · 호메로스(박문재 역) — 트로이 전쟁이 끝난 뒤 고향 이타카로 돌아가기까지 10년에 걸친 오디세우스의 파란만장한 귀환 여정을 그린 고대 그리스 서사시로, 서양 문학의 뿌리로 꼽히는 고전입니다. 예스24 주간 종합 베스트셀러 2위에 올라 있으며, 장중 급락 후에도 결국 제자리를 찾아가는 요즘 증시처럼 우여곡절 끝에 결국 목적지에 닿는 이야기라 오늘 하루와 겹쳐 읽어볼 만합니다.</p>
+    </div>
+  </section>
+
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Jamsil Baseball Stadium in Seoul first opened its gates in 1982, and it quickly became known as the "sacred ground" of Korean baseball. For 44 years, millions of fans have cheered inside its stands. Now, the stadium is getting ready to close for good at the end of this season. The Korea Baseball Organization announced that the very last regular-season game there will be played on October 7th, between the Doosan Bears and the LG Twins, two teams that have shared the ballpark as their home for decades. Many fans feel a mix of excitement and sadness about this final match. After the season ends, a new stadium is expected to take its place.
+      </p>
+      <p style="font-size:13px;color:#7a7368;margin-top:10px;">(번역) 서울 잠실야구장은 1982년 처음 문을 열었고, 곧 한국 야구의 '성지'로 불리게 되었습니다. 44년 동안 수많은 팬들이 이 경기장 관중석에서 환호해 왔습니다. 이제 이 구장은 올 시즌을 끝으로 완전히 문을 닫을 준비를 하고 있습니다. 한국야구위원회(KBO)는 이곳에서 열리는 마지막 정규시즌 경기가 10월 7일, 수십 년간 이 구장을 홈으로 함께 써온 두산 베어스와 LG 트윈스의 맞대결로 치러진다고 발표했습니다. 많은 팬들이 이 마지막 경기를 앞두고 설렘과 아쉬움이 뒤섞인 감정을 느끼고 있습니다. 시즌이 끝난 뒤에는 새로운 구장이 그 자리를 대신할 예정입니다.</p>
+      <ul class="vocab-list">
+        <li><strong>sacred (adj.)</strong> — 신성한, 성스러운</li>
+        <li><strong>regular-season (n./adj.)</strong> — 정규시즌(의)</li>
+        <li><strong>take its place (phr.)</strong> — 그 자리를 대신하다</li>
+      </ul>
+      <p class="comprehension-q">Q. According to the article, which two teams will play the last regular-season game at Jamsil Baseball Stadium, and on what date?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
