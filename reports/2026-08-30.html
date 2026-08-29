@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 8월 30일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .quote-attr {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    color: #8a8272;
+    margin-top: 10px;
+  }
+  .quote-attr .who { font-weight: 700; color: #6b6459; }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table, .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th, .event-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 8월 30일 일요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>8월 28일 종가 기준 코스피는 6,788.88포인트로 <strong>-1.79%</strong> 하락 마감했고, 코스닥은 838.41포인트로 <strong>+0.09%</strong> 소폭 상승했습니다. 뉴욕 증시도 나스닥 26,402.42(-0.52%), S&amp;P500 7,711.76(-0.25%)으로 동반 약세를 보였고, 원/달러 환율은 1,377.7원으로 -0.30% 내렸습니다.</p>
+    <ul>
+      <li><strong>삼성전자(005930)</strong> 259,500원 ▼-2.44% — PER 9.7배 저평가, ROE 15.1%, 영업이익 전분기 대비 75% 성장으로 중장기 매수 기회라는 평가.</li>
+      <li><strong>SK하이닉스(000660)</strong> 1,713,000원 ▼-0.98% — 12개월 선행 PER 3.9배의 극저평가, ROE 44.1%, HBM 선두 지위를 근거로 적극매수 의견.</li>
+      <li><strong>TIGER 반도체TOP10(0023A0)</strong> 약 20,700원(추정) — 삼성전자·SK하이닉스를 담은 국내 반도체 대표 ETF로, 조정 시 분할매수가 권고됨.</li>
+    </ul>
+    <p>이번 주 일정: 9월 1일(월) 미국 노동절 휴장, 9월 5일(금) 미국 8월 비농업 고용지표(NFP), 9월 16일(수) FOMC 금리 결정이 예정돼 있습니다.</p>
+    <div class="fortune-note">본 리포트는 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-08-30.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>엔비디아, 허깅페이스 인수 추진</strong> — 엔비디아가 오픈소스 AI 플랫폼 허깅페이스를 약 129억 달러(약 18조원)에 인수하는 방안을 추진 중인 것으로 전해졌다. (<a href="https://www.aitimes.com/" target="_blank">AI타임스</a>)</li>
+        <li><strong>빌 게이츠, AI 격동기 경고</strong> — 빌 게이츠가 AI 확산 속도에 대한 경고와 함께 '인간전용구역', 로봇세 도입 등을 제안하며 사회적 논의의 필요성을 제기했다. (<a href="https://www.aitimes.com/" target="_blank">AI타임스</a>)</li>
+        <li><strong>사이버보안 AI 모델 경쟁 가열</strong> — SKT·네이버클라우드 등 국내 기업들이 사이버보안 특화 AI 모델 사업에 잇따라 출사표를 던지며 경쟁이 본격화되고 있다. (<a href="https://www.aitimes.com/" target="_blank">AI타임스</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>정부, 잭슨홀 이후 시장 대응 점검</strong> — 구윤철 경제부총리 주재로 비상경제점검회의가 열려 잭슨홀 심포지엄 이후 국내외 금융시장 변동성 대응 방안을 논의했다. (<a href="https://mofe.go.kr/" target="_blank">기획재정부</a>)</li>
+        <li><strong>2분기 가계동향, 소득·지출 격차 주목</strong> — 통계청이 발표한 2026년 2분기 가계동향조사에서 소득 계층별 소비 여력 차이가 다시 도마 위에 올랐다. (<a href="https://www.hankyung.com/all-news" target="_blank">한국경제</a>)</li>
+        <li><strong>외환·자본시장 제도 개선, 해외 투자자에 설명</strong> — 기획재정부 국제금융 담당자가 글로벌 주요 투자자 대상 간담회에서 한국의 외환·자본시장 제도 개선 진행 상황을 설명했다. (<a href="https://mofe.go.kr/" target="_blank">기획재정부</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>네팔 홍수 실종 한국인 구조작전 총력</strong> — 두산에너빌리티 6명, 한국남동발전 3명 등 실종자 9명을 찾기 위해 정부 신속대응팀이 헬기 2대를 투입해 나흘째 수색을 이어가고 있다. (<a href="https://www.koreaherald.com/article/10856153" target="_blank">코리아헤럴드</a>)</li>
+        <li><strong>서울 주택공급 두고 정부·서울시 조율</strong> — 오세훈 서울시장이 제안한 강남 탄천 부지 등을 놓고 정부와 서울시가 주택공급 확대 방안을 계속 논의하고 있다. (<a href="https://www.youthdaily.co.kr/" target="_blank">유스데일리</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>LG디스플레이, '노마스크 OLED'로 초격차</strong> — 마스크 없는 포토리소그래피 공정으로 개구율을 55%까지 끌어올린 차세대 OLED 패널을 공개하며 중대형 시장 선점에 나섰다. (<a href="https://www.g-enews.com/" target="_blank">글로벌이코노믹</a>)</li>
+        <li><strong>중대형 OLED 시장, 연 14.8% 성장 전망</strong> — 중대형 OLED 시장이 2026년 약 115억 달러에서 2030년 약 200억 달러 규모로 커질 전망인 가운데, 올해 디스플레이 설비투자도 전년 대비 32% 늘어난다. (<a href="https://www.ebn.co.kr/" target="_blank">EBN</a>)</li>
+        <li><strong>갤럭시 Z 폴드8, 새 폴더블 OLED 탑재</strong> — 8월 7일 글로벌 출시된 갤럭시 Z 폴드8 시리즈에 삼성디스플레이의 새 폴더블 OLED 패널이 적용됐다. (<a href="https://www.g-enews.com/" target="_blank">글로벌이코노믹</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>한국 남자농구, 레바논에 완패</strong> — 이현중이 나선 한국 남자농구 대표팀이 2027 FIBA 월드컵 아시아 예선 2라운드에서 레바논에 74-93으로 패하며 조 최하위로 처졌다. (<a href="https://www.slist.kr/news/articleView.html?idxno=761915" target="_blank">에스라이프</a>)</li>
+        <li><strong>암표 거래 제재 대폭 강화</strong> — 8월 28일부터 공연·스포츠 경기 암표 거래에 대해 매크로 사용 여부와 관계없이 판매액의 최대 50배 과징금이 부과된다. (<a href="https://n.news.naver.com/mnews/article/001/0016275867?sid=103" target="_blank">연합뉴스</a>)</li>
+        <li><strong>그릴리시, 맨시티 떠나 이적 저울질</strong> — 맨체스터시티에서 출전 기회를 잃은 잭 그릴리시가 에버턴 등 프리미어리그 팀으로의 이적을 추진하는 것으로 알려졌다. (<a href="https://www.interfootball.co.kr/news/articleView.html?idxno=693387" target="_blank">인터풋볼</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 국내 AI 행사 -->
+  <section>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9/2~4</td><td><a href="https://www.ajunews.com/view/20260820142242887" target="_blank">2026 GGGF(글로벌경제재정포럼)</a></td>
+            <td>서울 플라자호텔 · 국회의사당</td><td>아주경제·GEFRI 주최 · "AI의 국가, 한국" 주제로 피지컬 AI 다룸 · 참가비·등록마감 미확인</td></tr>
+        <tr><td>9/16</td><td><a href="https://event-us.kr/khpseminar/event/132272" target="_blank">SK텔레콤 AI 런치 세미나</a></td>
+            <td>경기 성남 판교 글로벌비즈센터</td><td>SK텔레콤 주최 · 무료 · 등록마감 9/15</td></tr>
+        <tr><td>9/22</td><td><a href="https://event-us.kr/bylinenetwork/event/132790" target="_blank">금융테크 컨퍼런스 2026 (AI x SECURITY x FINANCE)</a></td>
+            <td>서울 여의도 FKI타워</td><td>바이라인네트워크 주최 · 무료 · 등록마감 9/21</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 30일 기준, 앞으로 한 달 내 열리는 AI·신기술 행사 중 날짜·장소가 확인된 것만 실었습니다. 이외에도 다수의 행사가 논의 중이나 구체 일정이 확인되지 않아 제외했습니다. 일정·장소는 주최 측 사정으로 바뀔 수 있으니 링크에서 다시 확인하세요.</div>
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1972년</strong> — 남북적십자 제1차 본회담이 평양에서 열려, 분단 이후 남북 당국 간 최초의 공식 회담으로 기록됐다.</li>
+      <li><strong>1999년</strong> — 동티모르에서 인도네시아로부터의 독립 여부를 묻는 주민투표가 유엔 감시하에 실시됐다.</li>
+    </ul>
+  </section>
+
+  <!-- 5. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      "날아오르고 싶은 충동을 느끼면서도 기어가는 데 동의할 수는 없다."
+      <div class="quote-attr"><span class="who">헬렌 켈러</span> · 미국 청각장애언어교육진흥회 연설 (1896년 7월 8일, 필라델피아)</div>
+    </div>
+  </section>
+
+  <!-- 6. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>일요일 아침의 차분한 기운이 한 주를 여는 힘이 됩니다. 서두르지 말고 오늘 하루 정리부터 시작하면 다음 한 주가 한결 가벼워질 운입니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>시장 변동성이 큰 시기이니 새 투자보다는 기존 포트폴리오 점검이 어울리는 날. 급하게 움직이지 않으면 손해를 피할 수 있습니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>가까운 사람과 나누는 짧은 안부 인사가 뜻밖의 좋은 인연으로 이어질 수 있는 날. 먼저 연락하는 쪽이 운을 가져갑니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 7. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>"잭슨홀 심포지엄 여파로 코스피가 하루 만에 1.8% 가까이 빠졌던데, 다음 주 FOMC까지는 변동성이 계속될 것 같아요."</li>
+      <li>"KBO 1위 삼성과 2위 KT가 겨우 반 게임 차예요. LG도 5.5게임차 4위라 막판까지 순위 다툼이 볼만하겠어요."</li>
+      <li>"오늘 새벽 PGA 투어 챔피언십에서 로리 매킬로이가 7언더 63타를 몰아치며 선두권까지 따라붙었다던데, 최종 라운드 결과가 궁금하네요."</li>
+    </ul>
+  </section>
+
+  <!-- 8. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (8/30, 일)</strong><br>
+        구름 많고 한때 비, 최고 29℃ · 최저 22℃. 습도가 높아 후텁지근하게 느껴질 수 있습니다.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (8/31, 월)</strong><br>
+        구름 많음, 최고 30℃ · 최저 22℃. 미세먼지 등급은 확인하지 못했으니 <a href="https://www.weather.go.kr/" target="_blank">기상청 날씨누리</a>를 참고하세요.
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>LG 트윈스는 8월 29일 기준 116경기에서 64승 51패 1무(승률 .557)로 4위에 자리하고 있습니다. 최근 10경기는 5승 5패로 다소 주춤한 흐름이며, 홈 30승-13패, 원정 22승-20패로 홈에서 특히 강한 모습을 보이고 있습니다. 3위 KIA와는 승차 없이 순위만 갈린 상태로, 8월 28~30일 사직에서 원정 경기를 치른 뒤 9월 1일부터 잠실에서 홈경기를 재개합니다. 정확한 최근 경기 스코어는 공식 사이트에서 확인하세요.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>삼성</td><td>115</td><td>68</td><td>3</td><td>44</td><td>.607</td><td>0</td></tr>
+            <tr><td>2</td><td>KT</td><td>112</td><td>66</td><td>3</td><td>43</td><td>.606</td><td>0.5</td></tr>
+            <tr><td>3</td><td>KIA</td><td>115</td><td>63</td><td>2</td><td>50</td><td>.558</td><td>5.5</td></tr>
+            <tr class="is-lg"><td>4</td><td>LG</td><td>116</td><td>64</td><td>1</td><td>51</td><td>.557</td><td>5.5</td></tr>
+            <tr><td>5</td><td>두산</td><td>116</td><td>60</td><td>4</td><td>52</td><td>.536</td><td>8</td></tr>
+            <tr><td>6</td><td>NC</td><td>110</td><td>50</td><td>2</td><td>58</td><td>.463</td><td>16</td></tr>
+            <tr><td>7</td><td>롯데</td><td>113</td><td>50</td><td>2</td><td>61</td><td>.450</td><td>17.5</td></tr>
+            <tr><td>8</td><td>한화</td><td>113</td><td>49</td><td>3</td><td>61</td><td>.445</td><td>18</td></tr>
+            <tr><td>9</td><td>SSG</td><td>118</td><td>48</td><td>5</td><td>65</td><td>.425</td><td>20.5</td></tr>
+            <tr><td>10</td><td>키움</td><td>120</td><td>42</td><td>3</td><td>75</td><td>.359</td><td>28.5</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 8월 29일 기준. 삼성-KT가 0.5게임차 초박빙 선두 다툼 중이며, 최신 경기 결과는 공식 사이트에서 확인하세요.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 10 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>투어 챔피언십 (East Lake GC, 애틀랜타)</td><td>애틀랜타</td><td>3라운드까지 라이언 제라드·빅터 호블란드·맥스 가터럽 공동선두(-11), 로리 매킬로이가 7언더 63타로 클럽하우스 리더(-10)로 추격. 최종 라운드 진행 중.</td></tr>
+        <tr><td>LPGA</td><td>FM 챔피언십 (TPC Boston)</td><td>매사추세츠 노턴</td><td>우승 미란다 왕(-20), 2위 지노 티티쿨(-19)로 대회 종료.</td></tr>
+        <tr><td>LIV</td><td>LIV 골프 마이클 팀 챔피언십 (The Cardinal at St. John's)</td><td>미시간 플리머스</td><td>시즌 최종전으로 팀별 토너먼트 진행 중. 개인·팀 챔피언은 대회 종료 후 확정.</td></tr>
+        <tr><td>KLPGA</td><td>제15회 KG 레이디스 오픈 (선닝포인트CC)</td><td>경기 용인</td><td>2라운드까지 노승희 단독선두(9언더 135타). 최종 라운드(4라운드제) 진행 중.</td></tr>
+        <tr><td>JLPGA</td><td>니토리 레이디스 골프 토너먼트</td><td>홋카이도 쓰루이</td><td>3라운드까지 아베 미유 단독선두(-7), 1타차 2위 쿠와기 시호·타카쿠 미나미. 최종 라운드 진행 중.</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 8월 29일 기준. 진행 중인 대회의 최종 순위는 각 투어 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 11. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>마장호수 출렁다리</strong> — 길이 220m로 국내 최장급인 파주 마장호수의 출렁다리. 걸을 때마다 살짝 흔들리는 스릴과 함께 호수 주변 둘레길 산책을 즐기기 좋습니다.</p>
+    <p><strong>율곡습지공원</strong> — 임진강변에 자리한 파주 율곡습지공원은 가을이면 코스모스가 만발해 가볍게 산책하며 사진 찍기 좋은 근교 나들이 코스입니다.</p>
+  </section>
+
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 12 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>한국사 이상현상 연구원(일반판)</td><td>최인서</td></tr>
+        <tr><td>2</td><td>세네카, 오늘을 빼앗기고 있는 당신에게</td><td>루키우스 안나이우스 세네카 (하와이 대저택 편역)</td></tr>
+        <tr><td>3</td><td>수족관</td><td>유래혁</td></tr>
+        <tr><td>4</td><td>오디세이아(고대 그리스어 완역본)</td><td>호메로스</td></tr>
+        <tr><td>5</td><td>그랬다고 적었다</td><td>김애란</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 교보문고 2026년 8월 19~25일 주간 종합 베스트셀러(도서·eBook 합산) 기준</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>세네카, 오늘을 빼앗기고 있는 당신에게</strong> · 루키우스 안나이우스 세네카 지음, 하와이 대저택 편역 — 네로 황제의 스승이었던 로마 스토아 철학자 세네카의 대화편 다섯 편 중 핵심만 추려 55편의 짧은 글로 재구성한 책입니다. "당신은 정말 당신의 삶을 살고 있는가, 시간 속에서 그저 살아지고 있는가"라는 질문을 던지며, 100만 유튜버 하와이 대저택이 고전의 무게는 지키되 가독성을 살려 편역했습니다. 오늘처럼 시장이 출렁이는 날, 흔들리지 않는 마음을 다루는 스토아 철학이 참고가 될 만합니다.</p>
+    </div>
+  </section>
+
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Late August in Korea can still feel like summer, but small signs of autumn are starting to appear. The morning air feels a little cooler, and street vendors begin selling roasted chestnuts near subway stations. Many people also start planning trips to see the first autumn flowers, like cosmos, in nearby parks. Families begin to think about Chuseok, the big autumn harvest holiday, and start checking train tickets early. Even though the daytime heat has not fully disappeared, this quiet shift in the air reminds people that a new season is coming. For many, it is a gentle signal to slow down and enjoy simple things, like a walk outside or a cup of warm tea.
+      </p>
+      <p style="font-size:13px; color:#6b6459;">(번역) 한국의 8월 말은 여전히 여름 같지만, 가을의 작은 신호들이 하나둘 나타나기 시작합니다. 아침 공기가 조금 선선해지고, 지하철역 근처에서는 군밤을 파는 노점상이 등장합니다. 많은 사람들이 근교 공원에서 코스모스 같은 초가을 꽃을 보러 갈 여행을 계획하기 시작합니다. 가정에서는 큰 가을 명절인 추석을 떠올리며 기차표를 미리 확인하기 시작합니다. 낮의 더위가 완전히 가시지는 않았지만, 이런 조용한 공기의 변화는 새로운 계절이 다가오고 있음을 알려줍니다. 많은 이들에게 이는 잠시 속도를 늦추고 산책이나 따뜻한 차 한 잔 같은 소박한 것들을 즐기라는 부드러운 신호이기도 합니다.</p>
+      <ul class="vocab-list">
+        <li><strong>vendor (n.)</strong> — 노점상, 판매자</li>
+        <li><strong>harvest (n.)</strong> — 수확, 추수</li>
+        <li><strong>gentle (adj.)</strong> — 부드러운, 은은한</li>
+      </ul>
+      <p class="comprehension-q">Q. What do many families start doing early as they think about Chuseok?</p>
+    </div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
