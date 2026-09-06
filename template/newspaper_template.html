@@ -220,6 +220,38 @@
     border-bottom: 1px solid #e4ddc9;
   }
   .news-category ul { margin-top: 0; }
+  .pattern-list { list-style: none; padding-left: 0; margin: 6px 0 0; counter-reset: pat; }
+  .pattern-list li {
+    background: #f7f2e6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .pattern-list li:last-child { margin-bottom: 0; }
+  .pat {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .pat .slot { color: #a3123a; font-weight: 700; }
+  .pat-ko { font-size: 13px; color: #7a7368; margin-top: 3px; }
+  .pat-ex {
+    font-size: 13.5px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e4ddc9;
+    line-height: 1.6;
+  }
+  .pat-ex .eng { font-family: Georgia, serif; }
+  .pat-ex .kor { color: #7a7368; }
+  .pat-cat {
+    font-size: 10.5px;
+    color: #9a9284;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+  }
   footer {
     text-align: center;
     font-size: 11px;
@@ -464,6 +496,25 @@
       </ul>
       <p class="comprehension-q">Q. {{COMPREHENSION_QUESTION}}</p>
     </div>
+  </section>
+
+  <!-- 14. 오늘의 영어 패턴 -->
+  <section>
+    <div class="section-num">SECTION 14 · ENGLISH PATTERNS</div>
+    <h2>오늘의 영어 패턴</h2>
+    <ul class="pattern-list">
+      {{PATTERN_ITEMS}}
+      <!-- data/english_patterns.json에서 오늘 몫 3개. 각 항목:
+           <li>
+             <div class="pat">I have a habit of <span class="slot">[~하는 것]</span></div>
+             <div class="pat-ko">나는 ~하는 버릇이 있어</div>
+             <div class="pat-ex"><span class="eng"><strong>Ex.</strong> ...</span><br><span class="kor">...</span></div>
+             <div class="pat-cat">패턴으로 말하기</div>
+           </li>
+           pattern과 ko는 JSON 그대로 쓰고, 예문만 그날 신문 내용으로 새로 만든다. -->
+    </ul>
+    <div class="standings-note">{{PATTERN_NOTE}}</div>
+    <!-- 예: "※ 43개 중 17~19번 · 약 2주에 한 바퀴 돕니다." -->
   </section>
 
   <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
