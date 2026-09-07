@@ -1,5 +1,5 @@
 {
-  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처 25장에서 추출 (2026-09-07, 5차에 걸쳐 수집)",
+  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처 27장에서 추출 (2026-09-07, 6차에 걸쳐 수집)",
   "_note": "pattern의 대괄호는 앱 원문 그대로의 슬롯 표기다. ko는 신문에 싣기 위해 덧붙인 한국어 뜻이며 앱 화면에는 없던 항목이다. category는 앱의 코스명이다.",
   "_usage": "SECTION 14에서 매일 3개씩 순서대로 사용한다. 선택 규칙은 NEWSPAPER.md 참고.",
   "patterns": [
@@ -1334,6 +1334,114 @@
       "pattern": "I'll have someone [작업 수행] by [미래 시간]",
       "ko": "[언제]까지 누구를 시켜 [그 일]을 해두겠습니다",
       "category": "비즈니스 영어 3"
+    },
+    {
+      "id": 223,
+      "pattern": "who is [사람]?",
+      "ko": "[그 사람] 누구야?",
+      "category": "스피킹하며 시작 (왕초보 1탄)"
+    },
+    {
+      "id": 224,
+      "pattern": "that is my [가족 관계]",
+      "ko": "저분은 제 [가족]이에요",
+      "category": "스피킹하며 시작 (왕초보 1탄)"
+    },
+    {
+      "id": 225,
+      "pattern": "are they [이름]'s [가족 관계]?",
+      "ko": "저분들 [누구]의 [가족]이야?",
+      "category": "스피킹하며 시작 (왕초보 1탄)"
+    },
+    {
+      "id": 226,
+      "pattern": "during [행사], I [빈도] put on [양] weight",
+      "ko": "[그 기간]에 나는 [얼마나] 살이 [자주] 쪄",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 227,
+      "pattern": "whenever [사람] [행동을 한다], they always [결과를 얻는다]",
+      "ko": "[그 사람]이 ~할 때마다 항상 [이렇게] 돼",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 228,
+      "pattern": "we stayed in a (big/small) [장소 유형] with [특징]",
+      "ko": "우리는 [특징]이 있는 [크고/작은] [숙소]에 묵었어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 229,
+      "pattern": "we [무엇을 했다] as much [무엇] as we could",
+      "ko": "우리는 할 수 있는 만큼 [그것]을 ~했어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 230,
+      "pattern": "we stayed at [설명] [숙소]",
+      "ko": "우리는 [어떤] [숙소]에 묵었어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 231,
+      "pattern": "I often eat [음식]",
+      "ko": "나는 [그것]을 자주 먹어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 232,
+      "pattern": "I must have been [상태]",
+      "ko": "내가 [어땠던] 게 분명해",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 233,
+      "pattern": "You must have been [상태] when I [무엇을 했는지]",
+      "ko": "내가 ~했을 때 너 [어땠]겠다",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 234,
+      "pattern": "this is a [색깔] [물건]",
+      "ko": "이건 [무슨 색] [물건]이야",
+      "category": "스피킹하며 시작 (왕초보 1탄)"
+    },
+    {
+      "id": 235,
+      "pattern": "I (had to/can't) [무언가를 하다] because of [이유]",
+      "ko": "[그 이유] 때문에 ~해야 했어 / ~할 수 없어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 236,
+      "pattern": "we [무엇을 했다] as many [것들] as we could",
+      "ko": "우리는 할 수 있는 만큼 많은 [것]을 ~했어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 237,
+      "pattern": "He is [형용사] because of [이유]",
+      "ko": "그는 [그 이유] 때문에 [어때]",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 238,
+      "pattern": "I really need to (start/stop) [~하는 것]",
+      "ko": "나 ~하는 걸 정말 시작해야/그만둬야 해",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 239,
+      "pattern": "whenever I [무언가를 하다], I always [결과를 얻다]",
+      "ko": "나는 ~할 때마다 항상 [이렇게] 돼",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 240,
+      "pattern": "they are [누구의] [가족 관계]",
+      "ko": "저분들은 [누구]의 [가족]이야",
+      "category": "스피킹하며 시작 (왕초보 1탄)"
     }
   ]
 }
