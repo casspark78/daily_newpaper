@@ -1,5 +1,5 @@
 {
-  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처 20장에서 추출 (2026-09-07, 4차에 걸쳐 수집)",
+  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처 25장에서 추출 (2026-09-07, 5차에 걸쳐 수집)",
   "_note": "pattern의 대괄호는 앱 원문 그대로의 슬롯 표기다. ko는 신문에 싣기 위해 덧붙인 한국어 뜻이며 앱 화면에는 없던 항목이다. category는 앱의 코스명이다.",
   "_usage": "SECTION 14에서 매일 3개씩 순서대로 사용한다. 선택 규칙은 NEWSPAPER.md 참고.",
   "patterns": [
@@ -1070,6 +1070,270 @@
       "pattern": "are you telling me that [진술]?",
       "ko": "지금 [그렇다]는 말이야?",
       "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 179,
+      "pattern": "compared to [옵션], [항목] has [특징]",
+      "ko": "[다른 것]에 비하면 [이것]은 [이런 점]이 있어",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 180,
+      "pattern": "[사람] is so [상태] that [결과]",
+      "ko": "[그 사람]이 너무 [어때]서 [이렇게] 됐어",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 181,
+      "pattern": "this may be a surprise, but [놀라운 소식]",
+      "ko": "놀라실 수도 있는데 [이런 일이 있어요]",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 182,
+      "pattern": "I appreciate your [무언가]",
+      "ko": "[그것] 정말 고맙습니다",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 183,
+      "pattern": "no matter what happens, I'll always [무엇을 하다]",
+      "ko": "무슨 일이 있어도 나는 늘 ~할 거야",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 184,
+      "pattern": "even if [조건], I will still [할 것]",
+      "ko": "[그렇더라도] 나는 그래도 ~할 거야",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 185,
+      "pattern": "let me know if [조건]",
+      "ko": "[그런 경우] 알려주세요",
+      "category": "비즈니스 영어 3"
+    },
+    {
+      "id": 186,
+      "pattern": "[사람] told [사람] that [소식]",
+      "ko": "[누가] [누구]에게 [이런 얘기]를 했어요",
+      "category": "비즈니스 영어 3"
+    },
+    {
+      "id": 187,
+      "pattern": "I couldn't have [무엇을 했] without you",
+      "ko": "당신 없었으면 못 했을 거예요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 188,
+      "pattern": "I am [정도] worried about [무엇]",
+      "ko": "[그것]이 [어느 정도] 걱정돼요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 189,
+      "pattern": "when it comes to [주제], [대상] might be the best option",
+      "ko": "[그 얘기라면] [이것]이 최선일 수 있어요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 190,
+      "pattern": "in which case, [사람] (would/will) probably go with [선택]",
+      "ko": "그렇다면 [그 사람]은 아마 [이걸] 택할 거예요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 191,
+      "pattern": "what if you were [사람]?",
+      "ko": "네가 [그 사람]이라면 어떨 것 같아?",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 192,
+      "pattern": "what would you do if [상황]?",
+      "ko": "[그런 상황]이면 어떻게 할 거야?",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 193,
+      "pattern": "it's not about [측면] it's about [측면]",
+      "ko": "중요한 건 [이게] 아니라 [저거]예요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 194,
+      "pattern": "what if you were in [장소]?",
+      "ko": "네가 [거기] 있다면 어떨 것 같아?",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 195,
+      "pattern": "whether I [무엇을 하다] or [다른 것], I should [일반적인 결과]",
+      "ko": "~하든 [다른 걸] 하든, 나는 ~해야 해",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 196,
+      "pattern": "[대답], thank you",
+      "ko": "[네/아니요], 고맙습니다",
+      "category": "여행 영어 2"
+    },
+    {
+      "id": 197,
+      "pattern": "do you speak [언어]?",
+      "ko": "[그 말] 하실 줄 아세요?",
+      "category": "스피킹하며 시작 (왕초보 1탄)"
+    },
+    {
+      "id": 198,
+      "pattern": "we have a reservation under [이름]",
+      "ko": "[그 이름]으로 예약했는데요",
+      "category": "원어민처럼 스피킹"
+    },
+    {
+      "id": 199,
+      "pattern": "even though [조건], [양보]",
+      "ko": "[그런데도] [이래요]",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 200,
+      "pattern": "although [조건], [양보]",
+      "ko": "[비록 그렇지만] [이래요]",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 201,
+      "pattern": "be on the lookout for [무언가]",
+      "ko": "[그것] 잘 살펴보세요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 202,
+      "pattern": "be careful with [무엇]",
+      "ko": "[그것] 조심하세요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 203,
+      "pattern": "the thing is [상황]",
+      "ko": "그게 말이죠, [사정이 이래요]",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 204,
+      "pattern": "try to [무언가 하다]",
+      "ko": "~하도록 해보세요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 205,
+      "pattern": "Please [무언가를 하다] as soon as possible",
+      "ko": "가능한 한 빨리 ~해 주세요",
+      "category": "비즈니스 영어 3"
+    },
+    {
+      "id": 206,
+      "pattern": "be careful not to [무엇을 하다]",
+      "ko": "~하지 않도록 조심하세요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 207,
+      "pattern": "by the way, how was [일]?",
+      "ko": "그건 그렇고, [그 일]은 어땠어?",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 208,
+      "pattern": "how was your [행사]?",
+      "ko": "[그거] 어땠어요?",
+      "category": "원어민처럼 스피킹"
+    },
+    {
+      "id": 209,
+      "pattern": "by the way, how was [행사] [과거 시간]?",
+      "ko": "그건 그렇고, [언제] [그 행사]는 어땠어?",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 210,
+      "pattern": "I like the way [사람] [행동하는 방식]",
+      "ko": "나는 [그 사람]이 ~하는 방식이 좋아",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 211,
+      "pattern": "I am concerned about [무언가]",
+      "ko": "[그것]이 염려됩니다",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 212,
+      "pattern": "you did a great job on [작업]",
+      "ko": "[그 일] 정말 잘하셨어요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 213,
+      "pattern": "I'm happy to see that [관찰]",
+      "ko": "[그런 걸] 보니 기쁘네요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 214,
+      "pattern": "I can tell that [관찰]",
+      "ko": "[그렇다는 게] 보여요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 215,
+      "pattern": "I have a lot of family in [장소]",
+      "ko": "저는 [거기]에 가족이 많아요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 216,
+      "pattern": "I want you to know that [안심]",
+      "ko": "[이것만은] 알아주셨으면 해요",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 217,
+      "pattern": "I must have been [상태] to [무엇을 하다]",
+      "ko": "~했다니 내가 [어땠던] 게 분명해",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 218,
+      "pattern": "I could have [무엇을 했을] my [물건]",
+      "ko": "[내 것]을 ~할 수도 있었는데",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 219,
+      "pattern": "I could have [무엇을 했을]",
+      "ko": "~할 수도 있었는데",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 220,
+      "pattern": "I [무엇을 했다] because of [이유]",
+      "ko": "[그 이유] 때문에 ~했어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 221,
+      "pattern": "I'll have someone [무엇을 하다]",
+      "ko": "누구를 시켜 ~하도록 하겠습니다",
+      "category": "비즈니스 영어 3"
+    },
+    {
+      "id": 222,
+      "pattern": "I'll have someone [작업 수행] by [미래 시간]",
+      "ko": "[언제]까지 누구를 시켜 [그 일]을 해두겠습니다",
+      "category": "비즈니스 영어 3"
     }
   ]
 }
