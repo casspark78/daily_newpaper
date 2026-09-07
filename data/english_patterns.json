@@ -1,50 +1,535 @@
 {
-  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처 5장에서 추출 (2026-09-07 수집)",
+  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처에서 추출 (1차 5장 2026-09-07, 2차 5장 2026-09-07)",
   "_note": "pattern의 대괄호는 앱 원문 그대로의 슬롯 표기다. ko는 신문에 싣기 위해 덧붙인 한국어 뜻이며 앱 화면에는 없던 항목이다. category는 앱의 코스명이다.",
   "_usage": "SECTION 14에서 매일 3개씩 순서대로 사용한다. 선택 규칙은 NEWSPAPER.md 참고.",
   "patterns": [
-    { "id": 1,  "pattern": "I'm always in a hurry to [무엇을 하다]", "ko": "나는 늘 ~하느라 서두른다", "category": "패턴으로 말하기" },
-    { "id": 2,  "pattern": "I missed the alarm [과거 시간]", "ko": "나 [언제] 알람을 못 들었어", "category": "패턴으로 말하기" },
-    { "id": 3,  "pattern": "I set my alarm for [시간]", "ko": "나 [몇 시]로 알람 맞춰놨어", "category": "패턴으로 말하기" },
-    { "id": 4,  "pattern": "I'm never going to [무엇을 하다] again", "ko": "다시는 ~하지 않을 거야", "category": "패턴으로 말하기" },
-    { "id": 5,  "pattern": "I shouldn't keep [~하는 것]", "ko": "계속 ~하면 안 되는데", "category": "패턴으로 말하기" },
-    { "id": 6,  "pattern": "if I'm hearing you correctly, you'd like to [무엇을 하다]?", "ko": "제가 제대로 이해했다면, ~하시겠다는 말씀이죠?", "category": "비즈니스 영어 1" },
-    { "id": 7,  "pattern": "I completely agree with [어떤 것].", "ko": "저는 ~에 전적으로 동의합니다", "category": "직장 커뮤니케이션 기초" },
-    { "id": 8,  "pattern": "I have a habit of [~하는 것]", "ko": "나는 ~하는 버릇이 있어", "category": "패턴으로 말하기" },
-    { "id": 9,  "pattern": "I've had enough of [~하는 것]", "ko": "~하는 건 이제 지긋지긋해", "category": "패턴으로 말하기" },
-    { "id": 10, "pattern": "Are we on the same page about [주제]?", "ko": "[주제]에 대해 우리 생각이 같은 거죠?", "category": "직장 커뮤니케이션 기초" },
-    { "id": 11, "pattern": "I can't get enough of [아이템]", "ko": "[그것]은 아무리 해도 질리지가 않아", "category": "패턴으로 말하기" },
-    { "id": 12, "pattern": "I can't get enough of [~하는 것]", "ko": "~하는 건 아무리 해도 질리지가 않아", "category": "패턴으로 말하기" },
-    { "id": 13, "pattern": "what are your thoughts on [주제]?", "ko": "[주제]에 대해 어떻게 생각하세요?", "category": "비즈니스 영어 1" },
-    { "id": 14, "pattern": "as part of [그룹], I was in charge of [하는 것]", "ko": "[팀]의 일원으로서 저는 ~를 맡았습니다", "category": "영어 면접 실전" },
-    { "id": 15, "pattern": "let me [무엇을 하다]", "ko": "제가 ~하겠습니다 / ~하게 해주세요", "category": "영어 면접 실전" },
-    { "id": 16, "pattern": "I got married in [연도]", "ko": "저는 [몇 년]에 결혼했어요", "category": "스피킹 살아남기 (기초 2탄)" },
-    { "id": 17, "pattern": "do I [무엇을 하다]?", "ko": "내가 ~하나요? / ~해야 하나요?", "category": "스피킹하며 시작 (왕초보 1탄)" },
-    { "id": 18, "pattern": "I [하는 일] at [시간].", "ko": "저는 [몇 시]에 [무엇을] 합니다", "category": "직장 커뮤니케이션 기초" },
-    { "id": 19, "pattern": "I'm in the mood for something [음식 설명]", "ko": "뭔가 [어떤] 게 당기네", "category": "초급 3" },
-    { "id": 20, "pattern": "Are you thinking of [무엇을 할지]?", "ko": "~할 생각이야?", "category": "중급 1" },
-    { "id": 21, "pattern": "Those [물건들] are so [형용사]", "ko": "저 [물건들] 정말 [어떻다]", "category": "초급 3" },
-    { "id": 22, "pattern": "These [물건] are so [설명]", "ko": "이 [물건들] 정말 [어떻다]", "category": "초급 3" },
-    { "id": 23, "pattern": "everything was [의견]", "ko": "다 [어땠어]", "category": "초급 3" },
-    { "id": 24, "pattern": "these [물건들] are a little too [핏]", "ko": "이거 좀 [크다/작다/끼다]", "category": "초급 3" },
-    { "id": 25, "pattern": "I [일과를 하다] by [하루 중 시간]", "ko": "나는 [몇 시]까지는 [무엇을] 해", "category": "초급 3" },
-    { "id": 26, "pattern": "can I get a [물건]?", "ko": "[그것] 하나 주시겠어요?", "category": "초급 3" },
-    { "id": 27, "pattern": "Are you free for [행사] [시간]?", "ko": "[언제] [행사] 시간 괜찮으세요?", "category": "직장 커뮤니케이션 기초" },
-    { "id": 28, "pattern": "I [무언가를 한다] after [이벤트].", "ko": "저는 [무엇] 후에 [무엇을] 합니다", "category": "직장 커뮤니케이션 기초" },
-    { "id": 29, "pattern": "I [무언가를 하다] before [행사].", "ko": "저는 [무엇] 전에 [무엇을] 합니다", "category": "직장 커뮤니케이션 기초" },
-    { "id": 30, "pattern": "that sounds [의견], but [변명]", "ko": "[좋을] 것 같은데, 다만 [사정이 있어]", "category": "초급 3" },
-    { "id": 31, "pattern": "I live behind [장소]", "ko": "저는 [장소] 뒤쪽에 살아요", "category": "초급 3" },
-    { "id": 32, "pattern": "I sometimes [일상적인 일을 하다] [하루 중 시간]", "ko": "나는 가끔 [언제] [무엇을] 해", "category": "초급 3" },
-    { "id": 33, "pattern": "I was born in [장소]", "ko": "저는 [어디]에서 태어났어요", "category": "초급 3" },
-    { "id": 34, "pattern": "I never [일상적인 일을 하다] after [하루 중 시간]", "ko": "나는 [몇 시] 이후에는 절대 [무엇을] 안 해", "category": "초급 3" },
-    { "id": 35, "pattern": "such a bummer, but I [핑계가 있어]", "ko": "아쉽지만 [사정이 있어서요]", "category": "초급 3" },
-    { "id": 36, "pattern": "could I have the [특별 메뉴 항목]?", "ko": "[그 메뉴]로 주시겠어요?", "category": "초급 3" },
-    { "id": 37, "pattern": "we never ordered this [음식]", "ko": "저희 이거 시킨 적 없는데요", "category": "초급 3" },
-    { "id": 38, "pattern": "do you wanna check out [행사/장소]?", "ko": "[거기] 한번 가볼래?", "category": "초급 3" },
-    { "id": 39, "pattern": "do you wanna come over for [행사]?", "ko": "[뭐] 하러 우리 집에 올래?", "category": "초급 3" },
-    { "id": 40, "pattern": "I try to [무언가 하다] more", "ko": "나는 ~를 더 하려고 노력해", "category": "초급 3" },
-    { "id": 41, "pattern": "I'll [무언가를 하다] in about [시간]", "ko": "[얼마] 후에 ~할게", "category": "초급 1" },
-    { "id": 42, "pattern": "How about [시간] instead?", "ko": "대신 [언제]는 어떠세요?", "category": "직장 커뮤니케이션 기초" },
-    { "id": 43, "pattern": "I [무엇을 한다] then.", "ko": "그럼 저는 [무엇을] 하겠습니다", "category": "직장 커뮤니케이션 기초" }
+    {
+      "id": 1,
+      "pattern": "I'm always in a hurry to [무엇을 하다]",
+      "ko": "나는 늘 ~하느라 서두른다",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 2,
+      "pattern": "I missed the alarm [과거 시간]",
+      "ko": "나 [언제] 알람을 못 들었어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 3,
+      "pattern": "I set my alarm for [시간]",
+      "ko": "나 [몇 시]로 알람 맞춰놨어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 4,
+      "pattern": "I'm never going to [무엇을 하다] again",
+      "ko": "다시는 ~하지 않을 거야",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 5,
+      "pattern": "I shouldn't keep [~하는 것]",
+      "ko": "계속 ~하면 안 되는데",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 6,
+      "pattern": "if I'm hearing you correctly, you'd like to [무엇을 하다]?",
+      "ko": "제가 제대로 이해했다면, ~하시겠다는 말씀이죠?",
+      "category": "비즈니스 영어 1"
+    },
+    {
+      "id": 7,
+      "pattern": "I completely agree with [어떤 것].",
+      "ko": "저는 ~에 전적으로 동의합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 8,
+      "pattern": "I have a habit of [~하는 것]",
+      "ko": "나는 ~하는 버릇이 있어",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 9,
+      "pattern": "I've had enough of [~하는 것]",
+      "ko": "~하는 건 이제 지긋지긋해",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 10,
+      "pattern": "Are we on the same page about [주제]?",
+      "ko": "[주제]에 대해 우리 생각이 같은 거죠?",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 11,
+      "pattern": "I can't get enough of [아이템]",
+      "ko": "[그것]은 아무리 해도 질리지가 않아",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 12,
+      "pattern": "I can't get enough of [~하는 것]",
+      "ko": "~하는 건 아무리 해도 질리지가 않아",
+      "category": "패턴으로 말하기"
+    },
+    {
+      "id": 13,
+      "pattern": "what are your thoughts on [주제]?",
+      "ko": "[주제]에 대해 어떻게 생각하세요?",
+      "category": "비즈니스 영어 1"
+    },
+    {
+      "id": 14,
+      "pattern": "as part of [그룹], I was in charge of [하는 것]",
+      "ko": "[팀]의 일원으로서 저는 ~를 맡았습니다",
+      "category": "영어 면접 실전"
+    },
+    {
+      "id": 15,
+      "pattern": "let me [무엇을 하다]",
+      "ko": "제가 ~하겠습니다 / ~하게 해주세요",
+      "category": "영어 면접 실전"
+    },
+    {
+      "id": 16,
+      "pattern": "I got married in [연도]",
+      "ko": "저는 [몇 년]에 결혼했어요",
+      "category": "스피킹 살아남기 (기초 2탄)"
+    },
+    {
+      "id": 17,
+      "pattern": "do I [무엇을 하다]?",
+      "ko": "내가 ~하나요? / ~해야 하나요?",
+      "category": "스피킹하며 시작 (왕초보 1탄)"
+    },
+    {
+      "id": 18,
+      "pattern": "I [하는 일] at [시간].",
+      "ko": "저는 [몇 시]에 [무엇을] 합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 19,
+      "pattern": "I'm in the mood for something [음식 설명]",
+      "ko": "뭔가 [어떤] 게 당기네",
+      "category": "초급 3"
+    },
+    {
+      "id": 20,
+      "pattern": "Are you thinking of [무엇을 할지]?",
+      "ko": "~할 생각이야?",
+      "category": "중급 1"
+    },
+    {
+      "id": 21,
+      "pattern": "Those [물건들] are so [형용사]",
+      "ko": "저 [물건들] 정말 [어떻다]",
+      "category": "초급 3"
+    },
+    {
+      "id": 22,
+      "pattern": "These [물건] are so [설명]",
+      "ko": "이 [물건들] 정말 [어떻다]",
+      "category": "초급 3"
+    },
+    {
+      "id": 23,
+      "pattern": "everything was [의견]",
+      "ko": "다 [어땠어]",
+      "category": "초급 3"
+    },
+    {
+      "id": 24,
+      "pattern": "these [물건들] are a little too [핏]",
+      "ko": "이거 좀 [크다/작다/끼다]",
+      "category": "초급 3"
+    },
+    {
+      "id": 25,
+      "pattern": "I [일과를 하다] by [하루 중 시간]",
+      "ko": "나는 [몇 시]까지는 [무엇을] 해",
+      "category": "초급 3"
+    },
+    {
+      "id": 26,
+      "pattern": "can I get a [물건]?",
+      "ko": "[그것] 하나 주시겠어요?",
+      "category": "초급 3"
+    },
+    {
+      "id": 27,
+      "pattern": "Are you free for [행사] [시간]?",
+      "ko": "[언제] [행사] 시간 괜찮으세요?",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 28,
+      "pattern": "I [무언가를 한다] after [이벤트].",
+      "ko": "저는 [무엇] 후에 [무엇을] 합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 29,
+      "pattern": "I [무언가를 하다] before [행사].",
+      "ko": "저는 [무엇] 전에 [무엇을] 합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 30,
+      "pattern": "that sounds [의견], but [변명]",
+      "ko": "[좋을] 것 같은데, 다만 [사정이 있어]",
+      "category": "초급 3"
+    },
+    {
+      "id": 31,
+      "pattern": "I live behind [장소]",
+      "ko": "저는 [장소] 뒤쪽에 살아요",
+      "category": "초급 3"
+    },
+    {
+      "id": 32,
+      "pattern": "I sometimes [일상적인 일을 하다] [하루 중 시간]",
+      "ko": "나는 가끔 [언제] [무엇을] 해",
+      "category": "초급 3"
+    },
+    {
+      "id": 33,
+      "pattern": "I was born in [장소]",
+      "ko": "저는 [어디]에서 태어났어요",
+      "category": "초급 3"
+    },
+    {
+      "id": 34,
+      "pattern": "I never [일상적인 일을 하다] after [하루 중 시간]",
+      "ko": "나는 [몇 시] 이후에는 절대 [무엇을] 안 해",
+      "category": "초급 3"
+    },
+    {
+      "id": 35,
+      "pattern": "such a bummer, but I [핑계가 있어]",
+      "ko": "아쉽지만 [사정이 있어서요]",
+      "category": "초급 3"
+    },
+    {
+      "id": 36,
+      "pattern": "could I have the [특별 메뉴 항목]?",
+      "ko": "[그 메뉴]로 주시겠어요?",
+      "category": "초급 3"
+    },
+    {
+      "id": 37,
+      "pattern": "we never ordered this [음식]",
+      "ko": "저희 이거 시킨 적 없는데요",
+      "category": "초급 3"
+    },
+    {
+      "id": 38,
+      "pattern": "do you wanna check out [행사/장소]?",
+      "ko": "[거기] 한번 가볼래?",
+      "category": "초급 3"
+    },
+    {
+      "id": 39,
+      "pattern": "do you wanna come over for [행사]?",
+      "ko": "[뭐] 하러 우리 집에 올래?",
+      "category": "초급 3"
+    },
+    {
+      "id": 40,
+      "pattern": "I try to [무언가 하다] more",
+      "ko": "나는 ~를 더 하려고 노력해",
+      "category": "초급 3"
+    },
+    {
+      "id": 41,
+      "pattern": "I'll [무언가를 하다] in about [시간]",
+      "ko": "[얼마] 후에 ~할게",
+      "category": "초급 1"
+    },
+    {
+      "id": 42,
+      "pattern": "How about [시간] instead?",
+      "ko": "대신 [언제]는 어떠세요?",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 43,
+      "pattern": "I [무엇을 한다] then.",
+      "ko": "그럼 저는 [무엇을] 하겠습니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 44,
+      "pattern": "I [무엇을 하다] before I [무엇을 하다].",
+      "ko": "나는 ~하기 전에 ~한다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 45,
+      "pattern": "I [무엇을 하다] after I [무엇을 하다].",
+      "ko": "나는 ~한 뒤에 ~한다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 46,
+      "pattern": "Maybe [다른 시간]?",
+      "ko": "[다른 때]는 어떠세요?",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 47,
+      "pattern": "I'm in the middle of [활동]",
+      "ko": "나 지금 ~하는 중이야",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 48,
+      "pattern": "I work from home on [요일].",
+      "ko": "저는 [무슨 요일]에 재택근무합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 49,
+      "pattern": "I go into the office on [요일].",
+      "ko": "저는 [무슨 요일]에 사무실로 출근합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 50,
+      "pattern": "sorry, but I [변명이 있다]",
+      "ko": "죄송한데 제가 [사정이 있어서요]",
+      "category": "초급 3"
+    },
+    {
+      "id": 51,
+      "pattern": "I'll [무엇을 하다] by [시간]",
+      "ko": "[언제]까지 ~하겠습니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 52,
+      "pattern": "I'm in the middle of [일]",
+      "ko": "나 지금 [무슨 일] 하는 중이야",
+      "category": "스피킹 살아남기 (기초 3탄)"
+    },
+    {
+      "id": 53,
+      "pattern": "could I get [물건]?",
+      "ko": "[그것] 좀 받을 수 있을까요?",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 54,
+      "pattern": "I want to [동사] less [목적어]",
+      "ko": "[무엇]을 덜 ~하고 싶어",
+      "category": "초급 3"
+    },
+    {
+      "id": 55,
+      "pattern": "I went to [장소]",
+      "ko": "나 [어디] 갔었어",
+      "category": "초급 1"
+    },
+    {
+      "id": 56,
+      "pattern": "I try to [일상적인 일을 하다] by [하루 중 시간]",
+      "ko": "나는 [몇 시]까지 ~하려고 해",
+      "category": "초급 3"
+    },
+    {
+      "id": 57,
+      "pattern": "I always [일과를 하다] [하루 중 시간]",
+      "ko": "나는 [언제] 항상 ~해",
+      "category": "초급 3"
+    },
+    {
+      "id": 58,
+      "pattern": "I rarely [일상적인 일을 하다]",
+      "ko": "나는 좀처럼 ~하지 않아",
+      "category": "초급 3"
+    },
+    {
+      "id": 59,
+      "pattern": "Are you [무엇을 할] [미래의 시간]?",
+      "ko": "[언제] ~할 거야?",
+      "category": "초급 3"
+    },
+    {
+      "id": 60,
+      "pattern": "I studied [전공 분야]",
+      "ko": "저는 [무엇]을 공부했어요",
+      "category": "초급 3"
+    },
+    {
+      "id": 61,
+      "pattern": "I am [무엇을 하고 있다] [미래의 시간]",
+      "ko": "나 [언제] ~할 예정이야",
+      "category": "초급 3"
+    },
+    {
+      "id": 62,
+      "pattern": "are you going to [행사]?",
+      "ko": "[그 행사] 갈 거야?",
+      "category": "초급 3"
+    },
+    {
+      "id": 63,
+      "pattern": "I'm afraid of [무언가를 하는 것]",
+      "ko": "나는 ~하는 게 무서워",
+      "category": "초급 3"
+    },
+    {
+      "id": 64,
+      "pattern": "I majored in [전공 분야]",
+      "ko": "저는 [무엇]을 전공했어요",
+      "category": "초급 3"
+    },
+    {
+      "id": 65,
+      "pattern": "I live next to [장소]",
+      "ko": "저는 [장소] 바로 옆에 살아요",
+      "category": "초급 3"
+    },
+    {
+      "id": 66,
+      "pattern": "how often do you [무엇을 하다]?",
+      "ko": "얼마나 자주 ~해?",
+      "category": "초급 3"
+    },
+    {
+      "id": 67,
+      "pattern": "I live around [위치]",
+      "ko": "저는 [그 근처]에 살아요",
+      "category": "초급 3"
+    },
+    {
+      "id": 68,
+      "pattern": "are you a [취향] person or a [취향] person?",
+      "ko": "너는 [이쪽]이야 [저쪽]이야?",
+      "category": "실전 상황별 스피킹"
+    },
+    {
+      "id": 69,
+      "pattern": "I want to [무언가 하다] less",
+      "ko": "~하는 걸 좀 줄이고 싶어",
+      "category": "초급 3"
+    },
+    {
+      "id": 70,
+      "pattern": "I don't [일상적인 일을 하다] after [하루 중 시간]",
+      "ko": "나는 [몇 시] 이후엔 ~안 해",
+      "category": "초급 3"
+    },
+    {
+      "id": 71,
+      "pattern": "I can't [전혀 할 수 없다] at all",
+      "ko": "나는 ~를 전혀 못 해",
+      "category": "초급 1"
+    },
+    {
+      "id": 72,
+      "pattern": "because it was too [형용사]",
+      "ko": "너무 [어때]서 그랬어",
+      "category": "초급 1"
+    },
+    {
+      "id": 73,
+      "pattern": "I am gonna [무언가를 하다] at the [장소]",
+      "ko": "나 [어디]에서 ~할 거야",
+      "category": "초급 1"
+    },
+    {
+      "id": 74,
+      "pattern": "what about [어디 가기]?",
+      "ko": "[거기] 가는 건 어때?",
+      "category": "초급 3"
+    },
+    {
+      "id": 75,
+      "pattern": "I love going to [장소]",
+      "ko": "나는 [거기] 가는 걸 정말 좋아해",
+      "category": "초급 3"
+    },
+    {
+      "id": 76,
+      "pattern": "I mostly [작업].",
+      "ko": "저는 주로 [무슨 일]을 합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 77,
+      "pattern": "I handle [업무].",
+      "ko": "저는 [무슨 업무]를 담당합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 78,
+      "pattern": "Could we [행동]?",
+      "ko": "우리 ~할 수 있을까요?",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 79,
+      "pattern": "can we review [문서] together?",
+      "ko": "[그 문서] 같이 검토해볼까요?",
+      "category": "비즈니스 영어 1"
+    },
+    {
+      "id": 80,
+      "pattern": "could you [요청]?",
+      "ko": "~해 주실 수 있을까요?",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 81,
+      "pattern": "I am gonna go to [장소] for [목적]",
+      "ko": "나 [무엇] 하러 [어디] 갈 거야",
+      "category": "초급 1"
+    },
+    {
+      "id": 82,
+      "pattern": "I am afraid of [무언가]",
+      "ko": "나는 [그것]이 무서워",
+      "category": "초급 3"
+    },
+    {
+      "id": 83,
+      "pattern": "I am (doing/feeling) [감정] [현재 시간]",
+      "ko": "나 지금 [기분이] ~해",
+      "category": "초급 1"
+    },
+    {
+      "id": 84,
+      "pattern": "[무언가]'s gonna be [예측]",
+      "ko": "[그것]은 ~할 거야",
+      "category": "초급 1"
+    },
+    {
+      "id": 85,
+      "pattern": "sounds [형용사]",
+      "ko": "[어떻게] 들리네 / ~하겠다",
+      "category": "초급 1"
+    },
+    {
+      "id": 86,
+      "pattern": "I am bummed about [~하는 것]",
+      "ko": "~하게 돼서 아쉬워",
+      "category": "초급 3"
+    },
+    {
+      "id": 87,
+      "pattern": "what about [새로운 주제]?",
+      "ko": "[그건] 어때?",
+      "category": "초급 3"
+    },
+    {
+      "id": 88,
+      "pattern": "I am excited about [무엇을 하는 것]",
+      "ko": "~하게 돼서 기대돼",
+      "category": "초급 3"
+    }
   ]
 }
