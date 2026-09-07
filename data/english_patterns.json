@@ -1,5 +1,5 @@
 {
-  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처에서 추출 (1차 5장 2026-09-07, 2차 5장 2026-09-07)",
+  "_source": "사용자가 제공한 영어 학습 앱 '모든 콘셉' 화면 캡처 15장에서 추출 (2026-09-07, 3차에 걸쳐 수집)",
   "_note": "pattern의 대괄호는 앱 원문 그대로의 슬롯 표기다. ko는 신문에 싣기 위해 덧붙인 한국어 뜻이며 앱 화면에는 없던 항목이다. category는 앱의 코스명이다.",
   "_usage": "SECTION 14에서 매일 3개씩 순서대로 사용한다. 선택 규칙은 NEWSPAPER.md 참고.",
   "patterns": [
@@ -530,6 +530,276 @@
       "pattern": "I am excited about [무엇을 하는 것]",
       "ko": "~하게 돼서 기대돼",
       "category": "초급 3"
+    },
+    {
+      "id": 89,
+      "pattern": "[무언가] sounds [설명]",
+      "ko": "[그것] ~하게 들리네",
+      "category": "초급 1"
+    },
+    {
+      "id": 90,
+      "pattern": "there's [수량]",
+      "ko": "[얼마]가 있어",
+      "category": "초급 1"
+    },
+    {
+      "id": 91,
+      "pattern": "[무언가] looks [설명]",
+      "ko": "[그것] ~해 보이네",
+      "category": "초급 1"
+    },
+    {
+      "id": 92,
+      "pattern": "can you [무언가를 하다] [기술 수준]?",
+      "ko": "너 ~를 [얼마나] 할 줄 알아?",
+      "category": "초급 1"
+    },
+    {
+      "id": 93,
+      "pattern": "I'm on the [업무 팀].",
+      "ko": "저는 [무슨] 팀 소속입니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 94,
+      "pattern": "I worked at [회사] before.",
+      "ko": "저는 전에 [어느 회사]에서 일했어요",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 95,
+      "pattern": "I'm at [회사].",
+      "ko": "저는 [어느 회사]에 다닙니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 96,
+      "pattern": "When will you be [상태]",
+      "ko": "언제쯤 [어떤 상태]가 되세요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 97,
+      "pattern": "I am not [~하고 있지 않다]",
+      "ko": "나 ~하고 있지 않아",
+      "category": "초급 1"
+    },
+    {
+      "id": 98,
+      "pattern": "I am tired of [무언가]",
+      "ko": "[그것] 이제 지겨워",
+      "category": "초급 3"
+    },
+    {
+      "id": 99,
+      "pattern": "how many [것들] are you gonna [행동]?",
+      "ko": "[그것] 몇 개나 ~할 거야?",
+      "category": "초급 1"
+    },
+    {
+      "id": 100,
+      "pattern": "I am bummed about [무언가]",
+      "ko": "[그것] 때문에 속상해",
+      "category": "초급 3"
+    },
+    {
+      "id": 101,
+      "pattern": "do you like [~하는 것]?",
+      "ko": "~하는 거 좋아해?",
+      "category": "초급 3"
+    },
+    {
+      "id": 102,
+      "pattern": "I just joined [사업 팀].",
+      "ko": "저는 [무슨] 팀에 막 합류했습니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 103,
+      "pattern": "I started [활동] [기간] ago",
+      "ko": "나는 [얼마] 전에 ~를 시작했어",
+      "category": "중급 1"
+    },
+    {
+      "id": 104,
+      "pattern": "I just started [기간] ago.",
+      "ko": "저는 [얼마] 전에 막 시작했어요",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 105,
+      "pattern": "I am [직업]",
+      "ko": "저는 [무슨 일]을 합니다",
+      "category": "직장 커뮤니케이션 기초"
+    },
+    {
+      "id": 106,
+      "pattern": "I am excited about [무언가]",
+      "ko": "[그것] 때문에 기대돼",
+      "category": "초급 3"
+    },
+    {
+      "id": 107,
+      "pattern": "I like going to [장소]",
+      "ko": "나는 [거기] 가는 걸 좋아해",
+      "category": "초급 3"
+    },
+    {
+      "id": 108,
+      "pattern": "will you be [상태] [시간]?",
+      "ko": "[언제] [어떤 상태]일 거야?",
+      "category": "초급 1"
+    },
+    {
+      "id": 109,
+      "pattern": "there was [물건]",
+      "ko": "[그것]이 있었어",
+      "category": "초급 1"
+    },
+    {
+      "id": 110,
+      "pattern": "Is this [물건들] mine?",
+      "ko": "이거 제 건가요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 111,
+      "pattern": "I am gonna stay at [숙소]",
+      "ko": "나 [어디]에서 묵을 거야",
+      "category": "초급 1"
+    },
+    {
+      "id": 112,
+      "pattern": "how are you gonna get [목적지]?",
+      "ko": "[거기] 어떻게 갈 거야?",
+      "category": "초급 1"
+    },
+    {
+      "id": 113,
+      "pattern": "will you be [상태] by [시간]?",
+      "ko": "[언제]까지 [어떤 상태]가 될까요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 114,
+      "pattern": "someone [~을 했다] them all",
+      "ko": "누군가 그걸 다 ~해버렸어",
+      "category": "초급 1"
+    },
+    {
+      "id": 115,
+      "pattern": "whose [물건] is this?",
+      "ko": "이거 누구 [것]이에요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 116,
+      "pattern": "what kind of [것] do you want to [행동]?",
+      "ko": "어떤 [종류]를 ~하고 싶어?",
+      "category": "초급 1"
+    },
+    {
+      "id": 117,
+      "pattern": "which [것] do you want to [행동]?",
+      "ko": "어느 [것]을 ~하고 싶어?",
+      "category": "초급 1"
+    },
+    {
+      "id": 118,
+      "pattern": "Please [무언가를 하다] when you have time",
+      "ko": "시간 되실 때 ~해 주세요",
+      "category": "비즈니스 영어 3"
+    },
+    {
+      "id": 119,
+      "pattern": "do you have any [유형] plans [상황]?",
+      "ko": "[언제] [어떤] 계획 있어?",
+      "category": "초급 1"
+    },
+    {
+      "id": 120,
+      "pattern": "where do you want to [무엇을 하고 싶습니까]?",
+      "ko": "어디서 ~하고 싶으세요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 121,
+      "pattern": "what can I [할 수 있나요] for [행사]?",
+      "ko": "[그 행사]를 위해 제가 뭘 하면 될까요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 122,
+      "pattern": "can you [무언가를 하다] when [조건]?",
+      "ko": "[언제] ~해 줄 수 있어?",
+      "category": "초급 1"
+    },
+    {
+      "id": 123,
+      "pattern": "I'm [무언가를 하고 있다] over [기간]",
+      "ko": "나 [그 기간] 동안 ~할 거야",
+      "category": "초급 1"
+    },
+    {
+      "id": 124,
+      "pattern": "who are you gonna introduce to [사람들]?",
+      "ko": "[그 사람들]에게 누구를 소개할 거야?",
+      "category": "초급 1"
+    },
+    {
+      "id": 125,
+      "pattern": "What time can you [무엇을 할 수 있습니까]?",
+      "ko": "몇 시에 ~할 수 있으세요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 126,
+      "pattern": "the [교통수단] departs in [시간]",
+      "ko": "[그 편]은 [얼마] 후에 출발해요",
+      "category": "초급 1"
+    },
+    {
+      "id": 127,
+      "pattern": "can you turn [방향] the volume?",
+      "ko": "소리 좀 [키워/줄여] 줄래?",
+      "category": "초급 1"
+    },
+    {
+      "id": 128,
+      "pattern": "can you pass the [물건]?",
+      "ko": "[그것] 좀 건네줄래?",
+      "category": "초급 1"
+    },
+    {
+      "id": 129,
+      "pattern": "what [것] are you gonna [행동] to the [행사]?",
+      "ko": "[그 행사]에 뭘 ~하고 갈 거야?",
+      "category": "초급 1"
+    },
+    {
+      "id": 130,
+      "pattern": "I'd like tickets for [참가자 수]",
+      "ko": "[몇 명] 표 주세요",
+      "category": "초급 1"
+    },
+    {
+      "id": 131,
+      "pattern": "when is the next [교통수단] to [목적지]?",
+      "ko": "[거기] 가는 다음 [편]은 언제예요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 132,
+      "pattern": "are there enough [자원] for [참가자 수]?",
+      "ko": "[몇 명] 쓸 만큼 [그것]이 충분한가요?",
+      "category": "초급 1"
+    },
+    {
+      "id": 133,
+      "pattern": "Who are you gonna [선택하다]",
+      "ko": "누구를 [고를] 거야?",
+      "category": "초급 1"
     }
   ]
 }
