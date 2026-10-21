@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 10월 22일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .quote-attr {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    color: #8a8272;
+    margin-top: 10px;
+  }
+  .quote-attr .who { font-weight: 700; color: #6b6459; }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table, .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th, .event-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  .pattern-list { list-style: none; padding-left: 0; margin: 6px 0 0; counter-reset: pat; }
+  .pattern-list li {
+    background: #f7f2e6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .pattern-list li:last-child { margin-bottom: 0; }
+  .pat {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .pat .slot { color: #a3123a; font-weight: 700; }
+  .pat-ko { font-size: 13px; color: #7a7368; margin-top: 3px; }
+  .pat-ex {
+    font-size: 13.5px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e4ddc9;
+    line-height: 1.6;
+  }
+  .pat-ex .eng { font-family: Georgia, serif; }
+  .pat-ex .kor { color: #7a7368; }
+  .pat-cat {
+    font-size: 10.5px;
+    color: #9a9284;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+  }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 10월 22일 목요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>10월 21일(수) 종가 기준 코스피는 5,735.66으로 3.29% 올랐고 코스닥도 1.38% 오른 792.76을 기록했습니다. 외국인이 6,600억 원을 순매수하며 반등을 이끌었습니다. 같은 날 미국 나스닥은 0.94%, S&amp;P500은 0.25% 오른 것으로 추정되며 필라델피아 반도체지수(SOX)도 1.6% 오른 11,316을 기록했습니다. 원/달러 환율은 1,325.2원(-2.9원)으로 소폭 내렸고, 미 10년물 국채금리는 5.10%(10/15 기준)였습니다.</p>
+    <ul>
+      <li><strong>삼성전자(005930)</strong> 223,500원 · +5.67% — 저평가된 재무 건전성과 큰 폭의 실적 성장이 강점으로 꼽혔지만, 외국인 순매도가 이어지고 있어 주의가 필요하다는 의견이 함께 나왔습니다.</li>
+      <li><strong>SK하이닉스(000660)</strong> 1,294,000원 · +5.81% — 높은 수익성과 낮은 PER을 근거로 중장기 매수 적기라는 판단이 제시됐습니다.</li>
+      <li><strong>SOL 미국양자컴퓨팅TOP10(0023A0)</strong> 19,175원 · +2.54% — 양자컴퓨팅 테마 관련 종목들의 강세에 힘입어 올랐습니다.</li>
+    </ul>
+    <p>이번 주 주요 일정: 10/22(목) 한국은행 금융통화위원회 기준금리 결정(동결 예상), 10/23(금) 밤 미국 S&amp;P 글로벌 예비 PMI 발표, 10/27~28(화~수) FOMC 회의(10/28 새벽 결과 발표).</p>
+    <div class="fortune-note">본 리포트는 AI가 생성한 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-10-22.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>삼성전기, 엔비디아에 AI기판 장기공급…세종·부산에 전용 팹 증설</strong> — 삼성전기가 엔비디아와 공동 투자로 세종·부산 사업장에 AI 반도체 기판 전용 라인을 신설해 올해부터 기판을 장기 공급하기로 했다. (<a href="https://www.news1.kr/industry/general-industry/6327841" target="_blank">뉴스1</a>)</li>
+        <li><strong>앤트로픽, '숨은 의도 읽는' 새 모델 준비…구글·오픈AI도 후속작 예고</strong> — 앤트로픽이 사용자가 목표를 자세히 설명하지 않아도 실제 필요를 파악하는 신모델을 준비 중이며, 구글과 오픈AI도 후속 모델 출시를 준비해 경쟁이 치열해질 전망이다. (<a href="https://aitimes.com/news/articleView.html?idxno=216424" target="_blank">AI타임스</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>코스피, 전날 급락분 되돌리며 3.29% 반등 마감</strong> — 10월 21일 코스피는 외국인 6,600억 원 순매수에 힘입어 182.92포인트(3.29%) 오른 5735.66으로 마감했고, 코스닥도 1.38% 올랐다. 원/달러 환율은 2.9원 내린 1325.2원이었다. (<a href="https://www.newspim.com/news/view/20261021001080" target="_blank">뉴스핌</a>)</li>
+        <li><strong>반도체주 급등에 SK하이닉스 레버리지 ETF 12%대 상승</strong> — 10월 21일 반도체 업종 강세에 SK하이닉스 관련 레버리지 ETF가 12%대 올랐다. (<a href="https://www.newspim.com/news/view/20261021001080" target="_blank">뉴스핌</a>)</li>
+        <li><strong>공정위 "과징금 비율 쿠팡 2%·카카오 3%…미국 기업 차별 없어"</strong> — 공정거래위원회가 10월 21일 쿠팡·카카오에 대한 과징금 부과 비율을 밝히며 미국 기업에 대한 차별이 없다고 해명했다. (<a href="https://www.newsis.com/view/NISX20261021_0003835385" target="_blank">뉴시스</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>이재명 정부 2년 차 국감 막바지…정무위 종합감사서 여야 격돌</strong> — 10월 21일 정무위 종합감사에서 국민의힘은 외교·안보·경제·부동산 전반을, 민주당은 방어 태세로 맞붙을 것으로 전망됐다. (<a href="https://www.fnnews.com/news/202610210701538052" target="_blank">파이낸셜뉴스</a>)</li>
+        <li><strong>靑 국감 증인 채택 두고 여야 충돌…강훈식·김용범·김현지 제외</strong> — 운영위의 청와대 국정감사 증인 명단에서 국민의힘이 요구한 강훈식 전 비서실장 등이 민주당 반대로 빠졌다. (<a href="https://www.etoday.co.kr/news/view/2638336" target="_blank">이투데이</a>)</li>
+        <li><strong>'김 여사 증인 채택' 여야 충돌…강훈식·김용범 靑국감 안 나온다</strong> — 청와대 국정감사 증인 채택을 둘러싸고 여야가 거세게 맞서는 가운데 핵심 증인들의 불출석이 확정됐다. (<a href="https://www.kmib.co.kr/article/20261021502174" target="_blank">국민일보</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>모바일 OLED, 삼성·LG디스플레이 중국 다시 앞질러</strong> — 유비리서치에 따르면 3·4분기 모바일 OLED 시장에서 삼성디스플레이·LG디스플레이 합산 점유율이 58.7%로 중국을 재역전했다. LG디스플레이는 아이폰18 프로 시리즈용 패널 공급 확대가 주효했다. (<a href="https://www.newspim.com/news/view/20261019000673" target="_blank">뉴스핌</a>)</li>
+        <li><strong>AR 글래스 시장서 韓 디스플레이 업체 아직 본격 공급 못해</strong> — AR 글래스 패널 시장을 소니·옴니비전·중국 업체가 선점한 가운데, 삼성디스플레이는 초소형 OLED, LG디스플레이는 IT용 OLED 경쟁력 확보에 집중하고 있다. (<a href="https://www.newspim.com/news/view/20261019000673" target="_blank">뉴스핌</a>)</li>
+        <li><strong>고화질·저전력이 무기…삼성D·LGD, 中 저가 공세 방어</strong> — 중국 업체들의 저가 공세에 맞서 삼성디스플레이와 LG디스플레이가 고화질·저전력 기술을 앞세워 프리미엄 시장 방어에 나서고 있다. (<a href="https://www.fnnews.com/news/202610191813064046" target="_blank">파이낸셜뉴스</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 국내 AI 행사 -->
+  <section>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>11/9~10</td><td><a href="https://www.nvidia.com/ko-kr/ai-days/" target="_blank">NVIDIA AI Day Seoul 2026</a></td><td>서울 코엑스(COEX)</td><td>NVIDIA 주최 · 피지컬 AI·에이전틱 AI·AI 인프라를 다루는 메인 컨퍼런스(1일차) + 유료 DLI 기술 워크숍(2일차) · 2천여 명 참가 예상</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 10월 22일 기준, 앞으로 한 달 내 국내 AI 행사 중 날짜·장소가 모두 확인된 것은 NVIDIA AI Day Seoul 하나였습니다. 이 외에도 행사가 있을 수 있으나 확인하지 못했으니, 이벤터스·온오프믹스·AI타임스 행사 캘린더에서 추가로 확인해 보세요.</div>
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1980년</strong> — 제5공화국 헌법 개정안에 대한 국민투표가 실시돼 약 91.6%의 찬성으로 가결됐고, 이 헌법은 같은 해 10월 27일 공포됐습니다.</li>
+      <li><strong>1962년</strong> — 존 F. 케네디 미국 대통령이 쿠바에서 소련의 미사일 기지를 발견했다고 발표하며 해상 봉쇄(격리)를 선언, 쿠바 미사일 위기가 본격화됐습니다.</li>
+    </ul>
+  </section>
+
+  <!-- 5. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      "한겨울 속에서 나는 마침내, 내 안에 결코 지지 않는 여름이 있다는 것을 깨달았다."
+      <div class="quote-attr"><span class="who">알베르 카뮈</span> · 『티파사로의 귀환(Return to Tipasa)』, 1954년</div>
+    </div>
+  </section>
+
+  <!-- 6. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>어제의 급락을 하루 만에 되돌린 반도체주처럼, 막혀 있던 일도 생각보다 빨리 풀리는 하루입니다. 어제까지 마음 졌던 걱정은 내려놓고 오늘 나오는 좋은 소식에 집중해보세요.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>반도체주가 하루 만에 5%씩 뛰어오른 소식에 마음이 들뜨기 쉽지만, 오늘 한국은행 금통위 발표를 지켜본 뒤 움직이는 편이 안전합니다. 추격보다는 확인이 먼저인 날입니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>LG 트윈스가 시즌을 마감했다는 소식을 화두로 삼아보세요. 아쉬움을 나누는 대화 속에서 오히려 가까운 사람과의 거리가 좁혀지는 하루입니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 7. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>"어제 코스피가 하루 만에 3%대 반등하면서 삼성전자·SK하이닉스가 나란히 5%씩 올랐던데, 오늘 한국은행이 기준금리를 동결할지 궁금하지 않으세요?"</li>
+      <li>"LG 트윈스가 결국 준플레이오프에서 KIA에 0승 3패로 밀려 시즌을 마감했다던데, 내년 시즌엔 전력 보강이 좀 이뤄질지 얘기해보는 것도 괜찮을 것 같아요."</li>
+      <li>"노벨문학상을 받은 앤 카슨의 『빨강의 자서전』이 베스트셀러 3위에 다시 올랐다던데, 단풍철에 읽기 좋은 책이라고 하더라고요."</li>
+    </ul>
+  </section>
+
+  <!-- 8. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (10/22, 목)</strong><br>
+        기상청 단기예보(전국 기준)에 따르면 오늘은 전국이 대체로 맑은 하늘을 보이며, 낮 최고기온은 15~19℃로 선선한 가을 날씨가 이어집니다. 비 소식은 경북 북부 동해안 일부에 그칠 것으로 보여, 경기 북부·파주 지역은 비 걱정 없이 지내도 될 것으로 보입니다. 다만 파주 지역 단독 수치(최저기온·미세먼지 등급)는 확인하지 못했으니, 외출 전 기상청 날씨누리(weather.go.kr)에서 파주 지역 예보를 다시 확인하시길 권합니다.
+      </div>
+      <div class="weather-card">
+        <strong>내일 (10/23, 금)</strong><br>
+        내일은 구름이 많아지는 하늘로, 최저 3~15℃·최고 18~23℃의 기온대가 예보되어 있습니다(전국 기준). 비는 남부지방과 제주에 집중될 것으로 보이며, 중부지방인 경기 북부·파주는 강수 없이 구름만 많을 가능성이 높습니다. 아침저녁으로 쌀쌀함이 느껴질 수 있어 외투를 챙기는 것이 좋겠습니다. 파주 단독 수치와 미세먼지 등급은 확인하지 못했습니다.
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LG트윈스 + KBO 순위표 -->
+  <section>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        <p>LG 트윈스의 2026시즌이 아쉽게 마무리됐습니다. 준플레이오프(5전 3선승제)에서 KIA 타이거즈에게 10/17 광주 1차전(5-1), 10/18 광주 2차전(6-3)을 내준 뒤, 10/20 잠실 3차전에서는 13-1로 크게 패하며 0승 3패로 시리즈를 마쳤습니다. 이날 KIA는 홈런 4개·16안타를 몰아치며 김도영이 비거리 145m 포스트시즌 최장거리 만루홈런을 쏘아 올렸고, 나성범도 멀티 홈런을 더했습니다. KIA는 준PO 3연승으로 플레이오프에 직행해 10/25부터 삼성 라이온즈와 맞붙습니다. LG는 정규시즌 4위로 시즌을 마감했으며, 자세한 시상식·스토브리그 소식은 공식 사이트에서 확인하세요.</p>
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>KT</td><td>144</td><td>90</td><td>5</td><td>49</td><td>0.647</td><td>0</td></tr>
+            <tr><td>2</td><td>삼성</td><td>144</td><td>83</td><td>3</td><td>58</td><td>0.589</td><td>8</td></tr>
+            <tr><td>3</td><td>KIA</td><td>144</td><td>79</td><td>2</td><td>63</td><td>0.556</td><td>12.5</td></tr>
+            <tr class="is-lg"><td>4</td><td>LG</td><td>144</td><td>78</td><td>1</td><td>65</td><td>0.545</td><td>14</td></tr>
+            <tr><td>5</td><td>두산</td><td>144</td><td>73</td><td>5</td><td>66</td><td>0.525</td><td>17</td></tr>
+            <tr><td>6</td><td>SSG</td><td>144</td><td>65</td><td>5</td><td>74</td><td>0.468</td><td>25</td></tr>
+            <tr><td>7</td><td>롯데</td><td>144</td><td>64</td><td>3</td><td>77</td><td>0.454</td><td>27</td></tr>
+            <tr><td>8</td><td>NC</td><td>144</td><td>64</td><td>2</td><td>78</td><td>0.451</td><td>27.5</td></tr>
+            <tr><td>9</td><td>한화</td><td>144</td><td>57</td><td>4</td><td>83</td><td>0.407</td><td>33.5</td></tr>
+            <tr><td>10</td><td>키움</td><td>144</td><td>50</td><td>4</td><td>90</td><td>0.357</td><td>40.5</td></tr>
+          </tbody>
+        </table>
+        <div class="standings-note">※ 144경기 전 일정을 마친 2026 정규시즌 최종 순위 기준(변동 없음). 포스트시즌(KIA vs 삼성 플레이오프)은 공식 사이트를 참고하세요.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 10 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td>버터필드 버뮤다 챔피언십</td><td>버뮤다 사우샘프턴 패리시 포트 로열 GC</td><td>10/22~25 개최, 오늘 1라운드 시작 · 실시간 순위는 공식 사이트 참고</td></tr>
+        <tr><td>LPGA</td><td>BMW 레이디스 챔피언십</td><td>한국 해남군 파인비치 골프링크스</td><td>10/22~25 개최, 오늘 1라운드 시작 · 한국 개최 대회로 KLPGA 선수 다수 출전 · 실시간 순위는 공식 사이트 참고</td></tr>
+        <tr class="is-off"><td>LIV</td><td>이번 주 대회 없음</td><td>-</td><td>2026시즌 8월 30일 종료, 오프시즌</td></tr>
+        <tr class="is-off"><td>KLPGA</td><td>이번 주 대회 없음</td><td>-</td><td>원래 예정됐던 광남일보 행복오픈이 주최 측 사정으로 취소됨(취소 경위는 확인되지 않음)</td></tr>
+        <tr><td>JLPGA</td><td>노부타 그룹 마스터즈GC 레이디스</td><td>일본 효고현 마스터즈 골프클럽</td><td>10/22~25 개최, 오늘 1라운드 시작 · 한국 선수 출전·성적은 확인되지 않음 · 실시간 순위는 공식 사이트 참고</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 10월 22일 기준. 각 투어 위키피디아 시즌 페이지로 일정을 확인했으며, 이번 주 대회들은 모두 오늘(목) 1라운드가 시작됩니다. 실시간 순위·우승자는 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 11. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>속리산국립공원(충북 보은)</strong> — 산림청의 2026년 단풍절정 예측지도에 따르면 속리산은 10월 28일 절정이 예상돼, 이번 주말엔 막 물들기 시작한 단풍을 한발 앞서 즐길 수 있습니다. 유네스코 세계유산 법주사의 고즈넉한 흙길을 걷거나, 속리산테마파크 집라인·모노레일로 단풍 숲을 내려다보는 코스도 있습니다. 다만 10월 중순부터 11월 16일까지 샛길 출입·임산물 채취 단속이 강화되니 탐방로를 벗어나지 않도록 주의하세요.</p>
+  </section>
+
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 12 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>가호</td><td>무라카미 하루키</td></tr>
+        <tr><td>2</td><td>원피스 ONE PIECE 115</td><td>오다 에이이치로</td></tr>
+        <tr><td>3</td><td>빨강의 자서전</td><td>앤 카슨</td></tr>
+        <tr><td>4</td><td>퍼플필</td><td>진쏠미</td></tr>
+        <tr><td>5</td><td>트렌드 코리아 2027</td><td>김난도 외</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 종합 베스트셀러, 집계기간 2026.10.15~10.21 기준.</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>빨강의 자서전</strong> · 앤 카슨 — 1998년 발표된 운문 소설로, 고대 그리스 시인 스테시코로스의 시에 나오는 붉은 날개의 괴물 게리온 이야기를 현대적으로 재구성한 앤 카슨의 대표작입니다. 지난 10월 8일 스웨덴 한림원이 그를 2026년 노벨문학상 수상자로 발표하면서(고전 전통과의 유희적 대화로 현대 문학에 새 형식을 만들었다는 평가) 이 책의 판매량이 급증해 이번 주 베스트셀러 3위에 올랐습니다. 단풍이 짙어지는 계절, 제목처럼 '빨강'을 테마로 고른 책입니다.</p>
+    </div>
+  </section>
+
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        This Thursday felt like a mix of good news and sad news. Korea's stock market bounced back strongly, and the Kospi index jumped 3.29 percent after chip makers like Samsung Electronics and SK Hynix both rose more than 5 percent. The Bank of Korea also held a policy meeting today to decide on interest rates. Baseball fans had a tougher day, though. The LG Twins lost their third straight game to the KIA Tigers and were eliminated from the playoffs. The weather was clear and cool, with highs around 15 to 19 degrees, a sign that autumn has fully arrived. For book lovers, there was happier news: Anne Carson's novel in verse climbed back onto the bestseller list after she won the Nobel Prize in Literature.
+      </p>
+      <p style="font-size:13px; color:#7a7368; margin-top:10px;">
+        (해석) 이번 목요일은 좋은 소식과 아쉬운 소식이 섞인 날이었습니다. 한국 증시가 강하게 반등하며 코스피 지수가 3.29% 올랐고, 삼성전자와 SK하이닉스 같은 반도체 기업들이 나란히 5% 넘게 상승했습니다. 한국은행도 오늘 기준금리를 결정하는 금융통화위원회를 열었습니다. 하지만 야구 팬들에게는 힘든 하루였습니다. LG 트윈스가 KIA 타이거즈에게 3연패를 당하며 플레이오프 진출에 실패했습니다. 날씨는 맑고 선선해서 최고기온이 15~19도를 오가며 가을이 완전히 찾아왔음을 보여줬습니다. 책을 좋아하는 사람들에게는 반가운 소식도 있었는데, 노벨문학상을 받은 앤 카슨의 운문 소설이 다시 베스트셀러 목록에 올랐습니다.
+      </p>
+      <ul class="vocab-list">
+        <li><strong>bounce back (phr. v)</strong> — 반등하다, 회복하다</li>
+        <li><strong>eliminate (v)</strong> — 탈락시키다</li>
+        <li><strong>climb (v)</strong> — (순위 등이) 오르다</li>
+      </ul>
+      <p class="comprehension-q">Q. Why did baseball fans have a tougher day on Thursday?</p>
+    </div>
+  </section>
+
+  <!-- 14. 오늘의 영어 패턴 -->
+  <section>
+    <div class="section-num">SECTION 14 · ENGLISH PATTERNS</div>
+    <h2>오늘의 영어 패턴</h2>
+    <ul class="pattern-list">
+      <li>
+        <div class="pat">why did you <span class="slot">[연락하다]</span> <span class="slot">[사람]</span>?</div>
+        <div class="pat-ko">왜 [그 사람]한테 [연락]했어?</div>
+        <div class="pat-ex"><span class="eng"><strong>Ex.</strong> Why did you call me about the Kospi rebound this morning?</span><br><span class="kor">오늘 아침 코스피 반등 소식 때문에 왜 나한테 전화했어?</span></div>
+        <div class="pat-cat">초급 1</div>
+      </li>
+      <li>
+        <div class="pat">as far as I understand, <span class="slot">[상황]</span></div>
+        <div class="pat-ko">제가 이해하기로는 [그렇습니다]</div>
+        <div class="pat-ex"><span class="eng"><strong>Ex.</strong> As far as I understand, the Bank of Korea will keep interest rates unchanged today.</span><br><span class="kor">제가 이해하기로는, 한국은행이 오늘 기준금리를 동결할 것 같아요.</span></div>
+        <div class="pat-cat">실전 상황별 스피킹</div>
+      </li>
+      <li>
+        <div class="pat">because I was <span class="slot">[상태]</span></div>
+        <div class="pat-ko">내가 [어떤 상태]였거든</div>
+        <div class="pat-ex"><span class="eng"><strong>Ex.</strong> I missed the Twins' last game because I was busy with work.</span><br><span class="kor">일하느라 바빠서 트윈스 마지막 경기를 못 봤어.</span></div>
+        <div class="pat-cat">초급 1</div>
+      </li>
+    </ul>
+    <div class="standings-note">※ 전체 240개 중 163~165번 · 약 80일(두 달 반)에 한 바퀴 돕니다.</div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
