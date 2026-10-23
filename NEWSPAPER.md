@@ -105,11 +105,12 @@
    승률/게임차 8열)로 넣는다. LG 행은 `tr class="is-lg"`로 강조. 표 데이터의 기준
    시점(예: "○월 ○일 기준")을 표 아래 `.standings-note`에 명시하고, 확인한 시점보다
    최신 경기 결과가 있을 수 있음을 짧게 안내한다.
-10. **GOLF (금주 골프 투어)** — PGA · LPGA · LIV · KLPGA · JLPGA 다섯 투어의 이번 주
-   대회를 `<table class="golf-table">`(투어/대회/개최지/상황 4열)에 한 행씩 넣는다.
-   일정은 각 투어의 위키피디아 시즌 페이지에서 확인하는 것이 가장 확실하다
-   (`2026 PGA Tour`, `2026 LPGA Tour`, `2026 LIV Golf League`,
-   `2026 LPGA of Korea Tour`, `2026 LPGA of Japan Tour`). 이 표들의 날짜는
+10. **GOLF (금주 골프 투어)** — PGA · LPGA · LIV · **DP World Tour** · KLPGA ·
+   JLPGA 여섯 투어의 이번 주 대회를 `<table class="golf-table">`(투어/대회/개최지/상황
+   4열)에 한 행씩 넣는다. 일정은 각 투어의 위키피디아 시즌 페이지에서 확인하는 것이
+   가장 확실하다 (`2026 PGA Tour`, `2026 LPGA Tour`, `2026 LIV Golf League`,
+   `2026 DP World Tour`, `2026 LPGA of Korea Tour`, `2026 LPGA of Japan Tour`).
+   이 표들의 날짜는
    **대회 최종일 기준**이므로, 오늘이 속한 주의 일요일 날짜로 찾으면 된다.
    - 대회가 이미 끝났으면 '상황' 칸에 우승자를 적는다.
    - 진행 중이면 현재 선두를 적고, 확인되면 한국 선수 성적을 짧게 덧붙인다.
