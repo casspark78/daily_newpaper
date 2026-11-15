@@ -124,7 +124,7 @@
   }
   .two-col .col-text { flex: 1 1 260px; }
   .two-col .col-table { flex: 1 1 320px; }
-  .standings-table, .rank-table, .golf-table, .event-table {
+  .standings-table, .rank-table, .golf-table, .event-table, .stove-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
@@ -132,12 +132,13 @@
   .standings-table th, .standings-table td,
   .rank-table th, .rank-table td,
   .golf-table th, .golf-table td,
-  .event-table th, .event-table td {
+  .event-table th, .event-table td,
+  .stove-table th, .stove-table td {
     padding: 5px 6px;
     text-align: center;
     border-bottom: 1px solid #e4ddc9;
   }
-  .standings-table th, .rank-table th, .golf-table th, .event-table th {
+  .standings-table th, .rank-table th, .golf-table th, .event-table th, .stove-table th {
     background: #f7f2e6;
     color: #a3123a;
     font-weight: 700;
@@ -151,6 +152,19 @@
   .golf-table td:first-child { font-weight: 700; color: #a3123a; }
   .golf-table tr.is-off td { color: #9a9284; }
   .event-table td:nth-child(n+2) { text-align: left; }
+  .stove-table td:nth-child(n+2) { text-align: left; }
+  .stove-table td:first-child { white-space: nowrap; color: #9a9284; font-size: 12px; }
+  .stove-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .ott-pick {
+    background: #f7f2e6;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  .ott-pick:last-child { margin-bottom: 0; }
+  .ott-title { font-weight: 700; font-size: 15px; color: #1a1a1a; }
+  .ott-meta { font-size: 12px; color: #9a9284; margin-top: 2px; }
+  .ott-desc { font-size: 13.5px; margin-top: 6px; line-height: 1.6; }
   .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
   .book-pick {
     background: #f7f2e6;
@@ -404,10 +418,30 @@
     </div>
   </section>
 
+  <!-- 9. KBO 스토브리그 — 시즌 중 LG TWINS 섹션의 오프시즌 대체판 -->
+  <section>
+    <div class="section-num">SECTION 09 · STOVE LEAGUE</div>
+    <h2>KBO 스토브리그</h2>
+    <table class="stove-table">
+      <thead>
+        <tr><th>날짜</th><th>구단</th><th>소식</th></tr>
+      </thead>
+      <tbody>
+        {{STOVE_LEAGUE_ROWS}}
+        <!-- 최근 트레이드/FA/영입/코칭스태프 소식 3~5건. LG 관련 행은 tr class="is-lg".
+             <tr class="is-lg"><td>11/14</td><td>LG</td><td>내용 한 문장</td></tr>
+             새 소식을 찾지 못하면 표 전체를 생략하고 .standings-note에만 "확인된 소식 없음"을 적는다. -->
+      </tbody>
+    </table>
+    <div class="standings-note">{{STOVE_LEAGUE_NOTE}}</div>
+    <!-- 예: "※ 11월 15일 기준. KBO 정규시즌 개막 전까지는 이 섹션이 LG 트윈스 자리를 대신합니다." -->
+  </section>
+
   <!--
-    9. LG트윈스 + KBO 순위표 — 2026-11-15부터 당분간 비활성화.
-    시즌이 끝나 새 결과가 없는 동안은 아래 블록을 신문에 넣지 않는다.
-    KBO 정규시즌 개막이 확인되면 이 주석을 풀어 SECTION 09로 복원한다.
+    LG트윈스 + KBO 순위표 (원래 SECTION 09) — 2026-11-15부터 당분간 비활성화,
+    위 STOVE LEAGUE가 그 자리를 대신한다.
+    KBO 정규시즌 개막이 확인되면: 위 STOVE LEAGUE 섹션을 지우고, 이 주석을 풀어
+    아래 블록을 SECTION 09로 복원한다.
 
   <section>
     <div class="section-num">SECTION 09 · LG TWINS</div>
@@ -520,6 +554,22 @@
     </ul>
     <div class="standings-note">{{PATTERN_NOTE}}</div>
     <!-- 예: "※ 43개 중 17~19번 · 약 2주에 한 바퀴 돕니다." -->
+  </section>
+
+  <!-- 15. 이주의 OTT·영화 -->
+  <section>
+    <div class="section-num">SECTION 15 · OTT &amp; MOVIES</div>
+    <h2>이주의 OTT·영화</h2>
+    {{OTT_PICKS}}
+    <!-- 1~2개. 각 항목:
+         <div class="ott-pick">
+           <div class="ott-title">제목</div>
+           <div class="ott-meta">플랫폼 또는 극장 · 공개일/개봉일</div>
+           <div class="ott-desc">한두 문장 소개</div>
+         </div>
+         이번 주 공개/개봉이 확인된 작품이 없으면 섹션 전체를 생략한다. -->
+    <div class="standings-note">{{OTT_NOTE}}</div>
+    <!-- 예: "※ 11월 15일 기준. 날짜는 공개/개봉 예정일이며 변경될 수 있습니다." -->
   </section>
 
   <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
