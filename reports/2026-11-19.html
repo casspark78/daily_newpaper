@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HANS 데일리 — 2026년 11월 19일</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    background: #f2ede0;
+    color: #222222;
+    margin: 0;
+    padding: 30px 12px;
+  }
+  .paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdf8;
+    border: 1px solid #d8d0bb;
+    padding: 36px 44px 50px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 4px double #2b2b2b;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+  }
+  .masthead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .masthead .tagline {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8a8272;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #2b2b2b;
+    padding: 8px 0 10px;
+    margin-bottom: 26px;
+  }
+  section {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  section:last-child { border-bottom: none; }
+  .section-num {
+    display: inline-block;
+    font-size: 11px;
+    color: #a3123a;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: #1a1a1a;
+    border-left: 4px solid #a3123a;
+    padding-left: 10px;
+  }
+  p { line-height: 1.7; font-size: 14.5px; margin: 6px 0; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { line-height: 1.7; font-size: 14.5px; margin-bottom: 6px; }
+  a { color: #0b4a8f; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .quote-box {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    color: #3a3a3a;
+    padding: 18px 30px;
+    background: #f7f2e6;
+    border-top: 1px solid #d8d0bb;
+    border-bottom: 1px solid #d8d0bb;
+  }
+  .quote-attr {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    color: #8a8272;
+    margin-top: 10px;
+  }
+  .quote-attr .who { font-weight: 700; color: #6b6459; }
+  .fortune-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .fortune-card {
+    flex: 1 1 180px;
+    background: #f7f2e6;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .fortune-card h3 {
+    font-size: 13px;
+    margin: 0 0 6px;
+    color: #a3123a;
+  }
+  .fortune-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 10px;
+  }
+  .two-col {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .two-col .col-text { flex: 1 1 260px; }
+  .two-col .col-table { flex: 1 1 320px; }
+  .standings-table, .rank-table, .golf-table, .event-table, .stove-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .standings-table th, .standings-table td,
+  .rank-table th, .rank-table td,
+  .golf-table th, .golf-table td,
+  .event-table th, .event-table td,
+  .stove-table th, .stove-table td {
+    padding: 5px 6px;
+    text-align: center;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .standings-table th, .rank-table th, .golf-table th, .event-table th, .stove-table th {
+    background: #f7f2e6;
+    color: #a3123a;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .standings-table td:nth-child(2) { text-align: left; }
+  .standings-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .rank-table td:nth-child(2), .rank-table td:nth-child(3) { text-align: left; }
+  .golf-table td:nth-child(n+2) { text-align: left; }
+  .golf-table td:first-child { font-weight: 700; color: #a3123a; }
+  .golf-table tr.is-off td { color: #9a9284; }
+  .event-table td:nth-child(n+2) { text-align: left; }
+  .stove-table td:nth-child(n+2) { text-align: left; }
+  .stove-table td:first-child { white-space: nowrap; color: #9a9284; font-size: 12px; }
+  .stove-table tr.is-lg td { background: #f7f2e6; font-weight: 700; }
+  .ott-pick {
+    background: #f7f2e6;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  .ott-pick:last-child { margin-bottom: 0; }
+  .ott-title { font-weight: 700; font-size: 15px; color: #1a1a1a; }
+  .ott-meta { font-size: 12px; color: #9a9284; margin-top: 2px; }
+  .ott-desc { font-size: 13.5px; margin-top: 6px; line-height: 1.6; }
+  .event-table td:first-child { white-space: nowrap; font-weight: 700; color: #a3123a; }
+  .book-pick {
+    background: #f7f2e6;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-top: 14px;
+  }
+  .book-pick h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .history-list li strong { color: #a3123a; }
+  .standings-note {
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 6px;
+  }
+  .weather-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .weather-card {
+    flex: 1 1 200px;
+    background: #f7f2e6;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .english-article {
+    background: #f7f2e6;
+    padding: 18px 22px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+  .english-article .eng-text { font-family: Georgia, serif; }
+  .vocab-list { margin-top: 14px; font-size: 13.5px; }
+  .vocab-list li { margin-bottom: 4px; }
+  .comprehension-q {
+    margin-top: 12px;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #333;
+  }
+  .placeholder-note {
+    font-size: 13px;
+    color: #7a7368;
+    background: #f2eee0;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  .news-category { margin-bottom: 18px; }
+  .news-category:last-child { margin-bottom: 0; }
+  .news-category h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a3123a;
+    margin: 0 0 8px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e4ddc9;
+  }
+  .news-category ul { margin-top: 0; }
+  .pattern-list { list-style: none; padding-left: 0; margin: 6px 0 0; counter-reset: pat; }
+  .pattern-list li {
+    background: #f7f2e6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .pattern-list li:last-child { margin-bottom: 0; }
+  .pat {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .pat .slot { color: #a3123a; font-weight: 700; }
+  .pat-ko { font-size: 13px; color: #7a7368; margin-top: 3px; }
+  .pat-ex {
+    font-size: 13.5px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e4ddc9;
+    line-height: 1.6;
+  }
+  .pat-ex .eng { font-family: Georgia, serif; }
+  .pat-ex .kor { color: #7a7368; }
+  .pat-cat {
+    font-size: 10.5px;
+    color: #9a9284;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+  }
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #9a9284;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="masthead">
+    <h1>HANS 데일리</h1>
+    <div class="tagline">Your Personal Morning Edition</div>
+  </div>
+  <div class="dateline">
+    <span>2026년 11월 19일 목요일</span>
+    <span>발행인 HANS · 매일 아침 자동 발행</span>
+  </div>
+
+  <!-- 1. 주식 리포트 -->
+  <section>
+    <div class="section-num">SECTION 01 · MARKET</div>
+    <h2>주식 리포트</h2>
+    <p>11월 19일 리포트에 따르면, 전날(11/18) 국내 증시는 강하게 반등해 코스피가 5,067.44(+1.99%)로 5,000선을 다시 회복했고 코스닥도 662.81(+1.96%) 올랐습니다. 다만 미국 증시는 엇갈린 흐름을 보여 나스닥은 24,429.88(+0.42%)로 올랐지만 S&amp;P500은 7,323.63(−0.23%), 다우는 50,198.17(−1.11%)로 내렸고, 미 반도체지수(SOX)는 엔비디아·마이크론 약세 속에 하루 만에 약 5.3% 급락했습니다. 원/달러 환율은 1,332.4원(−3.1원)으로 소폭 내렸고, 미국 10년물 국채금리는 5.10%로 높은 수준을 유지했습니다.</p>
+    <ul>
+      <li><strong>삼성전자(005930)</strong> 194,700원 +2.31% — 매수 의견, 선행 PER 기준 저평가 구간이며 HBM 경쟁력 회복 기대가 반영됐다는 코멘트</li>
+      <li><strong>SK하이닉스(000660)</strong> 1,144,000원 +4.19% — 매수 의견, 높은 영업이익률이 강점이나 외국인 순매도는 단기 부담 요인으로 꼽혔다는 코멘트</li>
+    </ul>
+    <p>11월 19일 새벽 4시(한국시간) 미국 FOMC 의사록이 공개됐고, 11월 26일에는 한국은행 금융통화위원회가 열려 기준금리 3.00% 동결 여부가 주목된다는 점이 이번 주 주요 일정으로 꼽혔습니다.</p>
+    <div class="fortune-note">본 리포트는 참고용 자료이며 투자 권유가 아닙니다 · <a href="https://casspark78.github.io/stock_analysis/reports/2026-11-19.html" target="_blank">전체 리포트 보기</a></div>
+  </section>
+
+  <!-- 2. 나만의 주요 뉴스 -->
+  <section>
+    <div class="section-num">SECTION 02 · HEADLINES</div>
+    <h2>나만의 주요 뉴스</h2>
+    <div class="news-category">
+      <h3>AI · 신기술</h3>
+      <ul>
+        <li><strong>MS, '이그나이트 2026'서 위협 차단 에이전트 '퍼셉션' 등 AI·보안 신기술 공개</strong> — 마이크로소프트가 이그나이트 2026 행사에서 위협을 차단하는 보안 AI 에이전트 등 신기술을 발표했다. (<a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9hOV9IOHBDemJyYWt3LUlUcmt0Z3lRRHhmeTh2bzVBVWI0WjVRVFpiRC1yRXFKRlRVXzlMOFdUanN0a3ZicUQtcDF5OHY5VE81NlJiamJNME5qbGp3bHpmR18xY0lCN0dUZFdn?oc=5" target="_blank">보안뉴스</a>)</li>
+        <li><strong>오세훈, AI 커닝 비상에 "21세기 기술인데 정부 대응은 아날로그"</strong> — 오세훈 서울시장이 수능 중 AI를 활용한 부정행위 논란에 정부의 대응 속도를 비판했다. (<a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE9oM3A1SGpTekp3a2ZWNlN5VE5OejFGT282U0dKWmdhcmtDeW1sQjBTLTlrVDhFcmMtUlRNdVdYWUpkYUVhc3FzNFQxN3QtTUE?oc=5" target="_blank">뉴스1</a>)</li>
+        <li><strong>노동부·폴리텍, 피지컬 AI 실습장 4곳 연내 가동…지역 中企에 개방</strong> — 고용노동부가 피지컬 AI 테스트베드 4곳을 개소해 지역 중소기업의 실무인력 양성에 활용하기로 했다. (<a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE1McWhkZW9iZWozNm1ISjV4eHFCSnZtaXNYQVl1RUNHQjh6OUtFYTF3ZU13Q0x5bG5GdUlfd1R0VlpZYk4tejJpTDRPV0k3Zw?oc=5" target="_blank">전자신문</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>경제</h3>
+      <ul>
+        <li><strong>"반도체, 내년 더 좋아"…경제성장률 대폭 상향</strong> — 반도체 업황 호조가 반영되며 내년 경제성장률 전망치가 큰 폭으로 상향 조정됐다. (<a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBXYkNNdE1tN2tSbW4wc2t4TjlnOC1wUTV0RFY0QjFvOUVRbkJYTGo2WFdSblFuMmhQNFJhNGxWaHYwRmZRbEVsYXZJWEhmalZieGtzeWE0aDdPUdIBX0FVX3lxTE9oRmVRaXBfVzRrbHJMQlc3VW5NYmo3QlREMXZobTZnbDlXN2JhZC1VMUM1QjJJZGEwVVc4OWl4UGxqMzFham9sdWVrZFplOHdPcmJHOVg2bWRLUlBrZWo4?oc=5" target="_blank">경향신문</a>)</li>
+        <li><strong>한중 정상, FTA 서비스·투자 협상 타결…경제협력 확대에 공감</strong> — 이재명 대통령과 시진핑 주석이 한중 FTA 서비스·투자 협상 타결을 계기로 경제협력 확대에 뜻을 모았다. (<a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFBsc09JU1hlQUNtaVBjeTA1aWFCbEdJOVJCUmZPSlc0RTVibzVFNWdhcnBjOTF6YzVvM2w2dEc1Qnpzbjh5NTBPZmJ4MTFhSmZHVzZHYQ?oc=5" target="_blank">JTBC</a>)</li>
+        <li><strong>엔비디아 호실적에도 뉴욕증시 혼조…다우 1.11% 하락</strong> — 엔비디아의 실적 호조에도 금리 우려 등으로 다우지수가 1.11% 내리며 뉴욕증시가 혼조세로 마감했다. (<a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1nRnFES2V1ZlFjX0VLRkpqQU9Ma0RybXhnczJFcTFoaXNSdkhlV3hvdlNyZnBhRkxhTGN0UlhqSVUydnU3NnV5M2RMb0daeHZaT1EtWDg0dXh0MHZaVlh6R25KdTAzQ044YlJHNw?oc=5" target="_blank">뉴시안</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>정치</h3>
+      <ul>
+        <li><strong>대법, '정치관여' 조태용 전 국정원장 징역 2년6개월 확정</strong> — 계엄 당시 위증·정치관여 혐의로 기소된 조태용 전 국가정보원장에게 대법원이 징역 2년6개월을 확정했다. (<a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE1FMVNBY1FxQ2JqY1lQZW5sb280ZlRYZ1BPbTJUWjJUNVREZ3MtV3hhVlBzeGNyMENRVExkVGo3enhJVzhiTDBMVDZJbDU3bTh6RUNSbUhSMGFvSklrN0FFNGdMYkhLaHRhN2k5YjhNSjV3SGx5b3ZvMgF3QVVfeXFMTnJNWEhzUWNnVWR4UC1LeHhKbS0tV1dkZy13aEZmZzJYQk9SOGZ0d1J2YnowWnY4SFMyNUgtcEM3cmlkQk9rODA1eWQxQ2EzaHg0NU45ODdPc2dHaGREc09NM2ZFQmx0NmpyYW8zTFdIbW54ejJ5ZTA?oc=5" target="_blank">연합뉴스</a>)</li>
+        <li><strong>'계엄 해제표결 방해' 혐의 추경호 1심 무죄</strong> — 계엄 해제 표결을 방해한 혐의로 기소된 추경호 전 원내대표에게 1심 재판부가 무죄를 선고했다. (<a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE4ydEtTZWdkYms4UzRXVFhHYkt2WHFHOXFWYnJaYW1iQjdORWhJaUM4eWctN1FwTDRlc3VkRi1iZzFOMm04OGlaZ29iUHJ4RUcxNUJVcEoyLTRYaDTSAWBBVV95cUxPU2JYZGlUTkktTDBDT2FCRkNjc3RvR2JXdjdxOFRxZ0pjVzJZb2dQa21oMGdHTmlnaUh1ZEtTeU5RYWV3UVNvbkd2NW1SbVNIbmR0SnZVdDFvUWlqbF9IZ28?oc=5" target="_blank">연합뉴스</a>)</li>
+        <li><strong>이 대통령, 순방 중 조작기소 특검법 재가·공포… 즉시 시행</strong> — 이재명 대통령이 해외 순방 중 '조작기소 특검법'을 재가해 공포, 즉시 시행에 들어갔다. (<a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBvMDl4LTQ4a1hxTTd5RkF1SXNJMXVWOGhNeE5ibjFBS1I4V19fbDFPZ3F3c1R4QnROdVpBclBLSVlhLW05TGNoTFRzMUlBQno0cFctRklhZHhBYVJPWHgyQW1sb1pCS3lLU2hUM1dB0gFzQVVfeXFMT05mWXpnU0k2Z1ktbkxLZFVlbl9jei1XZGZDYWlVZmxDVW9GMy02MVliLVQ4d0Z1WkFUX0I2MlZUMUNnWGxxWWFUUFRFb0w1SHQzWjljVXdfY1IzUFhsQ25DQ3ZSR2h6bDFuX094cDh3NU9jaw?oc=5" target="_blank">한국일보</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>디스플레이 산업</h3>
+      <ul>
+        <li><strong>K-디스플레이, 3년 만에 中에 내준 OLED 출하량 1위 탈환</strong> — 한국 OLED 업계가 출하량 기준으로 중국을 제치고 3년 만에 세계 1위를 되찾았다. (<a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9aT1l5VEFMUjBwZXNmTTZWOWl3ZllLYV9yQkI1bVREZzBaaHJuVFRsdmUxRmFPNEhEZm9uLWR5SzlOY2R0Z1dra0dJbTNRdTBnN2pHU3hn?oc=5" target="_blank">헤럴드경제</a>)</li>
+        <li><strong>아산 스마트모듈러센터 착공…무기발광 디스플레이 초격차 시동</strong> — 산업통상부가 충남 아산탕정에 차세대 무기발광 디스플레이 실증센터(총 1,461억원, 2028년 하반기 완공 목표) 착공식을 열었다. (<a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBvNGx1b3VaYVJ1NGlDN2RQODJyeWVhRW1IbGY0Mnh3aVI2YjIyV3hPbFYxMmlrR0p6Q19peU1XVUZYYzRhenFLUzJRV2ZDVzFOZHhBTUlSNXJpU1BjUVVQZ9IBYEFVX3lxTFBvNGx1b3VaYVJ1NGlDN2RQODJyeWVhRW1IbGY0Mnh3aVI2YjIyV3hPbFYxMmlrR0p6Q19peU1XVUZYYzRhenFLUzJRV2ZDVzFOZHhBTUlSNXJpU1BjUVVQZw?oc=5" target="_blank">연합뉴스</a>)</li>
+        <li><strong>삼성D·LGD, 연말부터 아이폰18 일반·에어 OLED 양산 돌입</strong> — 삼성디스플레이와 LG디스플레이가 연말부터 아이폰18 패널 양산에 들어간다고 보도됐다. (<a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTE5EclE5c2VQSDItcTBSaWo4WHIzaWxCUFVYQjRlRjhrbHM0SDdlNm95RkV0ekxabV9WT1hyeG9HeUVaUmtEd1l6S2lXbUszZw?oc=5" target="_blank">전자신문</a>)</li>
+      </ul>
+    </div>
+    <div class="news-category">
+      <h3>스포츠</h3>
+      <ul>
+        <li><strong>'후배 폭행' 프로축구 선수, 출장정지 10경기·제재금 1천만 원 징계</strong> — K리그 상벌위원회가 후배 선수를 폭행한 혐의로 한 선수에게 중징계를 내렸다. (<a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE14RU52dkxPbjlLTlM0STNBUUQtNnZrOU9ObXJvWGdUamVFWHpQQU1lMXc2c1hwOUkybm05akNWNVZhdDh5dGNYSUMwUEdtdW1mVzJDeDRsdzR1YzZMa3RzdDZSV3p0c0ZnS2FLNnV5azVRakNLRVE?oc=5" target="_blank">스포츠타임스</a>)</li>
+        <li><strong>가짜 르브론은 베팅, 가짜 메시는 투자 권유…스포츠도 AI로 '골머리'</strong> — 유명 선수 얼굴을 합성한 AI 딥페이크를 활용한 베팅·투자 사기가 스포츠계에서도 확산하고 있다. (<a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9lWHJqNTI5U2FoamMyal9MT2FwbzlWMllCczdoUG9MX2o2SmVPYzdZUnRrUHVxQzIwejlySThyYVZKLURJamd2bWdkMDRzVEhHbG1uV1RrZUYtMDN6bkHSAWNBVV95cUxNOHJfLUZGVmdCbElLWGxfUjk0Wlh6VXVLVjlzSm05Sy1MWXRyLWt0cHdud05IOHNQR0NzRTNacU5fWHA5VllHTjFZdEF6Qkt2Vm9OQVYyejNJN2tPbV91X3lER0k?oc=5" target="_blank">스포츠경향</a>)</li>
+        <li><strong>안정환 위원도 부러워한 일본…한국은 아직 감독도 불투명</strong> — 일본 축구의 새 체제 출발을 평가하며 한국 축구 대표팀의 감독 선임이 늦어지고 있다는 점이 지적됐다. (<a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOXzhyT2V6clVJSlRlbFh0U3ZVY2hOS2l6aHktX21FOUY1MTl3NTFZc0QzamM2T2M2aGRZVS1VR1p4QlRzeGg2ZE5aeTFHSmdFSC1MT0J3OENrS3VfX01jd1RTZGZUSC16U1BqdVFfc3VxYmF4M2JndjM4NFllY3dxd05Eaw?oc=5" target="_blank">조선일보</a>)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. 국내 AI 행사 -->
+  <section>
+    <div class="section-num">SECTION 03 · AI EVENTS</div>
+    <h2>다가오는 국내 AI 행사</h2>
+    <table class="event-table">
+      <thead>
+        <tr><th>날짜</th><th>행사</th><th>장소</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>12/12</td><td><a href="https://moducon.modulabs.co.kr" target="_blank">모두콘 2026 &quot;Deeper in AI&quot;</a></td><td>이화여대 ECC</td><td>모두의연구소 주최 · 무료 · 등록 마감일 미명시(신청 폼 운영 중)</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 11월 19일 기준, 앞으로 한 달 내 행사 중 2026년 개최와 일반 참가 가능 여부가 명확히 확인된 것은 1건뿐이었습니다. 여러 후보가 검색 결과에서 2025년 행사와 혼동되어 제외했습니다. 일정·장소는 주최 측 사정으로 바뀔 수 있습니다.</div>
+  </section>
+
+  <!-- 4. 오늘의 역사 -->
+  <section>
+    <div class="section-num">SECTION 04 · THIS DAY</div>
+    <h2>오늘, 역사 속의 이 날</h2>
+    <ul class="history-list">
+      <li><strong>1863년</strong> — 미국 에이브러햄 링컨 대통령이 남북전쟁 격전지 게티즈버그의 국립묘지 봉헌식에서 "국민의, 국민에 의한, 국민을 위한 정부"라는 구절로 유명한 게티즈버그 연설을 했다.</li>
+      <li><strong>1969년</strong> — 아폴로 12호의 우주비행사 피트 콘래드와 앨런 빈이 인류 역사상 세 번째, 네 번째로 달 표면에 착륙했다.</li>
+    </ul>
+  </section>
+
+  <!-- 5. 오늘의 명언 -->
+  <section>
+    <div class="section-num">SECTION 05 · QUIET WORDS</div>
+    <h2>오늘의 명언</h2>
+    <div class="quote-box">
+      한겨울에 나는 마침내 내 안에 꺾이지 않는 여름이 있음을 발견했다.
+      <div class="quote-attr"><span class="who">알베르 카뮈</span> · 수필 「티파사로의 귀환」, 수필집 『여름』(1954)</div>
+    </div>
+  </section>
+
+  <!-- 6. 오늘의 운세 -->
+  <section>
+    <div class="section-num">SECTION 06 · FORTUNE</div>
+    <h2>오늘의 운세 (뱀띠 · 1977년생)</h2>
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <h3>총운</h3>
+        <p>작은 결정들이 모여 큰 흐름을 만드는 하루입니다. 서두르지 않고 하나씩 처리하면 뒤탈이 없습니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>재물운</h3>
+        <p>예상치 못한 지출이 생길 수 있으니 오늘은 지갑을 너무 느슨하게 열지 않는 게 좋습니다.</p>
+      </div>
+      <div class="fortune-card">
+        <h3>애정운 · 대인관계운</h3>
+        <p>가까운 사람과의 작은 약속을 지키는 것이 신뢰를 쌓는 하루가 될 것입니다.</p>
+      </div>
+    </div>
+    <div class="fortune-note">※ 재미로 보는 오늘의 운세입니다.</div>
+  </section>
+
+  <!-- 7. 스몰토크 추천 -->
+  <section>
+    <div class="section-num">SECTION 07 · SMALL TALK</div>
+    <h2>오늘 스몰토크 추천</h2>
+    <ul>
+      <li>코스피가 하루 만에 2% 가까이 오르며 5,067선까지 회복했다는 소식 — 반도체 대형주가 다시 힘을 받고 있다는 이야기로 풀어가기 좋습니다.</li>
+      <li>LG 트윈스 홍창기와 박동원이 구단의 비FA 다년계약 제안을 거절하고 시장 평가를 받기로 했다는 소식 — 이번 스토브리그에 두 선수가 어디로 갈지 예상해보는 대화로 이어가기 좋습니다.</li>
+      <li>오늘부터 기온이 뚝 떨어져 아침 최저가 영하권에 접어든다는 소식 — 첫 롱패딩이나 난방 준비 이야기를 나누기 좋은 날입니다.</li>
+    </ul>
+  </section>
+
+  <!-- 8. 날씨 -->
+  <section>
+    <div class="section-num">SECTION 08 · WEATHER</div>
+    <h2>날씨 (경기도 파주시)</h2>
+    <div class="weather-box">
+      <div class="weather-card">
+        <strong>오늘 (11/19, 목)</strong><br>
+        아침 최저 −3℃ / 낮 최고 5℃. 오전·오후 모두 구름많음, 강수확률 20%입니다. 북쪽 찬 공기가 유입돼 체감온도는 이보다 더 낮게 느껴질 수 있습니다. (미세먼지 농도는 확인하지 못했습니다)
+      </div>
+      <div class="weather-card">
+        <strong>내일 (11/20, 금)</strong><br>
+        아침 최저 −4℃ / 낮 최고 3℃. 오전·오후 모두 맑음, 강수확률은 낮은 편입니다. 오늘보다 더 추워지니 외투를 단단히 챙기세요.
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. KBO 스토브리그 — 시즌 중 LG TWINS 섹션의 오프시즌 대체판 -->
+  <section>
+    <div class="section-num">SECTION 09 · STOVE LEAGUE</div>
+    <h2>KBO 스토브리그</h2>
+    <table class="stove-table">
+      <thead>
+        <tr><th>날짜</th><th>구단</th><th>소식</th></tr>
+      </thead>
+      <tbody>
+        <tr class="is-lg"><td>11/15</td><td>LG</td><td>손혁 전 한화 단장을 퀄리티컨트롤(QC)·투수총괄 코치로 영입하며 투수코치진을 전면 개편했다(유원상·최성훈 신규 계약).</td></tr>
+        <tr><td>11/16</td><td>KBO</td><td>2027시즌 FA 자격 선수 28명 중 22명이 FA 승인 선수 명단에 올랐다(신규 14명·재자격 5명 등).</td></tr>
+        <tr class="is-lg"><td>11/16</td><td>LG</td><td>외야수 홍창기(A등급)·포수 박동원(B등급)이 FA 승인 명단에 포함돼, 구단의 비FA 다년계약 제안을 거절하고 시장 평가를 받기로 했다.</td></tr>
+        <tr><td>11/17</td><td>KBO</td><td>FA 승인 선수들의 자유 협상이 시작됐으나, 19일 현재까지 구체적인 영입 시도나 계약 체결 소식은 확인되지 않았다.</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 11월 19일 기준. 홍창기·박동원의 구체적인 협상 진행 상황은 아직 확인되지 않았습니다. KBO 정규시즌 개막 전까지는 이 섹션이 LG 트윈스 자리를 대신합니다.</div>
+  </section>
+
+  <!--
+    LG트윈스 + KBO 순위표 (원래 SECTION 09) — 2026-11-15부터 당분간 비활성화,
+    위 STOVE LEAGUE가 그 자리를 대신한다.
+    KBO 정규시즌 개막이 확인되면: 위 STOVE LEAGUE 섹션을 지우고, 이 주석을 풀어
+    아래 블록을 SECTION 09로 복원한다.
+
+  <section>
+    <div class="section-num">SECTION 09 · LG TWINS</div>
+    <h2>LG 트윈스 경기 결과 &amp; KBO 순위표</h2>
+    <div class="two-col">
+      <div class="col-text">
+        {{LG_TWINS_TEXT}}
+        <p>
+          <a href="https://www.koreabaseball.com/" target="_blank">KBO 공식 웹사이트</a> ·
+          <a href="https://www.lgtwins.com/" target="_blank">LG 트윈스 공식 홈페이지</a>
+        </p>
+      </div>
+      <div class="col-table">
+        <table class="standings-table">
+          <thead>
+            <tr><th>순위</th><th>팀</th><th>경기</th><th>승</th><th>무</th><th>패</th><th>승률</th><th>게임차</th></tr>
+          </thead>
+          <tbody>
+            {{KBO_STANDINGS_ROWS}}
+            1~10위 전 팀. 각 행: tr class="is-lg"(LG 행만), td 8개(순위/팀/경기/승/무/패/승률/게임차)
+          </tbody>
+        </table>
+        <div class="standings-note">{{STANDINGS_AS_OF_NOTE}}</div>
+        예: "※ 7월 9일 전반기 종료 기준 (최신 경기 결과는 공식 사이트 참고)"
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- 10. 골프 금주 투어 일정 -->
+  <section>
+    <div class="section-num">SECTION 10 · GOLF</div>
+    <h2>금주 골프 투어</h2>
+    <table class="golf-table">
+      <thead>
+        <tr><th>투어</th><th>대회</th><th>개최지</th><th>상황</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>PGA</td><td><a href="https://www.pgatour.com/tournaments/2026/the-rsm-classic/R2026493/overview" target="_blank">RSM 클래식</a></td><td>세인트 사이먼스 아일랜드, 미국(조지아)</td><td>19일(현지시간) 개막 예정 — 2026시즌 마지막 정규 대회</td></tr>
+        <tr><td>LPGA</td><td>CME 그룹 투어 챔피언십</td><td>네이플스, 미국(플로리다)</td><td>19일(현지시간) 개막 예정 — 2026시즌 최종전</td></tr>
+        <tr class="is-off"><td>LIV</td><td>-</td><td>-</td><td>이번 주 대회 없음 (2026시즌 8월 종료, 현재 파산절차 속 사업정리 진행 중)</td></tr>
+        <tr class="is-off"><td>DP World Tour</td><td>-</td><td>-</td><td>이번 주 대회 없음 (시즌 최종전 11/15 종료, 우승 타이렐 해턴)</td></tr>
+        <tr class="is-off"><td>KLPGA</td><td>-</td><td>-</td><td>이번 주 대회 없음 (시즌 최종전 대보 하우스디 챔피언십 11/8 종료, 우승 유현조)</td></tr>
+        <tr><td>JLPGA</td><td>다이오페이퍼 엘레어 레이디스오픈</td><td>에히메, 일본</td><td>22일 종료 예정 (정확한 개막일은 확인되지 않았습니다)</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 11월 19일 기준. 진행 중이거나 개막을 앞둔 대회의 실시간 순위·결과는 공식 사이트를 참고하세요.</div>
+  </section>
+
+  <!-- 11. 주말 여행지 추천 -->
+  <section>
+    <div class="section-num">SECTION 11 · WEEKEND TRIP</div>
+    <h2>주말에 가면 좋을 국내 여행지</h2>
+    <p><strong>순천만 국가정원·습지</strong> — 11월 말부터 흑두루미 등 겨울 철새가 본격적으로 날아드는 국내 대표 철새 도래지입니다. 갈대밭 사이로 노을을 보며 걷기 좋은 계절입니다.</p>
+    <p><strong>충남 아산 온천지구</strong> — 기온이 뚝 떨어진 요즘, 노천탕에서 몸을 녹이며 하루를 느긋하게 보내기 좋은 전통 온천 명소입니다.</p>
+  </section>
+
+  <!-- 12. 오늘의 책 & 베스트셀러 -->
+  <section>
+    <div class="section-num">SECTION 12 · BOOKS</div>
+    <h2>오늘의 책 &amp; 주간 베스트셀러</h2>
+    <table class="rank-table">
+      <thead>
+        <tr><th>순위</th><th>제목</th><th>저자</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>멜로우TV 팀나빠 2</td><td>멜로우 TV 원저 / 안경순 글 / 김기수 그림</td></tr>
+        <tr><td>2</td><td>가호</td><td>무라카미 하루키 (홍은주 역)</td></tr>
+        <tr><td>3</td><td>100일의 거짓말 대본집 세트</td><td>류보리</td></tr>
+        <tr><td>4</td><td>싯다르타</td><td>헤르만 헤세 (박병덕 역)</td></tr>
+        <tr><td>5</td><td>가짜 돈 진짜 부</td><td>박종훈</td></tr>
+      </tbody>
+    </table>
+    <div class="standings-note">※ 예스24 2026년 11월 12일~18일 기준 종합 베스트셀러</div>
+    <div class="book-pick">
+      <h3>오늘의 책</h3>
+      <p><strong>가호</strong> · 무라카미 하루키 (홍은주 옮김) — 2026년 7월 일본에서 출간된 하루키의 16번째 장편소설로, 그의 작품 중 처음으로 26세 그림책 작가 '가호'라는 여성을 주인공으로 내세워 화제가 됐습니다. 도쿄 외곽 마을로 이사한 가호가 현실과 비현실의 경계가 흐려지는 사건에 휘말리며 모녀 관계와 가족의 의미를 되짚는 이야기로, 일본에서는 발행 4일 만에 30만 부가 나가고 오리콘 소설 부문 3주 연속 1위에 올랐습니다. 국내에서는 문학동네가 한국어판을 내놓았으며(정확한 출간일은 확인하지 못했습니다), 현재 예스24 종합 베스트셀러 2위에 올라 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- 13. 오늘의 짧은 영어 아티클 -->
+  <section>
+    <div class="section-num">SECTION 13 · ENGLISH FOR TODAY</div>
+    <h2>오늘의 짧은 영어 아티클</h2>
+    <div class="english-article">
+      <p class="eng-text">
+        Every November, a special event happens in a town called Suncheon, in the south of Korea. Thousands of birds called hooded cranes fly all the way from Siberia to spend the winter there. The birds arrive because the wetland in Suncheon has warm mud and plenty of food for them. Local people built a huge garden and a wide walking path so visitors can watch the birds safely. Many tourists visit in the late afternoon, because the cranes look beautiful flying over the water at sunset. If you visit Suncheon this winter, remember to bring warm clothes and a pair of binoculars.
+      </p>
+      <p style="font-size:13px; color:#7a7368; margin-top:8px;">(한국어 요약: 매년 11월, 한국 남쪽의 순천에서는 특별한 일이 벌어진다. 흑두루미라는 새 수천 마리가 시베리아에서 날아와 겨울을 보낸다. 순천의 습지에 먹이와 따뜻한 갯벌이 풍부하기 때문이다. 지역 주민들은 큰 정원과 산책로를 만들어 관람객이 안전하게 새를 볼 수 있게 했다. 해 질 무렵 물 위를 나는 두루미가 아름다워 늦은 오후에 많이들 찾는다. 이번 겨울 순천에 간다면 따뜻한 옷과 쌍안경을 챙기자.)</p>
+      <ul class="vocab-list">
+        <li><strong>crane (noun)</strong> — 두루미</li>
+        <li><strong>wetland (noun)</strong> — 습지</li>
+        <li><strong>binoculars (noun)</strong> — 쌍안경</li>
+      </ul>
+      <p class="comprehension-q">Q. Why do hooded cranes fly to Suncheon every winter?</p>
+    </div>
+  </section>
+
+  <!-- 14. 오늘의 영어 패턴 -->
+  <section>
+    <div class="section-num">SECTION 14 · ENGLISH PATTERNS</div>
+    <h2>오늘의 영어 패턴</h2>
+    <ul class="pattern-list">
+      <li>
+        <div class="pat">I completely agree with <span class="slot">[어떤 것]</span>.</div>
+        <div class="pat-ko">저는 ~에 전적으로 동의합니다</div>
+        <div class="pat-ex"><span class="eng"><strong>Ex.</strong> I completely agree with the analyst's call to buy Samsung Electronics this week.</span><br><span class="kor">이번 주 삼성전자를 매수하라는 애널리스트의 의견에 전적으로 동의해.</span></div>
+        <div class="pat-cat">직장 커뮤니케이션 기초</div>
+      </li>
+      <li>
+        <div class="pat">I have a habit of <span class="slot">[~하는 것]</span></div>
+        <div class="pat-ko">나는 ~하는 버릇이 있어</div>
+        <div class="pat-ex"><span class="eng"><strong>Ex.</strong> I have a habit of checking the KOSPI index first thing in the morning.</span><br><span class="kor">나는 아침에 일어나면 코스피 지수부터 확인하는 버릇이 있어.</span></div>
+        <div class="pat-cat">패턴으로 말하기</div>
+      </li>
+      <li>
+        <div class="pat">I've had enough of <span class="slot">[~하는 것]</span></div>
+        <div class="pat-ko">~하는 건 이제 지긋지긋해</div>
+        <div class="pat-ex"><span class="eng"><strong>Ex.</strong> I've had enough of shivering on my way to work every morning.</span><br><span class="kor">매일 아침 출근길에 떨면서 가는 건 이제 지긋지긋해.</span></div>
+        <div class="pat-cat">패턴으로 말하기</div>
+      </li>
+    </ul>
+    <div class="standings-note">※ 전체 240개 중 7~9번 · 약 80일(약 2.6개월)에 한 바퀴 돕니다.</div>
+  </section>
+
+  <!-- 15. 이주의 OTT·영화 -->
+  <section>
+    <div class="section-num">SECTION 15 · OTT &amp; MOVIES</div>
+    <h2>이주의 OTT·영화</h2>
+    <div class="ott-pick">
+      <div class="ott-title">푸른길</div>
+      <div class="ott-meta">넷플릭스 · 11월 20일(금) 오후 5시 전편(8부작) 공개</div>
+      <div class="ott-desc">손석구와 나가야마 에이타가 각각 서울과 도쿄의 형사로 호흡을 맞추는 한일 합작 범죄수사극으로, 'D.P.'의 한준희 감독이 연출을 맡았습니다. 동명 만화를 원작으로 하며, 1~3화는 지난 10월 부산국제영화제에서 먼저 공개돼 주목받았습니다.</div>
+    </div>
+    <div class="standings-note">※ 11월 19일 기준. 공개일은 넷플릭스 발표 기준이며 변경될 수 있습니다.</div>
+  </section>
+
+  <footer>HANS 데일리 · 매일 아침 자동 생성되는 나만의 전용 신문</footer>
+</div>
+</body>
+</html>
